@@ -70,15 +70,15 @@ namespace MusicNetease
             {
                 //还原窗体显示    
                 this.WindowState = FormWindowState.Normal;
-                this.Width = 1022;
-                this.Height = 670;
-                this.StartPosition = FormStartPosition.CenterScreen;
+                //this.Width = 1022;
+                //this.Height = 670;
+                //this.StartPosition = FormStartPosition.CenterScreen;
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                this.Width = Screen.GetWorkingArea(this).Width;
-                this.Height = Screen.GetWorkingArea(this).Height;
+                //this.Width = Screen.GetWorkingArea(this).Width;
+                //this.Height = Screen.GetWorkingArea(this).Height;
             }
             
         }
@@ -157,8 +157,8 @@ namespace MusicNetease
             this.skinPanel_top.Left = 0;
             this.skinPanel_top.Top = 0;
             this.skinPanel_Bottom.Width = this.Width;
-            this.skinPanel_top.Left = 0;
-            this.skinPanel_top.Top = this.Height-50;
+            this.skinPanel_Bottom.Left = 0;
+            this.skinPanel_Bottom.Top = this.Height-50;
         }
 
         private void skinButton_minimize_Click(object sender, EventArgs e)

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.skinPanel_top = new CCWin.SkinControl.SkinPanel();
             this.skinPanel_search = new CCWin.SkinControl.SkinPanel();
+            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
             this.skinButton_back = new CCWin.SkinControl.SkinButton();
             this.skinButton_forward = new CCWin.SkinControl.SkinButton();
             this.skinPanel_buttons = new CCWin.SkinControl.SkinPanel();
@@ -78,6 +79,7 @@
             // skinPanel_search
             // 
             this.skinPanel_search.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_search.Controls.Add(this.skinTextBox1);
             this.skinPanel_search.Controls.Add(this.skinButton_back);
             this.skinPanel_search.Controls.Add(this.skinButton_forward);
             this.skinPanel_search.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -91,11 +93,54 @@
             this.skinPanel_search.TabIndex = 2;
             this.skinPanel_search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             // 
+            // skinTextBox1
+            // 
+            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox1.DownBack = null;
+            this.skinTextBox1.Icon = null;
+            this.skinTextBox1.IconIsButton = false;
+            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox1.IsPasswordChat = '\0';
+            this.skinTextBox1.IsSystemPasswordChar = false;
+            this.skinTextBox1.Lines = new string[0];
+            this.skinTextBox1.Location = new System.Drawing.Point(86, 10);
+            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox1.MaxLength = 32767;
+            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox1.MouseBack = null;
+            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox1.Multiline = false;
+            this.skinTextBox1.Name = "skinTextBox1";
+            this.skinTextBox1.NormlBack = null;
+            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox1.ReadOnly = false;
+            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.skinTextBox1.Size = new System.Drawing.Size(238, 28);
+            // 
+            // 
+            // 
+            this.skinTextBox1.SkinTxt.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox1.SkinTxt.Name = "BaseText";
+            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(228, 18);
+            this.skinTextBox1.SkinTxt.TabIndex = 0;
+            this.skinTextBox1.SkinTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox1.SkinTxt.WaterText = "搜索音乐，视频，歌词，电台";
+            this.skinTextBox1.TabIndex = 9;
+            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox1.WaterText = "搜索音乐，视频，歌词，电台";
+            this.skinTextBox1.WordWrap = true;
+            // 
             // skinButton_back
             // 
             this.skinButton_back.BackColor = System.Drawing.Color.Transparent;
             this.skinButton_back.BackgroundImage = global::MusicNetease.Properties.Resources.back0;
-            this.skinButton_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.skinButton_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.skinButton_back.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
             this.skinButton_back.BaseColor = System.Drawing.Color.Transparent;
             this.skinButton_back.BorderColor = System.Drawing.Color.Transparent;
@@ -105,15 +150,14 @@
             this.skinButton_back.DownBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_back.GlowColor = System.Drawing.Color.Transparent;
             this.skinButton_back.ImageSize = new System.Drawing.Size(20, 20);
-            this.skinButton_back.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_back.IsDrawBorder = false;
+            this.skinButton_back.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_back.IsDrawGlass = false;
-            this.skinButton_back.Location = new System.Drawing.Point(19, 16);
+            this.skinButton_back.Location = new System.Drawing.Point(21, 16);
             this.skinButton_back.MouseBack = null;
             this.skinButton_back.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_back.Name = "skinButton_back";
             this.skinButton_back.NormlBack = null;
-            this.skinButton_back.Size = new System.Drawing.Size(16, 16);
+            this.skinButton_back.Size = new System.Drawing.Size(26, 16);
             this.skinButton_back.TabIndex = 8;
             this.skinButton_back.Tag = "后退";
             this.skinButton_back.UseVisualStyleBackColor = false;
@@ -126,7 +170,7 @@
             // 
             this.skinButton_forward.BackColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.BackgroundImage = global::MusicNetease.Properties.Resources.forward0;
-            this.skinButton_forward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.skinButton_forward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.skinButton_forward.BackRectangle = new System.Drawing.Rectangle(10, 10, 20, 20);
             this.skinButton_forward.BaseColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.BorderColor = System.Drawing.Color.Transparent;
@@ -136,15 +180,14 @@
             this.skinButton_forward.DownBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.GlowColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.ImageSize = new System.Drawing.Size(16, 16);
-            this.skinButton_forward.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_forward.IsDrawBorder = false;
+            this.skinButton_forward.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_forward.IsDrawGlass = false;
-            this.skinButton_forward.Location = new System.Drawing.Point(50, 16);
+            this.skinButton_forward.Location = new System.Drawing.Point(44, 16);
             this.skinButton_forward.MouseBack = null;
             this.skinButton_forward.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.Name = "skinButton_forward";
             this.skinButton_forward.NormlBack = null;
-            this.skinButton_forward.Size = new System.Drawing.Size(16, 16);
+            this.skinButton_forward.Size = new System.Drawing.Size(26, 16);
             this.skinButton_forward.TabIndex = 7;
             this.skinButton_forward.Tag = "前进";
             this.skinButton_forward.UseVisualStyleBackColor = false;
@@ -544,6 +587,7 @@
         private CCWin.SkinControl.SkinButton skinButton_back;
         private CCWin.SkinControl.SkinButton skinButton_forward;
         private CCWin.SkinToolTip skinToolTip1;
+        private CCWin.SkinControl.SkinTextBox skinTextBox1;
     }
 }
 
