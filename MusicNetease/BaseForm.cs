@@ -156,6 +156,9 @@ namespace MusicNetease
             this.skinPanel_top.Width = this.Width;
             this.skinPanel_top.Left = 0;
             this.skinPanel_top.Top = 0;
+            this.skinPanel_Bottom.Width = this.Width;
+            this.skinPanel_top.Left = 0;
+            this.skinPanel_top.Top = this.Height-50;
         }
 
         private void skinButton_minimize_Click(object sender, EventArgs e)
@@ -224,6 +227,47 @@ namespace MusicNetease
         {
             CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
             btn.BackgroundImage = global::MusicNetease.Properties.Resources.skin0;
+        }
+
+        private void skinButton_close_MouseEnter(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            skinToolTip1.ShowAlways = true;
+            skinToolTip1.SetToolTip(btn, btn.Tag.ToString());
+        }
+
+        private void skinButton_forward_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton_back_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton_back_MouseHover(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.back1;
+        }
+
+        private void skinButton_back_MouseLeave(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.back0;
+        }
+
+        private void skinButton_forward_MouseHover(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.forward1;
+        }
+
+        private void skinButton_forward_MouseLeave(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.forward0;
         }
     }
 }
