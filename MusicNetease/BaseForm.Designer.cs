@@ -709,6 +709,7 @@
             this.Text = "";
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.ClientSizeChanged += new System.EventHandler(this.BaseForm_ClientSizeChanged);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             this.skinPanel_top.ResumeLayout(false);
             this.skinPanel2.ResumeLayout(false);
             this.skinPanel_user.ResumeLayout(false);
