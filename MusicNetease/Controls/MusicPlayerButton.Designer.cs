@@ -42,13 +42,13 @@
             this.skinLabel_yycd = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_ybfcd = new CCWin.SkinControl.SkinLabel();
             this.skinPanel_otherButtons = new CCWin.SkinControl.SkinPanel();
+            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.skinLabel_playListCount = new CCWin.SkinControl.SkinLabel();
             this.skinButton_openPlayList = new CCWin.SkinControl.SkinButton();
             this.skinButton_Lyric = new CCWin.SkinControl.SkinButton();
             this.skinButton_bfsx = new CCWin.SkinControl.SkinButton();
             this.skinProgressBar_volume = new CCWin.SkinControl.SkinProgressBar();
             this.skinButton_volume = new CCWin.SkinControl.SkinButton();
-            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.skinLabel_playListCount = new CCWin.SkinControl.SkinLabel();
             this.skinPanel_buttons.SuspendLayout();
             this.skinPanel_xys.SuspendLayout();
             this.skinPanel_play.SuspendLayout();
@@ -221,13 +221,13 @@
             this.skinPanel_bfjdt.Controls.Add(this.skinLabel_yycd);
             this.skinPanel_bfjdt.Controls.Add(this.skinLabel_ybfcd);
             this.skinPanel_bfjdt.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_bfjdt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.skinPanel_bfjdt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinPanel_bfjdt.DownBack = null;
             this.skinPanel_bfjdt.Location = new System.Drawing.Point(206, 0);
             this.skinPanel_bfjdt.MouseBack = null;
             this.skinPanel_bfjdt.Name = "skinPanel_bfjdt";
             this.skinPanel_bfjdt.NormlBack = null;
-            this.skinPanel_bfjdt.Size = new System.Drawing.Size(481, 49);
+            this.skinPanel_bfjdt.Size = new System.Drawing.Size(748, 49);
             this.skinPanel_bfjdt.TabIndex = 1;
             // 
             // skinProgressBar_yyjdt
@@ -259,7 +259,7 @@
             this.skinLabel_yycd.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_yycd.BorderColor = System.Drawing.Color.White;
             this.skinLabel_yycd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_yycd.Location = new System.Drawing.Point(438, 16);
+            this.skinLabel_yycd.Location = new System.Drawing.Point(439, 16);
             this.skinLabel_yycd.Name = "skinLabel_yycd";
             this.skinLabel_yycd.Size = new System.Drawing.Size(39, 17);
             this.skinLabel_yycd.TabIndex = 1;
@@ -278,6 +278,7 @@
             this.skinLabel_ybfcd.TabIndex = 0;
             this.skinLabel_ybfcd.Tag = "已播放长度";
             this.skinLabel_ybfcd.Text = "01:30";
+            this.skinLabel_ybfcd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // skinPanel_otherButtons
             // 
@@ -289,7 +290,7 @@
             this.skinPanel_otherButtons.Controls.Add(this.skinProgressBar_volume);
             this.skinPanel_otherButtons.Controls.Add(this.skinButton_volume);
             this.skinPanel_otherButtons.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_otherButtons.Dock = System.Windows.Forms.DockStyle.Left;
+            this.skinPanel_otherButtons.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel_otherButtons.DownBack = null;
             this.skinPanel_otherButtons.Location = new System.Drawing.Point(687, 0);
             this.skinPanel_otherButtons.MouseBack = null;
@@ -297,6 +298,36 @@
             this.skinPanel_otherButtons.NormlBack = null;
             this.skinPanel_otherButtons.Size = new System.Drawing.Size(267, 49);
             this.skinPanel_otherButtons.TabIndex = 2;
+            // 
+            // skinPanel1
+            // 
+            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.Controls.Add(this.skinLabel_playListCount);
+            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel1.DownBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Location = new System.Drawing.Point(226, 16);
+            this.skinPanel1.MouseBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Name = "skinPanel1";
+            this.skinPanel1.NormlBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Radius = 20;
+            this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.Right;
+            this.skinPanel1.Size = new System.Drawing.Size(25, 20);
+            this.skinPanel1.TabIndex = 12;
+            // 
+            // skinLabel_playListCount
+            // 
+            this.skinLabel_playListCount.AutoSize = true;
+            this.skinLabel_playListCount.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_playListCount.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_playListCount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinLabel_playListCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinLabel_playListCount.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_playListCount.Location = new System.Drawing.Point(0, 0);
+            this.skinLabel_playListCount.Name = "skinLabel_playListCount";
+            this.skinLabel_playListCount.Size = new System.Drawing.Size(22, 17);
+            this.skinLabel_playListCount.TabIndex = 0;
+            this.skinLabel_playListCount.Text = "25";
+            this.skinLabel_playListCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // skinButton_openPlayList
             // 
@@ -435,36 +466,6 @@
             this.skinButton_volume.UseVisualStyleBackColor = false;
             this.skinButton_volume.Click += new System.EventHandler(this.skinButton_volume_Click);
             this.skinButton_volume.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // skinPanel1
-            // 
-            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel1.Controls.Add(this.skinLabel_playListCount);
-            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel1.DownBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
-            this.skinPanel1.Location = new System.Drawing.Point(226, 16);
-            this.skinPanel1.MouseBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
-            this.skinPanel1.Name = "skinPanel1";
-            this.skinPanel1.NormlBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
-            this.skinPanel1.Radius = 20;
-            this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.Right;
-            this.skinPanel1.Size = new System.Drawing.Size(25, 20);
-            this.skinPanel1.TabIndex = 12;
-            // 
-            // skinLabel_playListCount
-            // 
-            this.skinLabel_playListCount.AutoSize = true;
-            this.skinLabel_playListCount.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_playListCount.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_playListCount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinLabel_playListCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinLabel_playListCount.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_playListCount.Location = new System.Drawing.Point(0, 0);
-            this.skinLabel_playListCount.Name = "skinLabel_playListCount";
-            this.skinLabel_playListCount.Size = new System.Drawing.Size(22, 17);
-            this.skinLabel_playListCount.TabIndex = 0;
-            this.skinLabel_playListCount.Text = "25";
-            this.skinLabel_playListCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MusicPlayerButton
             // 

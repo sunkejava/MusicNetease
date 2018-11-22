@@ -96,18 +96,6 @@ namespace MusicNetease.Controls
                 default:
                     break;
             }
-            if (btn.Tag.ToString() == "")
-            {
-                
-            }
-            else
-            {
-                btn.Tag = "静音";
-                btn.BackgroundImage = global::MusicNetease.Properties.Resources.volume0;
-                btn.NormlBack = global::MusicNetease.Properties.Resources.volume0;
-                btn.MouseBack = global::MusicNetease.Properties.Resources.volume1;
-                btn.DownBack = global::MusicNetease.Properties.Resources.volume1;
-            }
         }
 
         private void skinButton_Lyric_Click(object sender, EventArgs e)

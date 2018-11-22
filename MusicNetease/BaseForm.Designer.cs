@@ -59,6 +59,7 @@
             this.toolStripMenuItem_lock = new System.Windows.Forms.ToolStripMenuItem();
             this.skinPanel_Bottom = new CCWin.SkinControl.SkinPanel();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
+            this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
             this.skinPanel_top.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             this.skinPanel_user.SuspendLayout();
@@ -68,6 +69,7 @@
             this.skinPanel_buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
+            this.skinPanel_Bottom.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel_top
@@ -671,6 +673,7 @@
             // skinPanel_Bottom
             // 
             this.skinPanel_Bottom.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_Bottom.Controls.Add(this.musicPlayerButton1);
             this.skinPanel_Bottom.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel_Bottom.DownBack = null;
             this.skinPanel_Bottom.Location = new System.Drawing.Point(0, 620);
@@ -686,6 +689,15 @@
             this.skinToolTip1.InitialDelay = 500;
             this.skinToolTip1.OwnerDraw = true;
             this.skinToolTip1.ReshowDelay = 800;
+            // 
+            // musicPlayerButton1
+            // 
+            this.musicPlayerButton1.BackColor = System.Drawing.SystemColors.Control;
+            this.musicPlayerButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.musicPlayerButton1.Location = new System.Drawing.Point(0, 0);
+            this.musicPlayerButton1.Name = "musicPlayerButton1";
+            this.musicPlayerButton1.Size = new System.Drawing.Size(1022, 50);
+            this.musicPlayerButton1.TabIndex = 0;
             // 
             // BaseForm
             // 
@@ -720,6 +732,7 @@
             this.skinPanel_buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).EndInit();
             this.skinContextMenuStrip1.ResumeLayout(false);
+            this.skinPanel_Bottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -755,6 +768,7 @@
         private CCWin.SkinControl.SkinPanel skinPanel_user;
         private CCWin.SkinControl.SkinButton skinButton_User;
         private CCWin.SkinControl.SkinButton skinButton_userDown;
+        private Controls.MusicPlayerButton musicPlayerButton1;
     }
 }
 
