@@ -31,8 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.skinPanel_top = new CCWin.SkinControl.SkinPanel();
+            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.skinPanel_user = new CCWin.SkinControl.SkinPanel();
+            this.skinButton_userDown = new CCWin.SkinControl.SkinButton();
+            this.skinButton_User = new CCWin.SkinControl.SkinButton();
+            this.skinPanel_logme = new CCWin.SkinControl.SkinPanel();
+            this.skinButton_logme = new CCWin.SkinControl.SkinButton();
             this.skinPanel_search = new CCWin.SkinControl.SkinPanel();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
+            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.btnSearch = new CCWin.SkinControl.SkinButton();
+            this.search_text = new CCWin.SkinControl.SkinAlphaWaterTextBox();
             this.skinButton_back = new CCWin.SkinControl.SkinButton();
             this.skinButton_forward = new CCWin.SkinControl.SkinButton();
             this.skinPanel_buttons = new CCWin.SkinControl.SkinPanel();
@@ -52,7 +60,11 @@
             this.skinPanel_Bottom = new CCWin.SkinControl.SkinPanel();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
             this.skinPanel_top.SuspendLayout();
+            this.skinPanel2.SuspendLayout();
+            this.skinPanel_user.SuspendLayout();
+            this.skinPanel_logme.SuspendLayout();
             this.skinPanel_search.SuspendLayout();
+            this.skinPanel1.SuspendLayout();
             this.skinPanel_buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
@@ -62,6 +74,7 @@
             // 
             this.skinPanel_top.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.skinPanel_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinPanel_top.Controls.Add(this.skinPanel2);
             this.skinPanel_top.Controls.Add(this.skinPanel_search);
             this.skinPanel_top.Controls.Add(this.skinPanel_buttons);
             this.skinPanel_top.Controls.Add(this.skinPictureBox_logo);
@@ -76,10 +89,142 @@
             this.skinPanel_top.TabIndex = 0;
             this.skinPanel_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             // 
+            // skinPanel2
+            // 
+            this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel2.Controls.Add(this.skinPanel_user);
+            this.skinPanel2.Controls.Add(this.skinPanel_logme);
+            this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.skinPanel2.DownBack = null;
+            this.skinPanel2.Location = new System.Drawing.Point(583, 0);
+            this.skinPanel2.MouseBack = null;
+            this.skinPanel2.Name = "skinPanel2";
+            this.skinPanel2.NormlBack = null;
+            this.skinPanel2.Size = new System.Drawing.Size(200, 50);
+            this.skinPanel2.TabIndex = 3;
+            this.skinPanel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
+            // 
+            // skinPanel_user
+            // 
+            this.skinPanel_user.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_user.Controls.Add(this.skinButton_userDown);
+            this.skinPanel_user.Controls.Add(this.skinButton_User);
+            this.skinPanel_user.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_user.Dock = System.Windows.Forms.DockStyle.Right;
+            this.skinPanel_user.DownBack = null;
+            this.skinPanel_user.Location = new System.Drawing.Point(51, 0);
+            this.skinPanel_user.MouseBack = null;
+            this.skinPanel_user.Name = "skinPanel_user";
+            this.skinPanel_user.NormlBack = null;
+            this.skinPanel_user.Size = new System.Drawing.Size(149, 50);
+            this.skinPanel_user.TabIndex = 2;
+            this.skinPanel_user.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
+            // 
+            // skinButton_userDown
+            // 
+            this.skinButton_userDown.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.BackgroundImage = global::MusicNetease.Properties.Resources.icon_down0;
+            this.skinButton_userDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.skinButton_userDown.BackRectangle = new System.Drawing.Rectangle(10, 10, 12, 12);
+            this.skinButton_userDown.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_userDown.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_userDown.DownBack = null;
+            this.skinButton_userDown.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.FadeGlow = false;
+            this.skinButton_userDown.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.ImageSize = new System.Drawing.Size(12, 12);
+            this.skinButton_userDown.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.IsDrawBorder = false;
+            this.skinButton_userDown.IsDrawGlass = false;
+            this.skinButton_userDown.Location = new System.Drawing.Point(118, 19);
+            this.skinButton_userDown.MouseBack = null;
+            this.skinButton_userDown.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_userDown.Name = "skinButton_userDown";
+            this.skinButton_userDown.NormlBack = null;
+            this.skinButton_userDown.Size = new System.Drawing.Size(12, 12);
+            this.skinButton_userDown.TabIndex = 7;
+            this.skinButton_userDown.Tag = "换肤";
+            this.skinButton_userDown.UseVisualStyleBackColor = false;
+            this.skinButton_userDown.MouseLeave += new System.EventHandler(this.skinButton_User_MouseLeave);
+            this.skinButton_userDown.MouseHover += new System.EventHandler(this.skinButton_User_MouseHover);
+            // 
+            // skinButton_User
+            // 
+            this.skinButton_User.AutoEllipsis = true;
+            this.skinButton_User.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_User.DownBack = null;
+            this.skinButton_User.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.FadeGlow = false;
+            this.skinButton_User.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.skinButton_User.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.IsDrawBorder = false;
+            this.skinButton_User.IsDrawGlass = false;
+            this.skinButton_User.Location = new System.Drawing.Point(2, 15);
+            this.skinButton_User.MouseBack = null;
+            this.skinButton_User.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_User.Name = "skinButton_User";
+            this.skinButton_User.NormlBack = null;
+            this.skinButton_User.Size = new System.Drawing.Size(112, 23);
+            this.skinButton_User.TabIndex = 0;
+            this.skinButton_User.Text = "DeclineAberdeen";
+            this.skinButton_User.UseVisualStyleBackColor = false;
+            this.skinButton_User.Click += new System.EventHandler(this.skinButton_User_Click);
+            this.skinButton_User.MouseLeave += new System.EventHandler(this.skinButton_User_MouseLeave);
+            this.skinButton_User.MouseHover += new System.EventHandler(this.skinButton_User_MouseHover);
+            // 
+            // skinPanel_logme
+            // 
+            this.skinPanel_logme.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_logme.Controls.Add(this.skinButton_logme);
+            this.skinPanel_logme.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_logme.DownBack = null;
+            this.skinPanel_logme.Location = new System.Drawing.Point(15, 10);
+            this.skinPanel_logme.MouseBack = null;
+            this.skinPanel_logme.Name = "skinPanel_logme";
+            this.skinPanel_logme.NormlBack = null;
+            this.skinPanel_logme.Radius = 30;
+            this.skinPanel_logme.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinPanel_logme.Size = new System.Drawing.Size(30, 30);
+            this.skinPanel_logme.TabIndex = 1;
+            // 
+            // skinButton_logme
+            // 
+            this.skinButton_logme.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.BackgroundImage = global::MusicNetease.Properties.Resources.melog;
+            this.skinButton_logme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton_logme.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_logme.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_logme.DownBack = null;
+            this.skinButton_logme.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton_logme.FadeGlow = false;
+            this.skinButton_logme.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.IsDrawBorder = false;
+            this.skinButton_logme.IsDrawGlass = false;
+            this.skinButton_logme.Location = new System.Drawing.Point(0, 0);
+            this.skinButton_logme.MouseBack = null;
+            this.skinButton_logme.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_logme.Name = "skinButton_logme";
+            this.skinButton_logme.NormlBack = null;
+            this.skinButton_logme.Size = new System.Drawing.Size(30, 30);
+            this.skinButton_logme.TabIndex = 0;
+            this.skinButton_logme.UseVisualStyleBackColor = false;
+            // 
             // skinPanel_search
             // 
             this.skinPanel_search.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_search.Controls.Add(this.skinTextBox1);
+            this.skinPanel_search.Controls.Add(this.skinPanel1);
             this.skinPanel_search.Controls.Add(this.skinButton_back);
             this.skinPanel_search.Controls.Add(this.skinButton_forward);
             this.skinPanel_search.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -89,52 +234,58 @@
             this.skinPanel_search.MouseBack = null;
             this.skinPanel_search.Name = "skinPanel_search";
             this.skinPanel_search.NormlBack = null;
-            this.skinPanel_search.Size = new System.Drawing.Size(360, 50);
+            this.skinPanel_search.Size = new System.Drawing.Size(310, 50);
             this.skinPanel_search.TabIndex = 2;
             this.skinPanel_search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             // 
-            // skinTextBox1
+            // skinPanel1
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[0];
-            this.skinTextBox1.Location = new System.Drawing.Point(86, 10);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(238, 28);
+            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.Controls.Add(this.btnSearch);
+            this.skinPanel1.Controls.Add(this.search_text);
+            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel1.DownBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Location = new System.Drawing.Point(89, 14);
+            this.skinPanel1.MouseBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Name = "skinPanel1";
+            this.skinPanel1.NormlBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
+            this.skinPanel1.Radius = 20;
+            this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinPanel1.Size = new System.Drawing.Size(216, 23);
+            this.skinPanel1.TabIndex = 9;
             // 
+            // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(159)))), ((int)(((byte)(215)))));
+            this.btnSearch.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DownBack = global::MusicNetease.Properties.Resources.search1;
+            this.btnSearch.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.btnSearch.Location = new System.Drawing.Point(188, 2);
+            this.btnSearch.MouseBack = global::MusicNetease.Properties.Resources.search1;
+            this.btnSearch.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.NormlBack = global::MusicNetease.Properties.Resources.search0;
+            this.btnSearch.Size = new System.Drawing.Size(20, 20);
+            this.btnSearch.TabIndex = 132;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            this.skinTextBox1.SkinTxt.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(228, 18);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "搜索音乐，视频，歌词，电台";
-            this.skinTextBox1.TabIndex = 9;
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "搜索音乐，视频，歌词，电台";
-            this.skinTextBox1.WordWrap = true;
+            // search_text
+            // 
+            this.search_text.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_text.BackAlpha = 0;
+            this.search_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.search_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.search_text.Location = new System.Drawing.Point(8, 4);
+            this.search_text.Name = "search_text";
+            this.search_text.Size = new System.Drawing.Size(180, 14);
+            this.search_text.TabIndex = 0;
+            this.search_text.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.search_text.WaterFont = new System.Drawing.Font("微软雅黑", 9F);
+            this.search_text.WaterText = "搜索音乐，视频，歌词，电台";
             // 
             // skinButton_back
             // 
@@ -148,16 +299,17 @@
             this.skinButton_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skinButton_back.DownBack = null;
             this.skinButton_back.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_back.FadeGlow = false;
             this.skinButton_back.GlowColor = System.Drawing.Color.Transparent;
             this.skinButton_back.ImageSize = new System.Drawing.Size(20, 20);
             this.skinButton_back.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_back.IsDrawGlass = false;
-            this.skinButton_back.Location = new System.Drawing.Point(21, 16);
+            this.skinButton_back.Location = new System.Drawing.Point(21, 13);
             this.skinButton_back.MouseBack = null;
             this.skinButton_back.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_back.Name = "skinButton_back";
             this.skinButton_back.NormlBack = null;
-            this.skinButton_back.Size = new System.Drawing.Size(26, 16);
+            this.skinButton_back.Size = new System.Drawing.Size(30, 24);
             this.skinButton_back.TabIndex = 8;
             this.skinButton_back.Tag = "后退";
             this.skinButton_back.UseVisualStyleBackColor = false;
@@ -178,16 +330,17 @@
             this.skinButton_forward.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skinButton_forward.DownBack = null;
             this.skinButton_forward.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_forward.FadeGlow = false;
             this.skinButton_forward.GlowColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.ImageSize = new System.Drawing.Size(16, 16);
             this.skinButton_forward.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_forward.IsDrawGlass = false;
-            this.skinButton_forward.Location = new System.Drawing.Point(44, 16);
+            this.skinButton_forward.Location = new System.Drawing.Point(49, 13);
             this.skinButton_forward.MouseBack = null;
             this.skinButton_forward.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.Name = "skinButton_forward";
             this.skinButton_forward.NormlBack = null;
-            this.skinButton_forward.Size = new System.Drawing.Size(26, 16);
+            this.skinButton_forward.Size = new System.Drawing.Size(30, 24);
             this.skinButton_forward.TabIndex = 7;
             this.skinButton_forward.Tag = "前进";
             this.skinButton_forward.UseVisualStyleBackColor = false;
@@ -234,7 +387,7 @@
             this.skinButton_skin.InnerBorderColor = System.Drawing.Color.Transparent;
             this.skinButton_skin.IsDrawBorder = false;
             this.skinButton_skin.IsDrawGlass = false;
-            this.skinButton_skin.Location = new System.Drawing.Point(22, 16);
+            this.skinButton_skin.Location = new System.Drawing.Point(6, 16);
             this.skinButton_skin.MouseBack = null;
             this.skinButton_skin.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_skin.Name = "skinButton_skin";
@@ -265,7 +418,7 @@
             this.skinButton_email.InnerBorderColor = System.Drawing.Color.Transparent;
             this.skinButton_email.IsDrawBorder = false;
             this.skinButton_email.IsDrawGlass = false;
-            this.skinButton_email.Location = new System.Drawing.Point(53, 16);
+            this.skinButton_email.Location = new System.Drawing.Point(46, 16);
             this.skinButton_email.MouseBack = null;
             this.skinButton_email.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_email.Name = "skinButton_email";
@@ -557,7 +710,12 @@
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.ClientSizeChanged += new System.EventHandler(this.BaseForm_ClientSizeChanged);
             this.skinPanel_top.ResumeLayout(false);
+            this.skinPanel2.ResumeLayout(false);
+            this.skinPanel_user.ResumeLayout(false);
+            this.skinPanel_logme.ResumeLayout(false);
             this.skinPanel_search.ResumeLayout(false);
+            this.skinPanel1.ResumeLayout(false);
+            this.skinPanel1.PerformLayout();
             this.skinPanel_buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).EndInit();
             this.skinContextMenuStrip1.ResumeLayout(false);
@@ -587,7 +745,15 @@
         private CCWin.SkinControl.SkinButton skinButton_back;
         private CCWin.SkinControl.SkinButton skinButton_forward;
         private CCWin.SkinToolTip skinToolTip1;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
+        private CCWin.SkinControl.SkinPanel skinPanel1;
+        private CCWin.SkinControl.SkinAlphaWaterTextBox search_text;
+        private CCWin.SkinControl.SkinButton btnSearch;
+        private CCWin.SkinControl.SkinPanel skinPanel2;
+        private CCWin.SkinControl.SkinPanel skinPanel_logme;
+        private CCWin.SkinControl.SkinButton skinButton_logme;
+        private CCWin.SkinControl.SkinPanel skinPanel_user;
+        private CCWin.SkinControl.SkinButton skinButton_User;
+        private CCWin.SkinControl.SkinButton skinButton_userDown;
     }
 }
 

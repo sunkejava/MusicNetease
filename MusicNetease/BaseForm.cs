@@ -269,5 +269,22 @@ namespace MusicNetease
             CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
             btn.BackgroundImage = global::MusicNetease.Properties.Resources.forward0;
         }
+
+        private void skinButton_User_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton_User_MouseHover(object sender, EventArgs e)
+        {
+            this.skinButton_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.skinButton_userDown.BackgroundImage = global::MusicNetease.Properties.Resources.icon_down1;
+        }
+
+        private void skinButton_User_MouseLeave(object sender, EventArgs e)
+        {
+            this.skinButton_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.skinButton_userDown.BackgroundImage = global::MusicNetease.Properties.Resources.icon_down0;
+        }
     }
 }

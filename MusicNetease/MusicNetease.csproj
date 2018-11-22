@@ -128,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\icon_down0.png" />
+    <None Include="Resources\icon_down1.png" />
+    <None Include="Resources\melog.jpg" />
+    <None Include="Resources\search0.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\skinPanel1.NormlBack.png" />
     <None Include="Resources\forward0.png" />
     <None Include="Resources\back1.png" />
     <None Include="Resources\back0.png" />
