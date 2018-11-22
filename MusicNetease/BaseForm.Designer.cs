@@ -279,7 +279,7 @@
             this.search_text.BackAlpha = 0;
             this.search_text.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.search_text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.search_text.Location = new System.Drawing.Point(8, 4);
+            this.search_text.Location = new System.Drawing.Point(8, 5);
             this.search_text.Name = "search_text";
             this.search_text.Size = new System.Drawing.Size(180, 14);
             this.search_text.TabIndex = 0;

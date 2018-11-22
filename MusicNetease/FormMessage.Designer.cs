@@ -158,6 +158,7 @@
             this.skinButton_No.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_No.DownBack = null;
             this.skinButton_No.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_No.IsDrawGlass = false;
             this.skinButton_No.Location = new System.Drawing.Point(216, 3);
             this.skinButton_No.MouseBack = null;
             this.skinButton_No.MouseBaseColor = System.Drawing.Color.Transparent;
@@ -177,6 +178,7 @@
             this.skinButton_ok.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_ok.DownBack = null;
             this.skinButton_ok.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_ok.IsDrawGlass = false;
             this.skinButton_ok.Location = new System.Drawing.Point(58, 3);
             this.skinButton_ok.MouseBack = null;
             this.skinButton_ok.MouseBaseColor = System.Drawing.Color.Transparent;

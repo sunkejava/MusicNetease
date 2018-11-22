@@ -73,6 +73,12 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MusicPlayerButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MusicPlayerButton.Designer.cs">
+      <DependentUpon>MusicPlayerButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="decline\Enums.cs" />
     <Compile Include="FormMessage.cs">
       <SubType>Form</SubType>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MusicPlayerButton.resx">
+      <DependentUpon>MusicPlayerButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessage.resx">
       <DependentUpon>FormMessage.cs</DependentUpon>
@@ -128,6 +137,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\playList0.png" />
+    <None Include="Resources\playList1.png" />
+    <None Include="Resources\music_lyrics1.png" />
+    <None Include="Resources\lyric0.png" />
+    <None Include="Resources\lyric1.png" />
+    <None Include="Resources\music_lyrics0.png" />
+    <None Include="Resources\sxbf1.png" />
+    <None Include="Resources\lbxh0.png" />
+    <None Include="Resources\lbxh1.png" />
+    <None Include="Resources\dqxh0.png" />
+    <None Include="Resources\dqxh1.png" />
+    <None Include="Resources\sjbf0.png" />
+    <None Include="Resources\sjbf1.png" />
+    <None Include="Resources\sxbf0.png" />
+    <None Include="Resources\novolume1.png" />
+    <None Include="Resources\novolume0.png" />
+    <None Include="Resources\volume0.png" />
+    <None Include="Resources\volume1.png" />
+    <None Include="Resources\xys.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\sys.png" />
     <None Include="Resources\icon_down0.png" />
     <None Include="Resources\icon_down1.png" />
     <None Include="Resources\melog.jpg" />
@@ -160,6 +191,7 @@
     <None Include="Resources\close0.png" />
     <None Include="Resources\close1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
