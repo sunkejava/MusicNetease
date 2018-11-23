@@ -57,9 +57,7 @@
             this.toolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Set = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_lock = new System.Windows.Forms.ToolStripMenuItem();
-            this.skinPanel_Bottom = new CCWin.SkinControl.SkinPanel();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
-            this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
             this.skinPanel_top.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             this.skinPanel_user.SuspendLayout();
@@ -69,7 +67,6 @@
             this.skinPanel_buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
-            this.skinPanel_Bottom.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel_top
@@ -670,34 +667,12 @@
             this.toolStripMenuItem_lock.Text = "锁定桌面歌词";
             this.toolStripMenuItem_lock.Click += new System.EventHandler(this.toolStripMenuItem_lock_Click);
             // 
-            // skinPanel_Bottom
-            // 
-            this.skinPanel_Bottom.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_Bottom.Controls.Add(this.musicPlayerButton1);
-            this.skinPanel_Bottom.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_Bottom.DownBack = null;
-            this.skinPanel_Bottom.Location = new System.Drawing.Point(0, 620);
-            this.skinPanel_Bottom.MouseBack = null;
-            this.skinPanel_Bottom.Name = "skinPanel_Bottom";
-            this.skinPanel_Bottom.NormlBack = null;
-            this.skinPanel_Bottom.Size = new System.Drawing.Size(1022, 50);
-            this.skinPanel_Bottom.TabIndex = 1;
-            // 
             // skinToolTip1
             // 
             this.skinToolTip1.AutoPopDelay = 5000;
             this.skinToolTip1.InitialDelay = 500;
             this.skinToolTip1.OwnerDraw = true;
             this.skinToolTip1.ReshowDelay = 800;
-            // 
-            // musicPlayerButton1
-            // 
-            this.musicPlayerButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.musicPlayerButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.musicPlayerButton1.Location = new System.Drawing.Point(0, 0);
-            this.musicPlayerButton1.Name = "musicPlayerButton1";
-            this.musicPlayerButton1.Size = new System.Drawing.Size(1022, 50);
-            this.musicPlayerButton1.TabIndex = 0;
             // 
             // BaseForm
             // 
@@ -706,7 +681,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1022, 670);
             this.ControlBox = false;
-            this.Controls.Add(this.skinPanel_Bottom);
             this.Controls.Add(this.skinPanel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -732,7 +706,6 @@
             this.skinPanel_buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).EndInit();
             this.skinContextMenuStrip1.ResumeLayout(false);
-            this.skinPanel_Bottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -754,7 +727,6 @@
         private CCWin.SkinControl.SkinButton skinButton_email;
         private CCWin.SkinControl.SkinButton skinButton_Set;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
-        private CCWin.SkinControl.SkinPanel skinPanel_Bottom;
         private CCWin.SkinControl.SkinPanel skinPanel_search;
         private CCWin.SkinControl.SkinButton skinButton_back;
         private CCWin.SkinControl.SkinButton skinButton_forward;
@@ -768,7 +740,6 @@
         private CCWin.SkinControl.SkinPanel skinPanel_user;
         private CCWin.SkinControl.SkinButton skinButton_User;
         private CCWin.SkinControl.SkinButton skinButton_userDown;
-        private Controls.MusicPlayerButton musicPlayerButton1;
     }
 }
 

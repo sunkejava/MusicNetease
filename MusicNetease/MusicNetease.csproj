@@ -79,6 +79,12 @@
     <Compile Include="Controls\MusicPlayerButton.Designer.cs">
       <DependentUpon>MusicPlayerButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PanelControl.Designer.cs">
+      <DependentUpon>PanelControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="decline\Enums.cs" />
     <Compile Include="FormMessage.cs">
       <SubType>Form</SubType>
@@ -86,8 +92,18 @@
     <Compile Include="FormMessage.Designer.cs">
       <DependentUpon>FormMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PaintDraw.cs" />
+    <Compile Include="Utils\RoundPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessage.resx">
       <DependentUpon>FormMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -137,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\melog2.png" />
     <None Include="Resources\playList0.png" />
     <None Include="Resources\playList1.png" />
     <None Include="Resources\music_lyrics1.png" />

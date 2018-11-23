@@ -156,9 +156,6 @@ namespace MusicNetease
             this.skinPanel_top.Width = this.Width;
             this.skinPanel_top.Left = 0;
             this.skinPanel_top.Top = 0;
-            this.skinPanel_Bottom.Width = this.Width;
-            this.skinPanel_Bottom.Left = 0;
-            this.skinPanel_Bottom.Top = this.Height-50;
         }
 
         private void skinButton_minimize_Click(object sender, EventArgs e)
@@ -285,6 +282,32 @@ namespace MusicNetease
         {
             this.skinButton_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.skinButton_userDown.BackgroundImage = global::MusicNetease.Properties.Resources.icon_down0;
+        }
+
+        private void skinPanel3_Paint(object sender, PaintEventArgs e)
+        {
+            CCWin.SkinControl.SkinPanel skinPanel = sender as CCWin.SkinControl.SkinPanel;
+            Utils.PaintDraw.Draw(e.ClipRectangle, e.Graphics, skinPanel.Width, false, skinPanel.BackColor, skinPanel.BackColor);
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+            g.DrawString("其实我是个Panel", new Font("微软雅黑", 9, FontStyle.Regular), new SolidBrush(Color.White), new PointF(10, 10));
+        }
+
+        private void panel1_Resize(object sender, EventArgs e)
+        {
+            Utils.RoundPanel rpnel = new Utils.RoundPanel();
+            rpnel.Back = Color.FromArgb(0, 255, 92, 138);
+            rpnel.MatrixRound = 50;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void roundPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
