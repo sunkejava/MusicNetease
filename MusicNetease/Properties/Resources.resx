@@ -291,4 +291,76 @@
   <data name="melog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\melog2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bdyy0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bdyy0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bdyy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bdyy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bflb0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bflb0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bflb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bflb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dt0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dt0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FM0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FM0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FM1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FM1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lxr0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lxr0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lxr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lxr1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="todown0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\todown0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="todown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\todown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tv0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tv0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tv1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wdsc0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wdsc0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wdsc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wdsc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yun0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yun0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yun1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yun1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

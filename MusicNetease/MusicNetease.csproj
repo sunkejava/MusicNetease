@@ -73,6 +73,18 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuControl.Designer.cs">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuListControl.Designer.cs">
+      <DependentUpon>MenuListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MusicPlayerButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +118,12 @@
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MenuControl.resx">
+      <DependentUpon>MenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MenuListControl.resx">
+      <DependentUpon>MenuListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MusicPlayerButton.resx">
       <DependentUpon>MusicPlayerButton.cs</DependentUpon>
@@ -156,6 +174,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\todown0.png" />
+    <None Include="Resources\todown1.png" />
+    <None Include="Resources\add0.png" />
+    <None Include="Resources\music1.png" />
+    <None Include="Resources\FM0.png" />
+    <None Include="Resources\FM1.png" />
+    <None Include="Resources\tv0.png" />
+    <None Include="Resources\tv1.png" />
+    <None Include="Resources\lxr0.png" />
+    <None Include="Resources\lxr1.png" />
+    <None Include="Resources\bdyy0.png" />
+    <None Include="Resources\bdyy1.png" />
+    <None Include="Resources\download0.png" />
+    <None Include="Resources\download1.png" />
+    <None Include="Resources\yun0.png" />
+    <None Include="Resources\yun1.png" />
+    <None Include="Resources\dt0.png" />
+    <None Include="Resources\dt1.png" />
+    <None Include="Resources\wdsc0.png" />
+    <None Include="Resources\wdsc1.png" />
+    <None Include="Resources\bflb0.png" />
+    <None Include="Resources\bflb1.png" />
+    <None Include="Resources\music0.png" />
     <None Include="Resources\melog2.png" />
     <None Include="Resources\playList0.png" />
     <None Include="Resources\playList1.png" />
