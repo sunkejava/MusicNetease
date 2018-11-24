@@ -242,10 +242,10 @@
             // 
             // skinPanel_yycd
             // 
+            this.skinPanel_yycd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.skinPanel_yycd.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel_yycd.Controls.Add(this.skinLabel_yycd);
             this.skinPanel_yycd.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_yycd.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel_yycd.DownBack = null;
             this.skinPanel_yycd.Location = new System.Drawing.Point(434, 0);
             this.skinPanel_yycd.MouseBack = null;
@@ -338,6 +338,7 @@
             // 
             // skinPanel_otherButtons
             // 
+            this.skinPanel_otherButtons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.skinPanel_otherButtons.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel_otherButtons.Controls.Add(this.skinPanel1);
             this.skinPanel_otherButtons.Controls.Add(this.skinButton_openPlayList);
@@ -346,7 +347,6 @@
             this.skinPanel_otherButtons.Controls.Add(this.skinProgressBar_volume);
             this.skinPanel_otherButtons.Controls.Add(this.skinButton_volume);
             this.skinPanel_otherButtons.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_otherButtons.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel_otherButtons.DownBack = null;
             this.skinPanel_otherButtons.Location = new System.Drawing.Point(687, 0);
             this.skinPanel_otherButtons.MouseBack = null;
@@ -382,8 +382,12 @@
             this.skinLabel_playListCount.Name = "skinLabel_playListCount";
             this.skinLabel_playListCount.Size = new System.Drawing.Size(22, 17);
             this.skinLabel_playListCount.TabIndex = 0;
+            this.skinLabel_playListCount.Tag = "打开播放列表";
             this.skinLabel_playListCount.Text = "25";
             this.skinLabel_playListCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.skinLabel_playListCount.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            this.skinLabel_playListCount.MouseLeave += new System.EventHandler(this.skinButton_openPlayList_MouseLeave);
+            this.skinLabel_playListCount.MouseHover += new System.EventHandler(this.skinButton_openPlayList_MouseHover);
             // 
             // skinButton_openPlayList
             // 
@@ -412,7 +416,10 @@
             this.skinButton_openPlayList.TabIndex = 11;
             this.skinButton_openPlayList.Tag = "打开播放列表";
             this.skinButton_openPlayList.UseVisualStyleBackColor = false;
+            this.skinButton_openPlayList.Click += new System.EventHandler(this.skinButton_openPlayList_Click);
             this.skinButton_openPlayList.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            this.skinButton_openPlayList.MouseLeave += new System.EventHandler(this.skinButton_openPlayList_MouseLeave);
+            this.skinButton_openPlayList.MouseHover += new System.EventHandler(this.skinButton_openPlayList_MouseHover);
             // 
             // skinButton_Lyric
             // 
@@ -443,6 +450,8 @@
             this.skinButton_Lyric.UseVisualStyleBackColor = false;
             this.skinButton_Lyric.Click += new System.EventHandler(this.skinButton_Lyric_Click);
             this.skinButton_Lyric.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            this.skinButton_Lyric.MouseLeave += new System.EventHandler(this.skinButton_Lyric_MouseLeave);
+            this.skinButton_Lyric.MouseHover += new System.EventHandler(this.skinButton_Lyric_MouseHover);
             // 
             // skinButton_bfsx
             // 
@@ -473,6 +482,8 @@
             this.skinButton_bfsx.UseVisualStyleBackColor = false;
             this.skinButton_bfsx.Click += new System.EventHandler(this.skinButton_bfsx_Click);
             this.skinButton_bfsx.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            this.skinButton_bfsx.MouseLeave += new System.EventHandler(this.skinButton_bfsx_MouseLeave);
+            this.skinButton_bfsx.MouseHover += new System.EventHandler(this.skinButton_bfsx_MouseHover);
             // 
             // skinProgressBar_volume
             // 

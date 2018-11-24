@@ -118,5 +118,86 @@ namespace MusicNetease.Controls
                 btn.DownBack = global::MusicNetease.Properties.Resources.lyric1;
             }
         }
+
+        private void skinButton_bfsx_MouseHover(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            switch (btn.Tag.ToString())
+            {
+                case "顺序播放":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.sxbf1;
+                    break;
+                case "列表循环":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.lbxh1;
+                    break;
+                case "单曲循环":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.dqxh1;
+                    break;
+                case "随机播放":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.sjbf1;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void skinButton_bfsx_MouseLeave(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            switch (btn.Tag.ToString())
+            {
+                case "顺序播放":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.sxbf0;
+                    break;
+                case "列表循环":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.lbxh0;
+                    break;
+                case "单曲循环":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.dqxh0;
+                    break;
+                case "随机播放":
+                    btn.BackgroundImage = global::MusicNetease.Properties.Resources.sjbf0;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void skinButton_Lyric_MouseHover(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric1;
+        }
+
+        private void skinButton_Lyric_MouseLeave(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric0;
+        }
+
+        private void skinButton_openPlayList_MouseHover(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.playList1;
+        }
+
+        private void skinButton_openPlayList_MouseLeave(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            btn.BackgroundImage = global::MusicNetease.Properties.Resources.playList0;
+        }
+
+        private void skinButton_openPlayList_Click(object sender, EventArgs e)
+        {
+            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+            if (btn.Tag.ToString() == "打开播放列表")
+            {
+                btn.Tag = "关闭播放列表";
+            }
+            else
+            {
+                btn.Tag = "打开播放列表";
+            }
+        }
     }
 }
