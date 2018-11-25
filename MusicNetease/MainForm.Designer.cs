@@ -59,6 +59,8 @@
             // 
             // menuListControl1
             // 
+            this.menuListControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.menuListControl1.BackColor = System.Drawing.Color.Transparent;
             this.menuListControl1.Location = new System.Drawing.Point(0, 50);
             this.menuListControl1.Name = "menuListControl1";
