@@ -62,11 +62,11 @@
             this.skinPanel_sc.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel_sc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skinPanel_sc.DownBack = null;
-            this.skinPanel_sc.Location = new System.Drawing.Point(6, 0);
+            this.skinPanel_sc.Location = new System.Drawing.Point(3, 0);
             this.skinPanel_sc.MouseBack = null;
             this.skinPanel_sc.Name = "skinPanel_sc";
             this.skinPanel_sc.NormlBack = null;
-            this.skinPanel_sc.Size = new System.Drawing.Size(159, 28);
+            this.skinPanel_sc.Size = new System.Drawing.Size(162, 28);
             this.skinPanel_sc.TabIndex = 0;
             this.skinPanel_sc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_sc_MouseDown);
             // 

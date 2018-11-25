@@ -30,6 +30,7 @@
         {
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
+            this.menuListControl1 = new MusicNetease.Controls.MenuListControl();
             this.skinPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,13 +57,23 @@
             this.musicPlayerButton1.Size = new System.Drawing.Size(1014, 49);
             this.musicPlayerButton1.TabIndex = 2;
             // 
+            // menuListControl1
+            // 
+            this.menuListControl1.BackColor = System.Drawing.Color.Transparent;
+            this.menuListControl1.Location = new System.Drawing.Point(0, 50);
+            this.menuListControl1.Name = "menuListControl1";
+            this.menuListControl1.Size = new System.Drawing.Size(175, 568);
+            this.menuListControl1.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(1022, 670);
+            this.Controls.Add(this.menuListControl1);
             this.Controls.Add(this.skinPanel3);
             this.Name = "MainForm";
             this.Controls.SetChildIndex(this.skinPanel3, 0);
+            this.Controls.SetChildIndex(this.menuListControl1, 0);
             this.skinPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -72,5 +83,6 @@
 
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private Controls.MusicPlayerButton musicPlayerButton1;
+        private Controls.MenuListControl menuListControl1;
     }
 }
