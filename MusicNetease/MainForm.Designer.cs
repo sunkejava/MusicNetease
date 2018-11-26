@@ -31,6 +31,7 @@
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
             this.menuListControl1 = new MusicNetease.Controls.MenuListControl();
+            this.mainTabControl1 = new MusicNetease.Controls.MainTabControl();
             this.skinPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +68,27 @@
             this.menuListControl1.Size = new System.Drawing.Size(175, 568);
             this.menuListControl1.TabIndex = 2;
             // 
+            // mainTabControl1
+            // 
+            this.mainTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainTabControl1.Location = new System.Drawing.Point(178, 52);
+            this.mainTabControl1.Name = "mainTabControl1";
+            this.mainTabControl1.Size = new System.Drawing.Size(840, 566);
+            this.mainTabControl1.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(1022, 670);
+            this.Controls.Add(this.mainTabControl1);
             this.Controls.Add(this.menuListControl1);
             this.Controls.Add(this.skinPanel3);
             this.Name = "MainForm";
             this.Controls.SetChildIndex(this.skinPanel3, 0);
             this.Controls.SetChildIndex(this.menuListControl1, 0);
+            this.Controls.SetChildIndex(this.mainTabControl1, 0);
             this.skinPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -86,5 +99,6 @@
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private Controls.MusicPlayerButton musicPlayerButton1;
         private Controls.MenuListControl menuListControl1;
+        private Controls.MainTabControl mainTabControl1;
     }
 }
