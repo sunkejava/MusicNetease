@@ -321,7 +321,7 @@
             // 
             // menuControl_fxyy
             // 
-            this.menuControl_fxyy.isSelect = false;
+            this.menuControl_fxyy.isSelect = true;
             this.menuControl_fxyy.Location = new System.Drawing.Point(0, 34);
             this.menuControl_fxyy.menuName = "skinLabel_name";
             this.menuControl_fxyy.menuText = "发现音乐";
@@ -333,6 +333,7 @@
             this.menuControl_fxyy.setScColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(234)))));
             this.menuControl_fxyy.Size = new System.Drawing.Size(177, 28);
             this.menuControl_fxyy.TabIndex = 1;
+            this.menuControl_fxyy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuControl_fxyy_MouseDown);
             // 
             // skinLabel1
             // 

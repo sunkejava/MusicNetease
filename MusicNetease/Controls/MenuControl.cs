@@ -18,7 +18,7 @@ namespace MusicNetease.Controls
             InitializeComponent();
         }
 
-        private void skinPanel_sc_MouseDown(object sender, MouseEventArgs e)
+        public void skinPanel_sc_MouseDown(object sender, MouseEventArgs e)
         {
             //原色  245, 245, 247
             skinPanel_dc.BackColor = Color.FromArgb(255, 92, 138);
