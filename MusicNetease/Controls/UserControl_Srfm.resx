@@ -117,68 +117,107 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="skinTabControl_Main.PageArrowDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAA/UlEQVRIS9XTuwqCUBjA8bbu
-        9/tQgc2N9QpNDb5Dm4M4uvkGghA4C06ighD0CCFBm2/hrovmFwSHOFnD9w0NPziX7/y3U8nzvIrtv6I1
-        bGTROjayaAMbWbSJDaItbGTRNjayaAcbRLvYINr7xPf9iSzLa1EUNyxJkgTHcaa8N6A0CsE4jk/F+s4q
-        zkwIwwwPRPufBEEwVRRlmyTJudg/g2maXlRV3XmeN2NnWRAdlDEMY2lZ1j7Lsmvh5rruQdf1FW/25WsU
-        aJomhGF4jKJIgTVvhgXR4S9s216Yprnk3b2D6AgbWXSMDaITbGRR+G6oyKLw3VCRRefY/iWazx+KA2vg
-        vXvIVAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="skinTabControl_Main.PageArrowHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABMElEQVRIS7XTTUuEQADG8b5A
-        bS8bvVBU9LJFL9a2e+4e+x32ZB9ED3rtJnj0IJ7Eq4QggjfvHvfQ1WsioTZPsFAxVodnhR/MjM4fZJil
-        tm2X2RBdYVtYtMeG6CobomtsiK6zIbrBhmifDdFNNkS32BDdZkN0hw3RXTZE99gQ3e8Sx/Gpruv3qqo+
-        fCXWRlEUncn2AKIHXUzTHBVF8SLG3x6xFhmGMRZD6T5ED7ukaTrQNO2xLMuZmH8+VVW9iuAkSZJzMZXu
-        Q/ToN67rKp7nTeu6fmua5j0IgifHcW5l384hevwX27bHWZZpeZ4/W5aF35Z+N4foyX+EYaj4vn8ne/cT
-        ojhFKkQHbIjiFKkQvWBD9JIN0Ss2RK/ZEL1hQ1RhQxT3mApRXD0qRIdsC4i2ww8FSp3+1Du7eQAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="skinTabControl_Main.PageCloseHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAB/SURBVChTY/j//z9JGJnDCsV4xWCMM2gYlxhYA8iEMxwdp/+DMIgNw2hiYJtQNHB2nfvPP/0+
-        kPv/DIgG8bFpgFsPUiSx+ud/qfX/wTRMMxTDnYSiCaQYhmFiQAxXh6KYWBtI9gNcA5IkGKOJYXoaCeMS
-        Q/E0yASwKbjF/jMAACTuwcqqE/ECAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="skinTabControl_Main.PageCloseNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACLSURBVChTnZGxDYAwDAQjUSBRMQAFLW2KDEHPAOxBwRSsa3yRsVBEY5CexPa/30mSiITAr1MM
-        itHAvv/IwasCgkmRFUWxKGZbiclTh1cFdMjrcQnQb1dsrK8cInguKE/RCGcT4+QCrLD3jg0ZR+o+Egdk
-        ZsZoO5+Wpw7vn0P4DGxCt4RV6B0CLy3pBgS7pxqDLyCRAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="skinTabControl_Main.PageDown" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADsAAAAiCAYAAADh/KHgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADmSURBVGhD5dirCkJRFEXR6xvfegWDYDAYDBaDwWKwGAwWg8FgMBgEQRAE//26V1hwvmF6YIYV
-        Rzw7i1cqiqJBT05jm/RSbJteiu3SS7EDeil2RC/FjukZW44xoSensVN6KXZGL8XO6RlbibGgJ6exS3rG
-        VmOs6Mlp7JqesbUYG3pyCluPsaUnp7D63O7oyWnsnp6x+skf6MkpbCvGkZ6cwupscaInp7CdGGd6cgqr
-        G82FnpzC9mJc6ckpbD/GjZ6cxt7pGatT44OenMIOYzzpyWnsi56xeYw3PTmN/dBLsV96f4bN8h/rfZFe
-        kLazHAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="skinTabControl_Main.PageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADsAAAAiCAYAAADh/KHgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABCElEQVRoQ93Yq05DURRF0cuz
-        QCAhpGmgIbyKQuGQdZU4LBKJRdZWViKxSBwSh8NhUKiKCn7hsqbYyf2GeZIplhxynyZvpW3bXXs4C7tv
-        r4vt2yvsasaRPZyFPbHXxV7a62Kv7BV2LePaHs7C3tgr7HrG2B7Owk7sFXYj49YeTrCbGXf2cILtZdzb
-        wwl2K+PBHk6w2xmP9nCC3cl4socTLMft1B5OsHsZM3s4wXLJz+3hBHuQ8WwPJ1i+LV7s4QQ7yHi1hxPs
-        YcabPZxghxnv9nCCPc74sIezsJ/2CstX45c9nGBPM77t4QR7lvFjDyfY84xfezjBXmQs7OEs7NJeYUcZ
-        f/aaphn9A6fPTbWk7W9QAAAAAElFTkSuQmCC
-</value>
+  <data name="skinWaterTextBox1.Text" xml:space="preserve">
+    <value>One two three
+一二三
+I've been running from the pain
+我已脱离痛境
+Trying not to feel the same
+试着不再重蹈覆辙
+But it's a shame that we're sinking
+但遗憾的是我们都在沉沦
+See, my confidence is shaking
+看见我的信心在动摇了
+And my heart is feeling vacant
+而我的内心也倍感空虚
+So you try to fill it in
+所以你尽力去填补空白
+You say "I could fix the broken in your heart
+你说“我可以修复你的玻璃心
+You're worth saving darling"
+亲爱的你值得我拯救
+But I don't know why you're shooting in the dark
+但我不明白你为什么要在深夜落荒逃离
+I got faith in nothing
+我对万事无自信
+But love, pray for me
+但是爱，它为我祈祷
+I never had somebody
+我从未幸得某人呵护
+So I don't know how to love
+所以我不懂怎么去爱
+Pray for me
+请为我祈祷
+I know I need somebody
+我知道我需要某个人陪伴
+So I can learn how to love
+所以我可以学会去热爱
+I know it's been a while
+我知道我已经恍惚很久
+Cause my memory's on trial
+因为我在审判我的回忆
+For the way I used to be
+我曾经亦是如此
+My head is running miles
+我的思绪飞跃几英里
+Round in circles and I try
+循环往复而我在努力
+To find the little light in me
+去探寻心中的那盏小明灯
+You say "I could fix the broken in your heart
+你说“我可以修复你的玻璃心
+You're worth saving darling"
+亲爱的你值得我拯救”
+But I don't know why you're shooting in the dark
+但我不明白你为什么要在深夜落荒逃离
+I got faith in nothing
+我对万事无自信
+But love, pray for me
+但是爱，它为我祈祷
+I never had somebody
+我从未幸得某人呵护
+So I don't know how to love
+所以我不懂怎么去爱
+Pray for me
+请为我祈祷
+I know I need somebody
+我知道我需要某个人陪伴
+So I can learn how to love
+所以我可以学会去热爱
+I know I need somebody
+我知道我需要某个人陪伴
+I know I need somebody
+我知道我需要某个人陪伴
+I know I need somebody
+我知道我需要某个人陪伴
+So I can learn how to love
+所以我可以学会去热爱
+How to love
+所以我可以学会去热爱
+How to love
+所以我可以学会去热爱
+So I can learn how to love
+所以我可以学会去热爱
+How to love
+所以我可以学会去热爱
+How to love
+所以我可以学会去热爱
+How to love, love, love, love, love, love, love, oh
+所以我可以学会去热爱
+I know I need somebody
+我知道我需要某个人陪伴
+I know I need somebody
+我知道我需要某个人陪伴
+I know I need somebody
+我知道我需要某个人陪伴
+So I can learn how to love
+所以我可以学会去热爱
+(Need somebody now
+我需要某个人陪伴
+How to love, love
+所以我可以学会去热爱
+How to love, love)
+所以我可以学会去热爱
+歌词贡献者：蜥蜴沼质</value>
   </data>
 </root>

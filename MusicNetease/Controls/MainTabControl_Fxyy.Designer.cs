@@ -1,6 +1,6 @@
 ﻿namespace MusicNetease.Controls
 {
-    partial class MainTabControl
+    partial class MainTabControl_Fxyy
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl_Fxyy));
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_gxtj = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gxtj = new CCWin.SkinControl.SkinPanel();

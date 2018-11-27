@@ -36,17 +36,17 @@
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinButton_icon = new CCWin.SkinControl.SkinButton();
             this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.menuControl7 = new MusicNetease.Controls.MenuControl();
-            this.menuControl8 = new MusicNetease.Controls.MenuControl();
-            this.menuControl4 = new MusicNetease.Controls.MenuControl();
-            this.menuControl5 = new MusicNetease.Controls.MenuControl();
-            this.menuControl6 = new MusicNetease.Controls.MenuControl();
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.menuControl3 = new MusicNetease.Controls.MenuControl();
-            this.menuControl2 = new MusicNetease.Controls.MenuControl();
-            this.menuControl1 = new MusicNetease.Controls.MenuControl();
-            this.menuControl_fxyy = new MusicNetease.Controls.MenuControl();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.menuControl_wddt = new MusicNetease.Controls.MenuControl();
+            this.menuControl_wdsc = new MusicNetease.Controls.MenuControl();
+            this.menuControl_xzgl = new MusicNetease.Controls.MenuControl();
+            this.menuControl_yun = new MusicNetease.Controls.MenuControl();
+            this.menuControl_bdyy = new MusicNetease.Controls.MenuControl();
+            this.menuControl_tv = new MusicNetease.Controls.MenuControl();
+            this.menuControl_friend = new MusicNetease.Controls.MenuControl();
+            this.menuControl_srFm = new MusicNetease.Controls.MenuControl();
+            this.menuControl_fxyy = new MusicNetease.Controls.MenuControl();
             this.skinPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,15 +58,15 @@
             this.skinPanel1.Controls.Add(this.skinButton1);
             this.skinPanel1.Controls.Add(this.skinButton_icon);
             this.skinPanel1.Controls.Add(this.skinLabel3);
-            this.skinPanel1.Controls.Add(this.menuControl7);
-            this.skinPanel1.Controls.Add(this.menuControl8);
-            this.skinPanel1.Controls.Add(this.menuControl4);
-            this.skinPanel1.Controls.Add(this.menuControl5);
-            this.skinPanel1.Controls.Add(this.menuControl6);
+            this.skinPanel1.Controls.Add(this.menuControl_wddt);
+            this.skinPanel1.Controls.Add(this.menuControl_wdsc);
+            this.skinPanel1.Controls.Add(this.menuControl_xzgl);
+            this.skinPanel1.Controls.Add(this.menuControl_yun);
+            this.skinPanel1.Controls.Add(this.menuControl_bdyy);
             this.skinPanel1.Controls.Add(this.skinLabel2);
-            this.skinPanel1.Controls.Add(this.menuControl3);
-            this.skinPanel1.Controls.Add(this.menuControl2);
-            this.skinPanel1.Controls.Add(this.menuControl1);
+            this.skinPanel1.Controls.Add(this.menuControl_tv);
+            this.skinPanel1.Controls.Add(this.menuControl_friend);
+            this.skinPanel1.Controls.Add(this.menuControl_srFm);
             this.skinPanel1.Controls.Add(this.menuControl_fxyy);
             this.skinPanel1.Controls.Add(this.skinLabel1);
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -186,81 +186,6 @@
             this.skinLabel3.TabIndex = 11;
             this.skinLabel3.Text = "创建的歌单";
             // 
-            // menuControl7
-            // 
-            this.menuControl7.isSelect = false;
-            this.menuControl7.Location = new System.Drawing.Point(0, 287);
-            this.menuControl7.menuName = "skinLabel_name";
-            this.menuControl7.menuText = "我的电台";
-            this.menuControl7.Name = "menuControl7";
-            this.menuControl7.setBackgroundIcon = global::MusicNetease.Properties.Resources.dt0;
-            this.menuControl7.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl7.setMouseBack = global::MusicNetease.Properties.Resources.dt1;
-            this.menuControl7.setNormlIcon = global::MusicNetease.Properties.Resources.dt0;
-            this.menuControl7.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl7.Size = new System.Drawing.Size(177, 28);
-            this.menuControl7.TabIndex = 10;
-            // 
-            // menuControl8
-            // 
-            this.menuControl8.isSelect = false;
-            this.menuControl8.Location = new System.Drawing.Point(0, 319);
-            this.menuControl8.menuName = "skinLabel_name";
-            this.menuControl8.menuText = "我的收藏";
-            this.menuControl8.Name = "menuControl8";
-            this.menuControl8.setBackgroundIcon = global::MusicNetease.Properties.Resources.wdsc0;
-            this.menuControl8.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl8.setMouseBack = global::MusicNetease.Properties.Resources.wdsc1;
-            this.menuControl8.setNormlIcon = global::MusicNetease.Properties.Resources.wdsc0;
-            this.menuControl8.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl8.Size = new System.Drawing.Size(177, 28);
-            this.menuControl8.TabIndex = 9;
-            // 
-            // menuControl4
-            // 
-            this.menuControl4.isSelect = false;
-            this.menuControl4.Location = new System.Drawing.Point(0, 224);
-            this.menuControl4.menuName = "skinLabel_name";
-            this.menuControl4.menuText = "下载管理";
-            this.menuControl4.Name = "menuControl4";
-            this.menuControl4.setBackgroundIcon = global::MusicNetease.Properties.Resources.download0;
-            this.menuControl4.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl4.setMouseBack = global::MusicNetease.Properties.Resources.download1;
-            this.menuControl4.setNormlIcon = global::MusicNetease.Properties.Resources.download0;
-            this.menuControl4.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl4.Size = new System.Drawing.Size(177, 28);
-            this.menuControl4.TabIndex = 8;
-            // 
-            // menuControl5
-            // 
-            this.menuControl5.isSelect = false;
-            this.menuControl5.Location = new System.Drawing.Point(0, 256);
-            this.menuControl5.menuName = "skinLabel_name";
-            this.menuControl5.menuText = "我的音乐云盘";
-            this.menuControl5.Name = "menuControl5";
-            this.menuControl5.setBackgroundIcon = global::MusicNetease.Properties.Resources.yun0;
-            this.menuControl5.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl5.setMouseBack = global::MusicNetease.Properties.Resources.yun1;
-            this.menuControl5.setNormlIcon = global::MusicNetease.Properties.Resources.yun0;
-            this.menuControl5.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl5.Size = new System.Drawing.Size(177, 28);
-            this.menuControl5.TabIndex = 7;
-            // 
-            // menuControl6
-            // 
-            this.menuControl6.isSelect = false;
-            this.menuControl6.Location = new System.Drawing.Point(0, 193);
-            this.menuControl6.menuName = "skinLabel_name";
-            this.menuControl6.menuText = "本地音乐";
-            this.menuControl6.Name = "menuControl6";
-            this.menuControl6.setBackgroundIcon = global::MusicNetease.Properties.Resources.bdyy0;
-            this.menuControl6.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl6.setMouseBack = global::MusicNetease.Properties.Resources.bdyy1;
-            this.menuControl6.setNormlIcon = global::MusicNetease.Properties.Resources.bdyy0;
-            this.menuControl6.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl6.Size = new System.Drawing.Size(177, 28);
-            this.menuControl6.TabIndex = 6;
-            // 
             // skinLabel2
             // 
             this.skinLabel2.AutoSize = true;
@@ -274,67 +199,6 @@
             this.skinLabel2.TabIndex = 5;
             this.skinLabel2.Text = "我的音乐";
             // 
-            // menuControl3
-            // 
-            this.menuControl3.isSelect = false;
-            this.menuControl3.Location = new System.Drawing.Point(0, 95);
-            this.menuControl3.menuName = "skinLabel_name";
-            this.menuControl3.menuText = "视频";
-            this.menuControl3.Name = "menuControl3";
-            this.menuControl3.setBackgroundIcon = global::MusicNetease.Properties.Resources.tv0;
-            this.menuControl3.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl3.setMouseBack = global::MusicNetease.Properties.Resources.tv1;
-            this.menuControl3.setNormlIcon = global::MusicNetease.Properties.Resources.tv0;
-            this.menuControl3.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl3.Size = new System.Drawing.Size(177, 28);
-            this.menuControl3.TabIndex = 4;
-            // 
-            // menuControl2
-            // 
-            this.menuControl2.isSelect = false;
-            this.menuControl2.Location = new System.Drawing.Point(0, 127);
-            this.menuControl2.menuName = "skinLabel_name";
-            this.menuControl2.menuText = "朋友";
-            this.menuControl2.Name = "menuControl2";
-            this.menuControl2.setBackgroundIcon = global::MusicNetease.Properties.Resources.lxr0;
-            this.menuControl2.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl2.setMouseBack = global::MusicNetease.Properties.Resources.lxr1;
-            this.menuControl2.setNormlIcon = global::MusicNetease.Properties.Resources.lxr0;
-            this.menuControl2.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl2.Size = new System.Drawing.Size(177, 28);
-            this.menuControl2.TabIndex = 3;
-            // 
-            // menuControl1
-            // 
-            this.menuControl1.isSelect = false;
-            this.menuControl1.Location = new System.Drawing.Point(0, 64);
-            this.menuControl1.menuName = "skinLabel_name";
-            this.menuControl1.menuText = "私人FM";
-            this.menuControl1.Name = "menuControl1";
-            this.menuControl1.setBackgroundIcon = global::MusicNetease.Properties.Resources.FM0;
-            this.menuControl1.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.menuControl1.setMouseBack = global::MusicNetease.Properties.Resources.FM1;
-            this.menuControl1.setNormlIcon = global::MusicNetease.Properties.Resources.FM0;
-            this.menuControl1.setScColor = System.Drawing.Color.Transparent;
-            this.menuControl1.Size = new System.Drawing.Size(177, 28);
-            this.menuControl1.TabIndex = 2;
-            // 
-            // menuControl_fxyy
-            // 
-            this.menuControl_fxyy.isSelect = true;
-            this.menuControl_fxyy.Location = new System.Drawing.Point(0, 34);
-            this.menuControl_fxyy.menuName = "skinLabel_name";
-            this.menuControl_fxyy.menuText = "发现音乐";
-            this.menuControl_fxyy.Name = "menuControl_fxyy";
-            this.menuControl_fxyy.setBackgroundIcon = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setBackgroundIcon")));
-            this.menuControl_fxyy.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.menuControl_fxyy.setMouseBack = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setMouseBack")));
-            this.menuControl_fxyy.setNormlIcon = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setNormlIcon")));
-            this.menuControl_fxyy.setScColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(234)))));
-            this.menuControl_fxyy.Size = new System.Drawing.Size(177, 28);
-            this.menuControl_fxyy.TabIndex = 1;
-            this.menuControl_fxyy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuControl_fxyy_MouseDown);
-            // 
             // skinLabel1
             // 
             this.skinLabel1.AutoSize = true;
@@ -347,6 +211,159 @@
             this.skinLabel1.Size = new System.Drawing.Size(32, 17);
             this.skinLabel1.TabIndex = 0;
             this.skinLabel1.Text = "推荐";
+            // 
+            // menuControl_wddt
+            // 
+            this.menuControl_wddt.isSelect = false;
+            this.menuControl_wddt.Location = new System.Drawing.Point(0, 287);
+            this.menuControl_wddt.menuName = "skinLabel_wddt";
+            this.menuControl_wddt.menuText = "我的电台";
+            this.menuControl_wddt.Name = "menuControl_wddt";
+            this.menuControl_wddt.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_wddt.setBackgroundIcon = global::MusicNetease.Properties.Resources.dt0;
+            this.menuControl_wddt.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_wddt.setMouseBack = global::MusicNetease.Properties.Resources.dt1;
+            this.menuControl_wddt.setNormlIcon = global::MusicNetease.Properties.Resources.dt0;
+            this.menuControl_wddt.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_wddt.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_wddt.TabIndex = 10;
+            this.menuControl_wddt.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_wdsc
+            // 
+            this.menuControl_wdsc.isSelect = false;
+            this.menuControl_wdsc.Location = new System.Drawing.Point(0, 319);
+            this.menuControl_wdsc.menuName = "skinLabel_wdsc";
+            this.menuControl_wdsc.menuText = "我的收藏";
+            this.menuControl_wdsc.Name = "menuControl_wdsc";
+            this.menuControl_wdsc.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_wdsc.setBackgroundIcon = global::MusicNetease.Properties.Resources.wdsc0;
+            this.menuControl_wdsc.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_wdsc.setMouseBack = global::MusicNetease.Properties.Resources.wdsc1;
+            this.menuControl_wdsc.setNormlIcon = global::MusicNetease.Properties.Resources.wdsc0;
+            this.menuControl_wdsc.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_wdsc.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_wdsc.TabIndex = 9;
+            this.menuControl_wdsc.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_xzgl
+            // 
+            this.menuControl_xzgl.isSelect = false;
+            this.menuControl_xzgl.Location = new System.Drawing.Point(0, 224);
+            this.menuControl_xzgl.menuName = "skinLabel_xzgl";
+            this.menuControl_xzgl.menuText = "下载管理";
+            this.menuControl_xzgl.Name = "menuControl_xzgl";
+            this.menuControl_xzgl.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_xzgl.setBackgroundIcon = global::MusicNetease.Properties.Resources.download0;
+            this.menuControl_xzgl.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_xzgl.setMouseBack = global::MusicNetease.Properties.Resources.download1;
+            this.menuControl_xzgl.setNormlIcon = global::MusicNetease.Properties.Resources.download0;
+            this.menuControl_xzgl.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_xzgl.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_xzgl.TabIndex = 8;
+            this.menuControl_xzgl.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_yun
+            // 
+            this.menuControl_yun.isSelect = false;
+            this.menuControl_yun.Location = new System.Drawing.Point(0, 256);
+            this.menuControl_yun.menuName = "skinLabel_yun";
+            this.menuControl_yun.menuText = "我的音乐云盘";
+            this.menuControl_yun.Name = "menuControl_yun";
+            this.menuControl_yun.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_yun.setBackgroundIcon = global::MusicNetease.Properties.Resources.yun0;
+            this.menuControl_yun.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_yun.setMouseBack = global::MusicNetease.Properties.Resources.yun1;
+            this.menuControl_yun.setNormlIcon = global::MusicNetease.Properties.Resources.yun0;
+            this.menuControl_yun.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_yun.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_yun.TabIndex = 7;
+            this.menuControl_yun.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_bdyy
+            // 
+            this.menuControl_bdyy.isSelect = false;
+            this.menuControl_bdyy.Location = new System.Drawing.Point(0, 193);
+            this.menuControl_bdyy.menuName = "skinLabel_bdyy";
+            this.menuControl_bdyy.menuText = "本地音乐";
+            this.menuControl_bdyy.Name = "menuControl_bdyy";
+            this.menuControl_bdyy.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_bdyy.setBackgroundIcon = global::MusicNetease.Properties.Resources.bdyy0;
+            this.menuControl_bdyy.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_bdyy.setMouseBack = global::MusicNetease.Properties.Resources.bdyy1;
+            this.menuControl_bdyy.setNormlIcon = global::MusicNetease.Properties.Resources.bdyy0;
+            this.menuControl_bdyy.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_bdyy.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_bdyy.TabIndex = 6;
+            this.menuControl_bdyy.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_tv
+            // 
+            this.menuControl_tv.isSelect = false;
+            this.menuControl_tv.Location = new System.Drawing.Point(0, 95);
+            this.menuControl_tv.menuName = "skinLabel_tv";
+            this.menuControl_tv.menuText = "视频";
+            this.menuControl_tv.Name = "menuControl_tv";
+            this.menuControl_tv.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_tv.setBackgroundIcon = global::MusicNetease.Properties.Resources.tv0;
+            this.menuControl_tv.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_tv.setMouseBack = global::MusicNetease.Properties.Resources.tv1;
+            this.menuControl_tv.setNormlIcon = global::MusicNetease.Properties.Resources.tv0;
+            this.menuControl_tv.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_tv.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_tv.TabIndex = 4;
+            this.menuControl_tv.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_friend
+            // 
+            this.menuControl_friend.isSelect = false;
+            this.menuControl_friend.Location = new System.Drawing.Point(0, 127);
+            this.menuControl_friend.menuName = "skinLabel_friend";
+            this.menuControl_friend.menuText = "朋友";
+            this.menuControl_friend.Name = "menuControl_friend";
+            this.menuControl_friend.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_friend.setBackgroundIcon = global::MusicNetease.Properties.Resources.lxr0;
+            this.menuControl_friend.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_friend.setMouseBack = global::MusicNetease.Properties.Resources.lxr1;
+            this.menuControl_friend.setNormlIcon = global::MusicNetease.Properties.Resources.lxr0;
+            this.menuControl_friend.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_friend.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_friend.TabIndex = 3;
+            this.menuControl_friend.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_srFm
+            // 
+            this.menuControl_srFm.isSelect = false;
+            this.menuControl_srFm.Location = new System.Drawing.Point(0, 64);
+            this.menuControl_srFm.menuName = "skinLabel_srfm";
+            this.menuControl_srFm.menuText = "私人FM";
+            this.menuControl_srFm.Name = "menuControl_srFm";
+            this.menuControl_srFm.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_srFm.setBackgroundIcon = global::MusicNetease.Properties.Resources.FM0;
+            this.menuControl_srFm.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.menuControl_srFm.setMouseBack = global::MusicNetease.Properties.Resources.FM1;
+            this.menuControl_srFm.setNormlIcon = global::MusicNetease.Properties.Resources.FM0;
+            this.menuControl_srFm.setScColor = System.Drawing.Color.Transparent;
+            this.menuControl_srFm.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_srFm.TabIndex = 2;
+            this.menuControl_srFm.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
+            // 
+            // menuControl_fxyy
+            // 
+            this.menuControl_fxyy.isSelect = true;
+            this.menuControl_fxyy.Location = new System.Drawing.Point(0, 34);
+            this.menuControl_fxyy.menuName = "skinLabel_fxyy";
+            this.menuControl_fxyy.menuText = "发现音乐";
+            this.menuControl_fxyy.Name = "menuControl_fxyy";
+            this.menuControl_fxyy.SelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_fxyy.setBackgroundIcon = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setBackgroundIcon")));
+            this.menuControl_fxyy.setDcColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.menuControl_fxyy.setMouseBack = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setMouseBack")));
+            this.menuControl_fxyy.setNormlIcon = ((System.Drawing.Image)(resources.GetObject("menuControl_fxyy.setNormlIcon")));
+            this.menuControl_fxyy.setScColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(234)))));
+            this.menuControl_fxyy.Size = new System.Drawing.Size(177, 28);
+            this.menuControl_fxyy.TabIndex = 1;
+            this.menuControl_fxyy.skinPanelMouseDown += new MusicNetease.Controls.MenuControl.PanelMouseDown(this.menuControl_srFm_skinPanelMouseDown);
             // 
             // MenuListControl
             // 
@@ -367,19 +384,19 @@
         private CCWin.SkinControl.SkinPanel skinPanel1;
         private CCWin.SkinControl.SkinLabel skinLabel1;
         private MenuControl menuControl_fxyy;
-        private MenuControl menuControl1;
-        private MenuControl menuControl3;
-        private MenuControl menuControl2;
         private CCWin.SkinControl.SkinLabel skinLabel2;
-        private MenuControl menuControl7;
-        private MenuControl menuControl8;
-        private MenuControl menuControl4;
-        private MenuControl menuControl5;
-        private MenuControl menuControl6;
         private CCWin.SkinControl.SkinLabel skinLabel3;
         public CCWin.SkinControl.SkinButton skinButton_icon;
         public CCWin.SkinControl.SkinButton skinButton1;
         public CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinLabel skinLabel4;
+        public MenuControl menuControl_srFm;
+        public MenuControl menuControl_tv;
+        public MenuControl menuControl_friend;
+        public MenuControl menuControl_bdyy;
+        public MenuControl menuControl_xzgl;
+        public MenuControl menuControl_yun;
+        public MenuControl menuControl_wddt;
+        public MenuControl menuControl_wdsc;
     }
 }

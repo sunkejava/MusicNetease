@@ -28,11 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
             this.menuListControl1 = new MusicNetease.Controls.MenuListControl();
-            this.mainTabControl1 = new MusicNetease.Controls.MainTabControl();
+            this.skinTabControl_Main = new CCWin.SkinControl.SkinTabControl();
+            this.skinTabPage_fxyy = new CCWin.SkinControl.SkinTabPage();
+            this.mainTabControl1 = new MusicNetease.Controls.MainTabControl_Fxyy();
+            this.skinTabPage_srfm = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_tv = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_friend = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_bdyy = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_xzgl = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_yun = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_wddt = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_wdsc = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
+            this.userControl_Srfm1 = new MusicNetease.Controls.UserControl_Srfm();
             this.skinPanel3.SuspendLayout();
+            this.skinTabControl_Main.SuspendLayout();
+            this.skinTabPage_fxyy.SuspendLayout();
+            this.skinTabPage_srfm.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel3
@@ -67,29 +83,187 @@
             this.menuListControl1.Name = "menuListControl1";
             this.menuListControl1.Size = new System.Drawing.Size(175, 568);
             this.menuListControl1.TabIndex = 2;
+            this.menuListControl1.MenuControl_MouseDown += new MusicNetease.Controls.MenuListControl.MenuControlMouseDown(this.menuListControl1_MenuControl_MouseDown);
+            // 
+            // skinTabControl_Main
+            // 
+            this.skinTabControl_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinTabControl_Main.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
+            this.skinTabControl_Main.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_fxyy);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_srfm);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_tv);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_friend);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_bdyy);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_xzgl);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_yun);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_wddt);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_wdsc);
+            this.skinTabControl_Main.Controls.Add(this.skinTabPage_gd);
+            this.skinTabControl_Main.HeadBack = null;
+            this.skinTabControl_Main.ImgTxtOffset = new System.Drawing.Point(0, 0);
+            this.skinTabControl_Main.ItemSize = new System.Drawing.Size(70, 36);
+            this.skinTabControl_Main.Location = new System.Drawing.Point(177, 16);
+            this.skinTabControl_Main.Name = "skinTabControl_Main";
+            this.skinTabControl_Main.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageArrowDown")));
+            this.skinTabControl_Main.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageArrowHover")));
+            this.skinTabControl_Main.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageCloseHover")));
+            this.skinTabControl_Main.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageCloseNormal")));
+            this.skinTabControl_Main.PageDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageDown")));
+            this.skinTabControl_Main.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageHover")));
+            this.skinTabControl_Main.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
+            this.skinTabControl_Main.PageNorml = null;
+            this.skinTabControl_Main.SelectedIndex = 1;
+            this.skinTabControl_Main.Size = new System.Drawing.Size(845, 602);
+            this.skinTabControl_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.skinTabControl_Main.TabIndex = 3;
+            // 
+            // skinTabPage_fxyy
+            // 
+            this.skinTabPage_fxyy.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_fxyy.Controls.Add(this.mainTabControl1);
+            this.skinTabPage_fxyy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_fxyy.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_fxyy.Name = "skinTabPage_fxyy";
+            this.skinTabPage_fxyy.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_fxyy.TabIndex = 0;
+            this.skinTabPage_fxyy.TabItemImage = null;
+            this.skinTabPage_fxyy.Text = "发现音乐";
             // 
             // mainTabControl1
             // 
-            this.mainTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainTabControl1.Location = new System.Drawing.Point(178, 52);
+            this.mainTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTabControl1.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl1.Name = "mainTabControl1";
-            this.mainTabControl1.Size = new System.Drawing.Size(840, 566);
-            this.mainTabControl1.TabIndex = 3;
+            this.mainTabControl1.Size = new System.Drawing.Size(845, 566);
+            this.mainTabControl1.TabIndex = 0;
+            // 
+            // skinTabPage_srfm
+            // 
+            this.skinTabPage_srfm.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_srfm.Controls.Add(this.userControl_Srfm1);
+            this.skinTabPage_srfm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_srfm.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_srfm.Name = "skinTabPage_srfm";
+            this.skinTabPage_srfm.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_srfm.TabIndex = 1;
+            this.skinTabPage_srfm.TabItemImage = null;
+            this.skinTabPage_srfm.Text = "私人FM";
+            // 
+            // skinTabPage_tv
+            // 
+            this.skinTabPage_tv.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_tv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_tv.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_tv.Name = "skinTabPage_tv";
+            this.skinTabPage_tv.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_tv.TabIndex = 2;
+            this.skinTabPage_tv.TabItemImage = null;
+            this.skinTabPage_tv.Text = "视频";
+            // 
+            // skinTabPage_friend
+            // 
+            this.skinTabPage_friend.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_friend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_friend.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_friend.Name = "skinTabPage_friend";
+            this.skinTabPage_friend.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_friend.TabIndex = 3;
+            this.skinTabPage_friend.TabItemImage = null;
+            this.skinTabPage_friend.Text = "朋友";
+            // 
+            // skinTabPage_bdyy
+            // 
+            this.skinTabPage_bdyy.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_bdyy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_bdyy.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_bdyy.Name = "skinTabPage_bdyy";
+            this.skinTabPage_bdyy.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_bdyy.TabIndex = 4;
+            this.skinTabPage_bdyy.TabItemImage = null;
+            this.skinTabPage_bdyy.Text = "本地音乐";
+            // 
+            // skinTabPage_xzgl
+            // 
+            this.skinTabPage_xzgl.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_xzgl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_xzgl.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_xzgl.Name = "skinTabPage_xzgl";
+            this.skinTabPage_xzgl.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_xzgl.TabIndex = 5;
+            this.skinTabPage_xzgl.TabItemImage = null;
+            this.skinTabPage_xzgl.Text = "下载管理";
+            // 
+            // skinTabPage_yun
+            // 
+            this.skinTabPage_yun.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_yun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_yun.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_yun.Name = "skinTabPage_yun";
+            this.skinTabPage_yun.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_yun.TabIndex = 6;
+            this.skinTabPage_yun.TabItemImage = null;
+            this.skinTabPage_yun.Text = "我的音乐云盘";
+            // 
+            // skinTabPage_wddt
+            // 
+            this.skinTabPage_wddt.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_wddt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_wddt.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_wddt.Name = "skinTabPage_wddt";
+            this.skinTabPage_wddt.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_wddt.TabIndex = 7;
+            this.skinTabPage_wddt.TabItemImage = null;
+            this.skinTabPage_wddt.Text = "我的电台";
+            // 
+            // skinTabPage_wdsc
+            // 
+            this.skinTabPage_wdsc.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_wdsc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_wdsc.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_wdsc.Name = "skinTabPage_wdsc";
+            this.skinTabPage_wdsc.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_wdsc.TabIndex = 8;
+            this.skinTabPage_wdsc.TabItemImage = null;
+            this.skinTabPage_wdsc.Text = "我的收藏";
+            // 
+            // skinTabPage_gd
+            // 
+            this.skinTabPage_gd.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_gd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_gd.Location = new System.Drawing.Point(0, 36);
+            this.skinTabPage_gd.Name = "skinTabPage_gd";
+            this.skinTabPage_gd.Size = new System.Drawing.Size(845, 566);
+            this.skinTabPage_gd.TabIndex = 9;
+            this.skinTabPage_gd.TabItemImage = null;
+            this.skinTabPage_gd.Text = "歌单";
+            // 
+            // userControl_Srfm1
+            // 
+            this.userControl_Srfm1.BackColor = System.Drawing.SystemColors.Control;
+            this.userControl_Srfm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl_Srfm1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_Srfm1.Name = "userControl_Srfm1";
+            this.userControl_Srfm1.Size = new System.Drawing.Size(845, 566);
+            this.userControl_Srfm1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(1022, 670);
-            this.Controls.Add(this.mainTabControl1);
             this.Controls.Add(this.menuListControl1);
             this.Controls.Add(this.skinPanel3);
+            this.Controls.Add(this.skinTabControl_Main);
             this.Name = "MainForm";
+            this.Controls.SetChildIndex(this.skinTabControl_Main, 0);
             this.Controls.SetChildIndex(this.skinPanel3, 0);
             this.Controls.SetChildIndex(this.menuListControl1, 0);
-            this.Controls.SetChildIndex(this.mainTabControl1, 0);
             this.skinPanel3.ResumeLayout(false);
+            this.skinTabControl_Main.ResumeLayout(false);
+            this.skinTabPage_fxyy.ResumeLayout(false);
+            this.skinTabPage_srfm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -99,6 +273,18 @@
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private Controls.MusicPlayerButton musicPlayerButton1;
         private Controls.MenuListControl menuListControl1;
-        private Controls.MainTabControl mainTabControl1;
+        private CCWin.SkinControl.SkinTabControl skinTabControl_Main;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_fxyy;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_srfm;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_tv;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_friend;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_bdyy;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_xzgl;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_yun;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_wddt;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_wdsc;
+        private CCWin.SkinControl.SkinTabPage skinTabPage_gd;
+        private Controls.MainTabControl_Fxyy mainTabControl1;
+        private Controls.UserControl_Srfm userControl_Srfm1;
     }
 }

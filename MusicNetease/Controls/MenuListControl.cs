@@ -17,19 +17,59 @@ namespace MusicNetease.Controls
             InitializeComponent();
 
         }
+        //定义委托
+        public delegate void MenuControlMouseDown(object sender, EventArgs e);
+        //定义事件
+        public event MenuControlMouseDown MenuControl_MouseDown;
+
         /// <summary>
-        /// 菜单按钮按下事件
+        /// 恢复所有控件为原始状态，包括颜色状态等信息
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void menuControl_fxyy_MouseDown(object sender, MouseEventArgs e)
-        {
-            menuControl_fxyy.skinPanel_sc_MouseDown(sender, e);
-        }
         private void setMenuControlDefault()
         {
-            menuControl_fxyy.isSelect = false;
-            
+            foreach (Control control in this.Controls)
+            {
+                foreach (Control item in control.Controls)
+                {
+                    //如果是菜单控件
+                    if (item is MenuControl)
+                    {
+                        MenuControl mc = item as MenuControl;
+                        mc.setBackColor();
+                        mc.isSelect = false;
+                    }
+                } 
+            }    
         }
+        /// <summary>
+        /// 设置按钮选择后的颜色
+        /// </summary>
+        /// <param name="color"></param>
+        private void setMenuControlSelectColor(Color color)
+        {
+            foreach (Control control in this.Controls)
+            {
+                foreach (Control item in control.Controls)
+                {
+                    //如果是菜单控件
+                    if (item is MenuControl)
+                    {
+                        MenuControl mc = item as MenuControl;
+                        mc.SelectColor = color;
+                    }
+                }
+            }
+        }
+
+        private void menuControl_srFm_skinPanelMouseDown(object sender, EventArgs e)
+        {
+            if (MenuControl_MouseDown != null)
+            {
+                MenuControl_MouseDown(sender, e);
+            }
+            setMenuControlDefault();
+        }
+
+        
     }
 }

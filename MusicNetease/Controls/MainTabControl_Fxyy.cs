@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MusicNetease.Controls
 {
-    public partial class MainTabControl : UserControl
+    public partial class MainTabControl_Fxyy : UserControl
     {
-        public MainTabControl()
+        public MainTabControl_Fxyy()
         {
             InitializeComponent();
             userControlLoad();

@@ -369,4 +369,10 @@
   <data name="Arrowright1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arrowright1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fmbj0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fmbj0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fmbj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fmbj1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

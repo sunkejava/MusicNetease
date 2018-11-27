@@ -13,15 +13,25 @@ namespace MusicNetease.Controls
     public partial class MenuControl : UserControl
     {
         private bool _isSelect = false;
+        private Color _SelectColor = Color.FromArgb(255, 92, 138);
         public MenuControl()
         {
             InitializeComponent();
         }
 
-        public void skinPanel_sc_MouseDown(object sender, MouseEventArgs e)
+        //定义委托
+        public delegate void PanelMouseDown(object sender, EventArgs e);
+        //定义事件
+        public event PanelMouseDown skinPanelMouseDown;
+
+        private void skinPanel_sc_MouseDown(object sender, MouseEventArgs e)
         {
+            if (skinPanelMouseDown != null)
+            {
+                skinPanelMouseDown(sender, e);
+            }
             //原色  245, 245, 247
-            skinPanel_dc.BackColor = Color.FromArgb(255, 92, 138);
+            skinPanel_dc.BackColor = _SelectColor;
             skinPanel_sc.BackColor = Color.FromArgb(230, 231, 234);
         }
 
@@ -112,6 +122,11 @@ namespace MusicNetease.Controls
             set { _isSelect = value; }
         }
 
+        public Color SelectColor
+        {
+            get { return _SelectColor; }
+            set { _SelectColor = value; }
+        }
 
 
 
