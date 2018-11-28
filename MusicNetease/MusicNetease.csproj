@@ -107,6 +107,18 @@
     <Compile Include="Controls\PanelControl.Designer.cs">
       <DependentUpon>PanelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\RadiusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RadiusControl.Designer.cs">
+      <DependentUpon>RadiusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RadiusControlButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RadiusControlButton.Designer.cs">
+      <DependentUpon>RadiusControlButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UserControl_Srfm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MusicPlayerButton.resx">
       <DependentUpon>MusicPlayerButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RadiusControl.resx">
+      <DependentUpon>RadiusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RadiusControlButton.resx">
+      <DependentUpon>RadiusControlButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserControl_Srfm.resx">
       <DependentUpon>UserControl_Srfm.cs</DependentUpon>

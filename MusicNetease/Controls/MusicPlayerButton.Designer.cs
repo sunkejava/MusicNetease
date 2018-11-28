@@ -37,38 +37,36 @@
             this.skinButton_sys = new CCWin.SkinControl.SkinButton();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
             this.skinPanel_bfjdt = new CCWin.SkinControl.SkinPanel();
-            this.skinPanel_yycd = new CCWin.SkinControl.SkinPanel();
-            this.skinLabel_yycd = new CCWin.SkinControl.SkinLabel();
             this.skinPanel_jdt = new CCWin.SkinControl.SkinPanel();
             this.layeredTrackBar_yyjdt = new LayeredSkin.Controls.LayeredTrackBar();
+            this.skinPanel_yycd = new CCWin.SkinControl.SkinPanel();
+            this.skinLabel_yycd = new CCWin.SkinControl.SkinLabel();
             this.skinPanel_dqjd = new CCWin.SkinControl.SkinPanel();
             this.skinLabel_ybfcd = new CCWin.SkinControl.SkinLabel();
             this.skinPanel_otherButtons = new CCWin.SkinControl.SkinPanel();
+            this.skinButton_volume = new CCWin.SkinControl.SkinButton();
+            this.layeredTrackBar_yljdt = new LayeredSkin.Controls.LayeredTrackBar();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinLabel_playListCount = new CCWin.SkinControl.SkinLabel();
             this.skinButton_openPlayList = new CCWin.SkinControl.SkinButton();
             this.skinButton_Lyric = new CCWin.SkinControl.SkinButton();
             this.skinButton_bfsx = new CCWin.SkinControl.SkinButton();
-            this.skinButton_volume = new CCWin.SkinControl.SkinButton();
-            this.layeredTrackBar_yljdt = new LayeredSkin.Controls.LayeredTrackBar();
-            this.skinButton_xys = new CCWin.SkinControl.SkinButton();
-            this.skinPanel_xys = new CCWin.SkinControl.SkinPanel();
+            this.radiusControlButton1 = new MusicNetease.Controls.RadiusControlButton();
             this.skinPanel_buttons.SuspendLayout();
             this.skinPanel_play.SuspendLayout();
             this.skinPanel_sys.SuspendLayout();
             this.skinPanel_bfjdt.SuspendLayout();
-            this.skinPanel_yycd.SuspendLayout();
             this.skinPanel_jdt.SuspendLayout();
+            this.skinPanel_yycd.SuspendLayout();
             this.skinPanel_dqjd.SuspendLayout();
             this.skinPanel_otherButtons.SuspendLayout();
             this.skinPanel1.SuspendLayout();
-            this.skinPanel_xys.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel_buttons
             // 
             this.skinPanel_buttons.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_buttons.Controls.Add(this.skinPanel_xys);
+            this.skinPanel_buttons.Controls.Add(this.radiusControlButton1);
             this.skinPanel_buttons.Controls.Add(this.skinPanel_play);
             this.skinPanel_buttons.Controls.Add(this.skinPanel_sys);
             this.skinPanel_buttons.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -196,34 +194,6 @@
             this.skinPanel_bfjdt.Size = new System.Drawing.Size(485, 49);
             this.skinPanel_bfjdt.TabIndex = 1;
             // 
-            // skinPanel_yycd
-            // 
-            this.skinPanel_yycd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinPanel_yycd.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_yycd.Controls.Add(this.skinLabel_yycd);
-            this.skinPanel_yycd.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_yycd.DownBack = null;
-            this.skinPanel_yycd.Location = new System.Drawing.Point(434, 0);
-            this.skinPanel_yycd.MouseBack = null;
-            this.skinPanel_yycd.Name = "skinPanel_yycd";
-            this.skinPanel_yycd.NormlBack = null;
-            this.skinPanel_yycd.Size = new System.Drawing.Size(51, 49);
-            this.skinPanel_yycd.TabIndex = 5;
-            // 
-            // skinLabel_yycd
-            // 
-            this.skinLabel_yycd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_yycd.AutoSize = true;
-            this.skinLabel_yycd.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_yycd.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_yycd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_yycd.Location = new System.Drawing.Point(5, 16);
-            this.skinLabel_yycd.Name = "skinLabel_yycd";
-            this.skinLabel_yycd.Size = new System.Drawing.Size(39, 17);
-            this.skinLabel_yycd.TabIndex = 1;
-            this.skinLabel_yycd.Tag = "音乐长度";
-            this.skinLabel_yycd.Text = "02:59";
-            // 
             // skinPanel_jdt
             // 
             this.skinPanel_jdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -273,6 +243,34 @@
             this.layeredTrackBar_yyjdt.TabIndex = 3;
             this.layeredTrackBar_yyjdt.Value = 0.7563D;
             // 
+            // skinPanel_yycd
+            // 
+            this.skinPanel_yycd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinPanel_yycd.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_yycd.Controls.Add(this.skinLabel_yycd);
+            this.skinPanel_yycd.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_yycd.DownBack = null;
+            this.skinPanel_yycd.Location = new System.Drawing.Point(434, 0);
+            this.skinPanel_yycd.MouseBack = null;
+            this.skinPanel_yycd.Name = "skinPanel_yycd";
+            this.skinPanel_yycd.NormlBack = null;
+            this.skinPanel_yycd.Size = new System.Drawing.Size(51, 49);
+            this.skinPanel_yycd.TabIndex = 5;
+            // 
+            // skinLabel_yycd
+            // 
+            this.skinLabel_yycd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_yycd.AutoSize = true;
+            this.skinLabel_yycd.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_yycd.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_yycd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_yycd.Location = new System.Drawing.Point(5, 16);
+            this.skinLabel_yycd.Name = "skinLabel_yycd";
+            this.skinLabel_yycd.Size = new System.Drawing.Size(39, 17);
+            this.skinLabel_yycd.TabIndex = 1;
+            this.skinLabel_yycd.Tag = "音乐长度";
+            this.skinLabel_yycd.Text = "02:59";
+            // 
             // skinPanel_dqjd
             // 
             this.skinPanel_dqjd.BackColor = System.Drawing.Color.Transparent;
@@ -319,6 +317,70 @@
             this.skinPanel_otherButtons.NormlBack = null;
             this.skinPanel_otherButtons.Size = new System.Drawing.Size(267, 49);
             this.skinPanel_otherButtons.TabIndex = 2;
+            // 
+            // skinButton_volume
+            // 
+            this.skinButton_volume.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.BackgroundImage = global::MusicNetease.Properties.Resources.volume0;
+            this.skinButton_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton_volume.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
+            this.skinButton_volume.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_volume.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_volume.DownBack = global::MusicNetease.Properties.Resources.volume1;
+            this.skinButton_volume.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.FadeGlow = false;
+            this.skinButton_volume.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.ImageSize = new System.Drawing.Size(20, 20);
+            this.skinButton_volume.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.IsDrawBorder = false;
+            this.skinButton_volume.IsDrawGlass = false;
+            this.skinButton_volume.Location = new System.Drawing.Point(3, 17);
+            this.skinButton_volume.MouseBack = global::MusicNetease.Properties.Resources.volume1;
+            this.skinButton_volume.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_volume.Name = "skinButton_volume";
+            this.skinButton_volume.NormlBack = global::MusicNetease.Properties.Resources.volume0;
+            this.skinButton_volume.Size = new System.Drawing.Size(16, 16);
+            this.skinButton_volume.TabIndex = 7;
+            this.skinButton_volume.Tag = "音量";
+            this.skinButton_volume.UseVisualStyleBackColor = false;
+            this.skinButton_volume.Click += new System.EventHandler(this.skinButton_volume_Click);
+            this.skinButton_volume.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            // 
+            // layeredTrackBar_yljdt
+            // 
+            this.layeredTrackBar_yljdt.AdaptImage = true;
+            this.layeredTrackBar_yljdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layeredTrackBar_yljdt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.layeredTrackBar_yljdt.BackImage = null;
+            this.layeredTrackBar_yljdt.BackLineColor = System.Drawing.Color.Gray;
+            this.layeredTrackBar_yljdt.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.layeredTrackBar_yljdt.Borders.BottomWidth = 0;
+            this.layeredTrackBar_yljdt.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.layeredTrackBar_yljdt.Borders.LeftWidth = 0;
+            this.layeredTrackBar_yljdt.Borders.RightColor = System.Drawing.Color.Empty;
+            this.layeredTrackBar_yljdt.Borders.RightWidth = 0;
+            this.layeredTrackBar_yljdt.Borders.TopColor = System.Drawing.Color.Empty;
+            this.layeredTrackBar_yljdt.Borders.TopWidth = 0;
+            this.layeredTrackBar_yljdt.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredTrackBar_yljdt.Canvas")));
+            this.layeredTrackBar_yljdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 105, 5);
+            this.layeredTrackBar_yljdt.LineWidth = 3;
+            this.layeredTrackBar_yljdt.Location = new System.Drawing.Point(16, 17);
+            this.layeredTrackBar_yljdt.Margin = new System.Windows.Forms.Padding(0);
+            this.layeredTrackBar_yljdt.MouseCanControl = true;
+            this.layeredTrackBar_yljdt.Name = "layeredTrackBar_yljdt";
+            this.layeredTrackBar_yljdt.Orientation = LayeredSkin.Controls.Orientations.Horizontal;
+            this.layeredTrackBar_yljdt.PointImage = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImage;
+            this.layeredTrackBar_yljdt.PointImageHover = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImageHover;
+            this.layeredTrackBar_yljdt.PointImagePressed = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImagePressed;
+            this.layeredTrackBar_yljdt.PointState = LayeredSkin.Controls.ControlStates.Normal;
+            this.layeredTrackBar_yljdt.Size = new System.Drawing.Size(115, 15);
+            this.layeredTrackBar_yljdt.SurfaceImage = null;
+            this.layeredTrackBar_yljdt.SurfaceLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.layeredTrackBar_yljdt.TabIndex = 13;
+            this.layeredTrackBar_yljdt.Value = 0.7563D;
             // 
             // skinPanel1
             // 
@@ -450,114 +512,15 @@
             this.skinButton_bfsx.MouseLeave += new System.EventHandler(this.skinButton_bfsx_MouseLeave);
             this.skinButton_bfsx.MouseHover += new System.EventHandler(this.skinButton_bfsx_MouseHover);
             // 
-            // skinButton_volume
+            // radiusControlButton1
             // 
-            this.skinButton_volume.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.BackgroundImage = global::MusicNetease.Properties.Resources.volume0;
-            this.skinButton_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.skinButton_volume.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
-            this.skinButton_volume.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_volume.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_volume.DownBack = global::MusicNetease.Properties.Resources.volume1;
-            this.skinButton_volume.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.FadeGlow = false;
-            this.skinButton_volume.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.ImageSize = new System.Drawing.Size(20, 20);
-            this.skinButton_volume.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.IsDrawBorder = false;
-            this.skinButton_volume.IsDrawGlass = false;
-            this.skinButton_volume.Location = new System.Drawing.Point(3, 17);
-            this.skinButton_volume.MouseBack = global::MusicNetease.Properties.Resources.volume1;
-            this.skinButton_volume.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_volume.Name = "skinButton_volume";
-            this.skinButton_volume.NormlBack = global::MusicNetease.Properties.Resources.volume0;
-            this.skinButton_volume.Size = new System.Drawing.Size(16, 16);
-            this.skinButton_volume.TabIndex = 7;
-            this.skinButton_volume.Tag = "音量";
-            this.skinButton_volume.UseVisualStyleBackColor = false;
-            this.skinButton_volume.Click += new System.EventHandler(this.skinButton_volume_Click);
-            this.skinButton_volume.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // layeredTrackBar_yljdt
-            // 
-            this.layeredTrackBar_yljdt.AdaptImage = true;
-            this.layeredTrackBar_yljdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.layeredTrackBar_yljdt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.layeredTrackBar_yljdt.BackImage = null;
-            this.layeredTrackBar_yljdt.BackLineColor = System.Drawing.Color.Gray;
-            this.layeredTrackBar_yljdt.Borders.BottomColor = System.Drawing.Color.Empty;
-            this.layeredTrackBar_yljdt.Borders.BottomWidth = 0;
-            this.layeredTrackBar_yljdt.Borders.LeftColor = System.Drawing.Color.Empty;
-            this.layeredTrackBar_yljdt.Borders.LeftWidth = 0;
-            this.layeredTrackBar_yljdt.Borders.RightColor = System.Drawing.Color.Empty;
-            this.layeredTrackBar_yljdt.Borders.RightWidth = 0;
-            this.layeredTrackBar_yljdt.Borders.TopColor = System.Drawing.Color.Empty;
-            this.layeredTrackBar_yljdt.Borders.TopWidth = 0;
-            this.layeredTrackBar_yljdt.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredTrackBar_yljdt.Canvas")));
-            this.layeredTrackBar_yljdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 105, 5);
-            this.layeredTrackBar_yljdt.LineWidth = 3;
-            this.layeredTrackBar_yljdt.Location = new System.Drawing.Point(16, 17);
-            this.layeredTrackBar_yljdt.Margin = new System.Windows.Forms.Padding(0);
-            this.layeredTrackBar_yljdt.MouseCanControl = true;
-            this.layeredTrackBar_yljdt.Name = "layeredTrackBar_yljdt";
-            this.layeredTrackBar_yljdt.Orientation = LayeredSkin.Controls.Orientations.Horizontal;
-            this.layeredTrackBar_yljdt.PointImage = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImage;
-            this.layeredTrackBar_yljdt.PointImageHover = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImageHover;
-            this.layeredTrackBar_yljdt.PointImagePressed = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImagePressed;
-            this.layeredTrackBar_yljdt.PointState = LayeredSkin.Controls.ControlStates.Normal;
-            this.layeredTrackBar_yljdt.Size = new System.Drawing.Size(115, 15);
-            this.layeredTrackBar_yljdt.SurfaceImage = null;
-            this.layeredTrackBar_yljdt.SurfaceLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.layeredTrackBar_yljdt.TabIndex = 13;
-            this.layeredTrackBar_yljdt.Value = 0.7563D;
-            // 
-            // skinButton_xys
-            // 
-            this.skinButton_xys.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.BackgroundImage = global::MusicNetease.Properties.Resources.xys;
-            this.skinButton_xys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinButton_xys.BackRectangle = new System.Drawing.Rectangle(10, 10, 40, 40);
-            this.skinButton_xys.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_xys.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_xys.DownBack = null;
-            this.skinButton_xys.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.FadeGlow = false;
-            this.skinButton_xys.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.ImageSize = new System.Drawing.Size(40, 40);
-            this.skinButton_xys.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.IsDrawBorder = false;
-            this.skinButton_xys.IsDrawGlass = false;
-            this.skinButton_xys.Location = new System.Drawing.Point(0, 0);
-            this.skinButton_xys.MouseBack = null;
-            this.skinButton_xys.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_xys.Name = "skinButton_xys";
-            this.skinButton_xys.NormlBack = null;
-            this.skinButton_xys.Size = new System.Drawing.Size(40, 40);
-            this.skinButton_xys.TabIndex = 7;
-            this.skinButton_xys.Tag = "下一首";
-            this.skinButton_xys.UseVisualStyleBackColor = false;
-            this.skinButton_xys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // skinPanel_xys
-            // 
-            this.skinPanel_xys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinPanel_xys.Controls.Add(this.skinButton_xys);
-            this.skinPanel_xys.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_xys.DownBack = null;
-            this.skinPanel_xys.Location = new System.Drawing.Point(150, 5);
-            this.skinPanel_xys.MouseBack = null;
-            this.skinPanel_xys.Name = "skinPanel_xys";
-            this.skinPanel_xys.NormlBack = null;
-            this.skinPanel_xys.Radius = 40;
-            this.skinPanel_xys.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel_xys.Size = new System.Drawing.Size(40, 40);
-            this.skinPanel_xys.TabIndex = 2;
-            this.skinPanel_xys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            this.radiusControlButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton1.Location = new System.Drawing.Point(144, 5);
+            this.radiusControlButton1.Name = "radiusControlButton1";
+            this.radiusControlButton1.Radius = 40;
+            this.radiusControlButton1.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton1.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton1.TabIndex = 2;
             // 
             // MusicPlayerButton
             // 
@@ -573,15 +536,14 @@
             this.skinPanel_play.ResumeLayout(false);
             this.skinPanel_sys.ResumeLayout(false);
             this.skinPanel_bfjdt.ResumeLayout(false);
+            this.skinPanel_jdt.ResumeLayout(false);
             this.skinPanel_yycd.ResumeLayout(false);
             this.skinPanel_yycd.PerformLayout();
-            this.skinPanel_jdt.ResumeLayout(false);
             this.skinPanel_dqjd.ResumeLayout(false);
             this.skinPanel_dqjd.PerformLayout();
             this.skinPanel_otherButtons.ResumeLayout(false);
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
-            this.skinPanel_xys.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -609,7 +571,6 @@
         private CCWin.SkinControl.SkinPanel skinPanel_yycd;
         private LayeredSkin.Controls.LayeredTrackBar layeredTrackBar_yyjdt;
         private LayeredSkin.Controls.LayeredTrackBar layeredTrackBar_yljdt;
-        private CCWin.SkinControl.SkinButton skinButton_xys;
-        private CCWin.SkinControl.SkinPanel skinPanel_xys;
+        private RadiusControlButton radiusControlButton1;
     }
 }
