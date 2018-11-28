@@ -383,6 +383,36 @@ namespace MusicNetease.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap layeredTrackBar1_PointImage {
+            get {
+                object obj = ResourceManager.GetObject("layeredTrackBar1_PointImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap layeredTrackBar1_PointImageHover {
+            get {
+                object obj = ResourceManager.GetObject("layeredTrackBar1_PointImageHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap layeredTrackBar1_PointImagePressed {
+            get {
+                object obj = ResourceManager.GetObject("layeredTrackBar1_PointImagePressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap lbxh0 {
             get {
                 object obj = ResourceManager.GetObject("lbxh0", resourceCulture);
