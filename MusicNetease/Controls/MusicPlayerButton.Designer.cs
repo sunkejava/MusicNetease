@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayerButton));
             this.skinPanel_buttons = new CCWin.SkinControl.SkinPanel();
+            this.radiusControlButton_sys = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControlButton_play = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControlButton_xys = new MusicNetease.Controls.RadiusControlButton();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
             this.skinPanel_bfjdt = new CCWin.SkinControl.SkinPanel();
             this.skinPanel_jdt = new CCWin.SkinControl.SkinPanel();
@@ -47,9 +50,6 @@
             this.skinButton_openPlayList = new CCWin.SkinControl.SkinButton();
             this.skinButton_Lyric = new CCWin.SkinControl.SkinButton();
             this.skinButton_bfsx = new CCWin.SkinControl.SkinButton();
-            this.radiusControlButton_sys = new MusicNetease.Controls.RadiusControlButton();
-            this.radiusControlButton_play = new MusicNetease.Controls.RadiusControlButton();
-            this.radiusControlButton_xys = new MusicNetease.Controls.RadiusControlButton();
             this.skinPanel_buttons.SuspendLayout();
             this.skinPanel_bfjdt.SuspendLayout();
             this.skinPanel_jdt.SuspendLayout();
@@ -74,6 +74,61 @@
             this.skinPanel_buttons.NormlBack = null;
             this.skinPanel_buttons.Size = new System.Drawing.Size(206, 49);
             this.skinPanel_buttons.TabIndex = 0;
+            // 
+            // radiusControlButton_sys
+            // 
+            this.radiusControlButton_sys.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_sys.IsBdtb = false;
+            this.radiusControlButton_sys.IsSelect = false;
+            this.radiusControlButton_sys.IsShowBorder = false;
+            this.radiusControlButton_sys.Location = new System.Drawing.Point(11, 5);
+            this.radiusControlButton_sys.Name = "radiusControlButton_sys";
+            this.radiusControlButton_sys.Radius = 40;
+            this.radiusControlButton_sys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_sys.SetDefaultIcon = global::MusicNetease.Properties.Resources.sys;
+            this.radiusControlButton_sys.SetIconSize = 20;
+            this.radiusControlButton_sys.SetSelectIcon = null;
+            this.radiusControlButton_sys.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_sys.TabIndex = 4;
+            this.radiusControlButton_sys.Tag = "上一首";
+            this.radiusControlButton_sys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            // 
+            // radiusControlButton_play
+            // 
+            this.radiusControlButton_play.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_play.IsBdtb = true;
+            this.radiusControlButton_play.IsSelect = false;
+            this.radiusControlButton_play.IsShowBorder = false;
+            this.radiusControlButton_play.Location = new System.Drawing.Point(77, 5);
+            this.radiusControlButton_play.Name = "radiusControlButton_play";
+            this.radiusControlButton_play.Radius = 40;
+            this.radiusControlButton_play.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_play.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
+            this.radiusControlButton_play.SetIconSize = 20;
+            this.radiusControlButton_play.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
+            this.radiusControlButton_play.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_play.TabIndex = 3;
+            this.radiusControlButton_play.Tag = "播放";
+            this.radiusControlButton_play.Click += new System.EventHandler(this.radiusControlButton_play_Click);
+            this.radiusControlButton_play.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            // 
+            // radiusControlButton_xys
+            // 
+            this.radiusControlButton_xys.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_xys.IsBdtb = false;
+            this.radiusControlButton_xys.IsSelect = false;
+            this.radiusControlButton_xys.IsShowBorder = false;
+            this.radiusControlButton_xys.Location = new System.Drawing.Point(144, 5);
+            this.radiusControlButton_xys.Name = "radiusControlButton_xys";
+            this.radiusControlButton_xys.Radius = 40;
+            this.radiusControlButton_xys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_xys.SetDefaultIcon = global::MusicNetease.Properties.Resources.xys;
+            this.radiusControlButton_xys.SetIconSize = 20;
+            this.radiusControlButton_xys.SetSelectIcon = null;
+            this.radiusControlButton_xys.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_xys.TabIndex = 2;
+            this.radiusControlButton_xys.Tag = "下一首";
+            this.radiusControlButton_xys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
             // 
             // skinToolTip1
             // 
@@ -416,61 +471,6 @@
             this.skinButton_bfsx.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
             this.skinButton_bfsx.MouseLeave += new System.EventHandler(this.skinButton_bfsx_MouseLeave);
             this.skinButton_bfsx.MouseHover += new System.EventHandler(this.skinButton_bfsx_MouseHover);
-            // 
-            // radiusControlButton_sys
-            // 
-            this.radiusControlButton_sys.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton_sys.IsBdtb = false;
-            this.radiusControlButton_sys.IsSelect = false;
-            this.radiusControlButton_sys.IsShowBorder = false;
-            this.radiusControlButton_sys.Location = new System.Drawing.Point(11, 5);
-            this.radiusControlButton_sys.Name = "radiusControlButton_sys";
-            this.radiusControlButton_sys.Radius = 40;
-            this.radiusControlButton_sys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.radiusControlButton_sys.SetDefaultIcon = global::MusicNetease.Properties.Resources.sys;
-            this.radiusControlButton_sys.SetIconSize = 20;
-            this.radiusControlButton_sys.SetSelectIcon = null;
-            this.radiusControlButton_sys.Size = new System.Drawing.Size(40, 40);
-            this.radiusControlButton_sys.TabIndex = 4;
-            this.radiusControlButton_sys.Tag = "上一首";
-            this.radiusControlButton_sys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // radiusControlButton_play
-            // 
-            this.radiusControlButton_play.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton_play.IsBdtb = true;
-            this.radiusControlButton_play.IsSelect = false;
-            this.radiusControlButton_play.IsShowBorder = false;
-            this.radiusControlButton_play.Location = new System.Drawing.Point(77, 5);
-            this.radiusControlButton_play.Name = "radiusControlButton_play";
-            this.radiusControlButton_play.Radius = 40;
-            this.radiusControlButton_play.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.radiusControlButton_play.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
-            this.radiusControlButton_play.SetIconSize = 20;
-            this.radiusControlButton_play.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
-            this.radiusControlButton_play.Size = new System.Drawing.Size(40, 40);
-            this.radiusControlButton_play.TabIndex = 3;
-            this.radiusControlButton_play.Tag = "播放";
-            this.radiusControlButton_play.Click += new System.EventHandler(this.radiusControlButton_play_Click);
-            this.radiusControlButton_play.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // radiusControlButton_xys
-            // 
-            this.radiusControlButton_xys.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton_xys.IsBdtb = false;
-            this.radiusControlButton_xys.IsSelect = false;
-            this.radiusControlButton_xys.IsShowBorder = false;
-            this.radiusControlButton_xys.Location = new System.Drawing.Point(144, 5);
-            this.radiusControlButton_xys.Name = "radiusControlButton_xys";
-            this.radiusControlButton_xys.Radius = 40;
-            this.radiusControlButton_xys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.radiusControlButton_xys.SetDefaultIcon = global::MusicNetease.Properties.Resources.xys;
-            this.radiusControlButton_xys.SetIconSize = 20;
-            this.radiusControlButton_xys.SetSelectIcon = null;
-            this.radiusControlButton_xys.Size = new System.Drawing.Size(40, 40);
-            this.radiusControlButton_xys.TabIndex = 2;
-            this.radiusControlButton_xys.Tag = "下一首";
-            this.radiusControlButton_xys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
             // 
             // MusicPlayerButton
             // 

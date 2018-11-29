@@ -123,19 +123,20 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="layeredTrackBar_yyjdt.Canvas" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAYYAAAAPCAYAAADgSGhBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAK1JREFUeF7t2TEKg1AQRVEXmsVYZ7+W+hPxiWKEn0IxmHPgEgzTCTOFDQAAAMBv
-        KV/KOAB3l71flXEA7i57v5Sum36HYWn+7y3jANxd9v5kPAZ9vzQ+R8a5Wnk8iySd2mx7FDaHoW1bnVjW
-        ft3uS5SkI5s5DJeWtV+3+xIl6cjW1sdhdRRGe8tMx5W1D3C97P3Pj88jH58B/k/2flXGAbi77P2qjAMA
-        AAAAv6ZpXqI9rwaC9NBKAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAYYAAAAPCAYAAADgSGhBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVHhe7dkxCoNQEEVRF5rFWGe/lvoT8YlihJ9CMZhz
+        4BIM0wkzhQ0AAADAbylfyjgAd5e9X5VxAO4ue7+Urpt+h2Fp/u8t4wDcXfb+ZDwGfb80PkfGuVp5PIsk
+        ndpsexQ2h6FtW51Y1n7d7kuUpCObOQyXlrVft/sSJenI1tbHYXUURnvLTMeVtQ9wvez9z4/PIx+fAf5P
+        9n5VxgG4u+z9qowDAAAAAL+maV6iPa8GgvTQSgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="layeredTrackBar_yljdt.Canvas" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHMAAAAPCAYAAADXo/BcAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAItJREFUWEft1sEKhSAURVE/tI9x3P821FviEaUCg4Is9oJDvMcdBHuSA4B/sYt0
-        jpGpVZfOMTK1MluW/Iyxrvy30TlGplZZChhCXfotOn+HTbOxCyv2IXcxvfePT6n6Tl+cHVcQ8wdrtUGb
-        kMlZjLtTKjxFrY4fQAkfQN+iVl06x8jUqkvnAIAvc24F7mqtCBg6CZIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAHMAAAAPCAYAAADXo/BcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVFhH7dbBCoUgFEVRP7SPcdz/NtRb4hGlAoOCLPaC
+        Q7zHHQR7kgOAf7GLdI6RqVWXzjEytTJblvyMsa78t9E5RqZWWQoYQl36LTp/h02zsQsr9iF3Mb33j0+p
+        +k5fnB1XEPMHa7VBm5DJWYy7Uyo8Ra2OH0AJH0DfolZdOsfI1KpL5wCAL3NuBe5qrQgYOgmSAAAAAElF
+        TkSuQmCC
 </value>
   </data>
 </root>

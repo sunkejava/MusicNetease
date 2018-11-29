@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Srfm));
             this.skinPictureBox_sys = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPanel_play = new CCWin.SkinControl.SkinPanel();
-            this.skinButton_Play = new CCWin.SkinControl.SkinButton();
             this.skinLabel_songName = new CCWin.SkinControl.SkinLabel();
             this.skinButton_qxd = new CCWin.SkinControl.SkinButton();
             this.skinLabel_zj = new CCWin.SkinControl.SkinLabel();
@@ -41,9 +39,10 @@
             this.skinLabel_zjName = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_gsName = new CCWin.SkinControl.SkinLabel();
             this.skinWaterTextBox1 = new CCWin.SkinControl.SkinWaterTextBox();
+            this.radiusControlButton1 = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControl1 = new MusicNetease.Controls.RadiusControl();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_sys)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
-            this.skinPanel_play.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPictureBox_sys
@@ -65,52 +64,6 @@
             this.skinPictureBox1.Size = new System.Drawing.Size(300, 300);
             this.skinPictureBox1.TabIndex = 1;
             this.skinPictureBox1.TabStop = false;
-            // 
-            // skinPanel_play
-            // 
-            this.skinPanel_play.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_play.BackgroundImage = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
-            this.skinPanel_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinPanel_play.Controls.Add(this.skinButton_Play);
-            this.skinPanel_play.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_play.DownBack = null;
-            this.skinPanel_play.Location = new System.Drawing.Point(227, 193);
-            this.skinPanel_play.MouseBack = null;
-            this.skinPanel_play.Name = "skinPanel_play";
-            this.skinPanel_play.NormlBack = null;
-            this.skinPanel_play.Radius = 60;
-            this.skinPanel_play.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel_play.Size = new System.Drawing.Size(60, 60);
-            this.skinPanel_play.TabIndex = 10;
-            // 
-            // skinButton_Play
-            // 
-            this.skinButton_Play.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.BackgroundImage = global::MusicNetease.Properties.Resources.play;
-            this.skinButton_Play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinButton_Play.BackRectangle = new System.Drawing.Rectangle(10, 10, 40, 40);
-            this.skinButton_Play.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_Play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_Play.DownBack = null;
-            this.skinButton_Play.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.FadeGlow = false;
-            this.skinButton_Play.ForeColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.ImageSize = new System.Drawing.Size(40, 40);
-            this.skinButton_Play.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.IsDrawBorder = false;
-            this.skinButton_Play.IsDrawGlass = false;
-            this.skinButton_Play.Location = new System.Drawing.Point(0, 0);
-            this.skinButton_Play.MouseBack = null;
-            this.skinButton_Play.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_Play.Name = "skinButton_Play";
-            this.skinButton_Play.NormlBack = null;
-            this.skinButton_Play.Size = new System.Drawing.Size(60, 60);
-            this.skinButton_Play.TabIndex = 7;
-            this.skinButton_Play.Tag = "播放";
-            this.skinButton_Play.UseVisualStyleBackColor = false;
             // 
             // skinLabel_songName
             // 
@@ -211,11 +164,40 @@
             this.skinWaterTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.skinWaterTextBox1.WaterText = "";
             // 
+            // radiusControlButton1
+            // 
+            this.radiusControlButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton1.IsBdtb = false;
+            this.radiusControlButton1.IsSelect = false;
+            this.radiusControlButton1.IsShowBorder = true;
+            this.radiusControlButton1.Location = new System.Drawing.Point(219, 185);
+            this.radiusControlButton1.Name = "radiusControlButton1";
+            this.radiusControlButton1.Radius = 80;
+            this.radiusControlButton1.SetBackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton1.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
+            this.radiusControlButton1.SetIconSize = 40;
+            this.radiusControlButton1.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
+            this.radiusControlButton1.Size = new System.Drawing.Size(80, 80);
+            this.radiusControlButton1.TabIndex = 18;
+            // 
+            // radiusControl1
+            // 
+            this.radiusControl1.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControl1.IsShowBorder = true;
+            this.radiusControl1.Location = new System.Drawing.Point(327, 303);
+            this.radiusControl1.Name = "radiusControl1";
+            this.radiusControl1.Radius = 80;
+            this.radiusControl1.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControl1.Size = new System.Drawing.Size(80, 80);
+            this.radiusControl1.TabIndex = 19;
+            // 
             // UserControl_Srfm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.radiusControl1);
+            this.Controls.Add(this.radiusControlButton1);
             this.Controls.Add(this.skinWaterTextBox1);
             this.Controls.Add(this.skinLabel_gsName);
             this.Controls.Add(this.skinLabel_zjName);
@@ -223,14 +205,12 @@
             this.Controls.Add(this.skinLabel_zj);
             this.Controls.Add(this.skinButton_qxd);
             this.Controls.Add(this.skinLabel_songName);
-            this.Controls.Add(this.skinPanel_play);
             this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.skinPictureBox_sys);
             this.Name = "UserControl_Srfm";
             this.Size = new System.Drawing.Size(866, 503);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_sys)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
-            this.skinPanel_play.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,8 +220,6 @@
 
         private CCWin.SkinControl.SkinPictureBox skinPictureBox_sys;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
-        private CCWin.SkinControl.SkinPanel skinPanel_play;
-        private CCWin.SkinControl.SkinButton skinButton_Play;
         private CCWin.SkinControl.SkinLabel skinLabel_songName;
         private CCWin.SkinControl.SkinButton skinButton_qxd;
         private CCWin.SkinControl.SkinLabel skinLabel_zj;
@@ -249,5 +227,7 @@
         private CCWin.SkinControl.SkinLabel skinLabel_zjName;
         private CCWin.SkinControl.SkinLabel skinLabel_gsName;
         private CCWin.SkinControl.SkinWaterTextBox skinWaterTextBox1;
+        private RadiusControlButton radiusControlButton1;
+        private RadiusControl radiusControl1;
     }
 }
