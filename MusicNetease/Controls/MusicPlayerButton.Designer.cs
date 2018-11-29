@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayerButton));
             this.skinPanel_buttons = new CCWin.SkinControl.SkinPanel();
-            this.skinPanel_play = new CCWin.SkinControl.SkinPanel();
-            this.skinButton_play = new CCWin.SkinControl.SkinButton();
-            this.skinPanel_sys = new CCWin.SkinControl.SkinPanel();
-            this.skinButton_sys = new CCWin.SkinControl.SkinButton();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
             this.skinPanel_bfjdt = new CCWin.SkinControl.SkinPanel();
             this.skinPanel_jdt = new CCWin.SkinControl.SkinPanel();
@@ -51,10 +47,10 @@
             this.skinButton_openPlayList = new CCWin.SkinControl.SkinButton();
             this.skinButton_Lyric = new CCWin.SkinControl.SkinButton();
             this.skinButton_bfsx = new CCWin.SkinControl.SkinButton();
-            this.radiusControlButton1 = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControlButton_sys = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControlButton_play = new MusicNetease.Controls.RadiusControlButton();
+            this.radiusControlButton_xys = new MusicNetease.Controls.RadiusControlButton();
             this.skinPanel_buttons.SuspendLayout();
-            this.skinPanel_play.SuspendLayout();
-            this.skinPanel_sys.SuspendLayout();
             this.skinPanel_bfjdt.SuspendLayout();
             this.skinPanel_jdt.SuspendLayout();
             this.skinPanel_yycd.SuspendLayout();
@@ -66,9 +62,9 @@
             // skinPanel_buttons
             // 
             this.skinPanel_buttons.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_buttons.Controls.Add(this.radiusControlButton1);
-            this.skinPanel_buttons.Controls.Add(this.skinPanel_play);
-            this.skinPanel_buttons.Controls.Add(this.skinPanel_sys);
+            this.skinPanel_buttons.Controls.Add(this.radiusControlButton_sys);
+            this.skinPanel_buttons.Controls.Add(this.radiusControlButton_play);
+            this.skinPanel_buttons.Controls.Add(this.radiusControlButton_xys);
             this.skinPanel_buttons.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel_buttons.Dock = System.Windows.Forms.DockStyle.Left;
             this.skinPanel_buttons.DownBack = null;
@@ -78,97 +74,6 @@
             this.skinPanel_buttons.NormlBack = null;
             this.skinPanel_buttons.Size = new System.Drawing.Size(206, 49);
             this.skinPanel_buttons.TabIndex = 0;
-            // 
-            // skinPanel_play
-            // 
-            this.skinPanel_play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinPanel_play.Controls.Add(this.skinButton_play);
-            this.skinPanel_play.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_play.DownBack = null;
-            this.skinPanel_play.Location = new System.Drawing.Point(82, 5);
-            this.skinPanel_play.MouseBack = null;
-            this.skinPanel_play.Name = "skinPanel_play";
-            this.skinPanel_play.NormlBack = null;
-            this.skinPanel_play.Radius = 40;
-            this.skinPanel_play.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel_play.Size = new System.Drawing.Size(40, 40);
-            this.skinPanel_play.TabIndex = 1;
-            this.skinPanel_play.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // skinButton_play
-            // 
-            this.skinButton_play.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.BackgroundImage = global::MusicNetease.Properties.Resources.play;
-            this.skinButton_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinButton_play.BackRectangle = new System.Drawing.Rectangle(10, 10, 40, 40);
-            this.skinButton_play.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_play.DownBack = null;
-            this.skinButton_play.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.FadeGlow = false;
-            this.skinButton_play.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.ImageSize = new System.Drawing.Size(40, 40);
-            this.skinButton_play.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.IsDrawBorder = false;
-            this.skinButton_play.IsDrawGlass = false;
-            this.skinButton_play.Location = new System.Drawing.Point(0, 0);
-            this.skinButton_play.MouseBack = null;
-            this.skinButton_play.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_play.Name = "skinButton_play";
-            this.skinButton_play.NormlBack = null;
-            this.skinButton_play.Size = new System.Drawing.Size(40, 40);
-            this.skinButton_play.TabIndex = 7;
-            this.skinButton_play.Tag = "播放";
-            this.skinButton_play.UseVisualStyleBackColor = false;
-            this.skinButton_play.Click += new System.EventHandler(this.skinButton_play_Click);
-            this.skinButton_play.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // skinPanel_sys
-            // 
-            this.skinPanel_sys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinPanel_sys.Controls.Add(this.skinButton_sys);
-            this.skinPanel_sys.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_sys.DownBack = null;
-            this.skinPanel_sys.Location = new System.Drawing.Point(15, 5);
-            this.skinPanel_sys.MouseBack = null;
-            this.skinPanel_sys.Name = "skinPanel_sys";
-            this.skinPanel_sys.NormlBack = null;
-            this.skinPanel_sys.Radius = 40;
-            this.skinPanel_sys.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel_sys.Size = new System.Drawing.Size(40, 40);
-            this.skinPanel_sys.TabIndex = 0;
-            this.skinPanel_sys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
-            // 
-            // skinButton_sys
-            // 
-            this.skinButton_sys.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.BackgroundImage = global::MusicNetease.Properties.Resources.sys;
-            this.skinButton_sys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinButton_sys.BackRectangle = new System.Drawing.Rectangle(10, 10, 40, 40);
-            this.skinButton_sys.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_sys.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_sys.DownBack = null;
-            this.skinButton_sys.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.FadeGlow = false;
-            this.skinButton_sys.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.ImageSize = new System.Drawing.Size(20, 20);
-            this.skinButton_sys.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.IsDrawBorder = false;
-            this.skinButton_sys.IsDrawGlass = false;
-            this.skinButton_sys.Location = new System.Drawing.Point(0, 0);
-            this.skinButton_sys.MouseBack = null;
-            this.skinButton_sys.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_sys.Name = "skinButton_sys";
-            this.skinButton_sys.NormlBack = null;
-            this.skinButton_sys.Size = new System.Drawing.Size(40, 40);
-            this.skinButton_sys.TabIndex = 7;
-            this.skinButton_sys.Tag = "上一首";
-            this.skinButton_sys.UseVisualStyleBackColor = false;
-            this.skinButton_sys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
             // 
             // skinToolTip1
             // 
@@ -512,15 +417,60 @@
             this.skinButton_bfsx.MouseLeave += new System.EventHandler(this.skinButton_bfsx_MouseLeave);
             this.skinButton_bfsx.MouseHover += new System.EventHandler(this.skinButton_bfsx_MouseHover);
             // 
-            // radiusControlButton1
+            // radiusControlButton_sys
             // 
-            this.radiusControlButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton1.Location = new System.Drawing.Point(144, 5);
-            this.radiusControlButton1.Name = "radiusControlButton1";
-            this.radiusControlButton1.Radius = 40;
-            this.radiusControlButton1.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.radiusControlButton1.Size = new System.Drawing.Size(40, 40);
-            this.radiusControlButton1.TabIndex = 2;
+            this.radiusControlButton_sys.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_sys.IsBdtb = false;
+            this.radiusControlButton_sys.IsSelect = false;
+            this.radiusControlButton_sys.IsShowBorder = false;
+            this.radiusControlButton_sys.Location = new System.Drawing.Point(11, 5);
+            this.radiusControlButton_sys.Name = "radiusControlButton_sys";
+            this.radiusControlButton_sys.Radius = 40;
+            this.radiusControlButton_sys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_sys.SetDefaultIcon = global::MusicNetease.Properties.Resources.sys;
+            this.radiusControlButton_sys.SetIconSize = 20;
+            this.radiusControlButton_sys.SetSelectIcon = null;
+            this.radiusControlButton_sys.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_sys.TabIndex = 4;
+            this.radiusControlButton_sys.Tag = "上一首";
+            this.radiusControlButton_sys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            // 
+            // radiusControlButton_play
+            // 
+            this.radiusControlButton_play.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_play.IsBdtb = true;
+            this.radiusControlButton_play.IsSelect = false;
+            this.radiusControlButton_play.IsShowBorder = false;
+            this.radiusControlButton_play.Location = new System.Drawing.Point(77, 5);
+            this.radiusControlButton_play.Name = "radiusControlButton_play";
+            this.radiusControlButton_play.Radius = 40;
+            this.radiusControlButton_play.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_play.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
+            this.radiusControlButton_play.SetIconSize = 20;
+            this.radiusControlButton_play.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
+            this.radiusControlButton_play.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_play.TabIndex = 3;
+            this.radiusControlButton_play.Tag = "播放";
+            this.radiusControlButton_play.Click += new System.EventHandler(this.radiusControlButton_play_Click);
+            this.radiusControlButton_play.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
+            // 
+            // radiusControlButton_xys
+            // 
+            this.radiusControlButton_xys.BackColor = System.Drawing.Color.Transparent;
+            this.radiusControlButton_xys.IsBdtb = false;
+            this.radiusControlButton_xys.IsSelect = false;
+            this.radiusControlButton_xys.IsShowBorder = false;
+            this.radiusControlButton_xys.Location = new System.Drawing.Point(144, 5);
+            this.radiusControlButton_xys.Name = "radiusControlButton_xys";
+            this.radiusControlButton_xys.Radius = 40;
+            this.radiusControlButton_xys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.radiusControlButton_xys.SetDefaultIcon = global::MusicNetease.Properties.Resources.xys;
+            this.radiusControlButton_xys.SetIconSize = 20;
+            this.radiusControlButton_xys.SetSelectIcon = null;
+            this.radiusControlButton_xys.Size = new System.Drawing.Size(40, 40);
+            this.radiusControlButton_xys.TabIndex = 2;
+            this.radiusControlButton_xys.Tag = "下一首";
+            this.radiusControlButton_xys.MouseEnter += new System.EventHandler(this.skinButton_MouseEnter);
             // 
             // MusicPlayerButton
             // 
@@ -533,8 +483,6 @@
             this.Name = "MusicPlayerButton";
             this.Size = new System.Drawing.Size(954, 49);
             this.skinPanel_buttons.ResumeLayout(false);
-            this.skinPanel_play.ResumeLayout(false);
-            this.skinPanel_sys.ResumeLayout(false);
             this.skinPanel_bfjdt.ResumeLayout(false);
             this.skinPanel_jdt.ResumeLayout(false);
             this.skinPanel_yycd.ResumeLayout(false);
@@ -551,10 +499,6 @@
         #endregion
 
         private CCWin.SkinControl.SkinPanel skinPanel_buttons;
-        private CCWin.SkinControl.SkinPanel skinPanel_play;
-        private CCWin.SkinControl.SkinPanel skinPanel_sys;
-        private CCWin.SkinControl.SkinButton skinButton_play;
-        private CCWin.SkinControl.SkinButton skinButton_sys;
         private CCWin.SkinToolTip skinToolTip1;
         private CCWin.SkinControl.SkinPanel skinPanel_bfjdt;
         private CCWin.SkinControl.SkinLabel skinLabel_ybfcd;
@@ -571,6 +515,8 @@
         private CCWin.SkinControl.SkinPanel skinPanel_yycd;
         private LayeredSkin.Controls.LayeredTrackBar layeredTrackBar_yyjdt;
         private LayeredSkin.Controls.LayeredTrackBar layeredTrackBar_yljdt;
-        private RadiusControlButton radiusControlButton1;
+        private RadiusControlButton radiusControlButton_xys;
+        private RadiusControlButton radiusControlButton_play;
+        private RadiusControlButton radiusControlButton_sys;
     }
 }

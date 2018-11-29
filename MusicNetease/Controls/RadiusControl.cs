@@ -16,9 +16,7 @@ namespace MusicNetease.Controls
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// 圆角度数
-        /// </summary>
+        [Description("圆角度数"), Category("自定义属性")]
         public int Radius
         {
             get { return layeredButton1.Radius; }
@@ -27,9 +25,7 @@ namespace MusicNetease.Controls
                 layeredButton1.Radius = value;
             }
         }
-        /// <summary>
-        /// 背景颜色设置
-        /// </summary>
+        [Description("背景颜色设置"), Category("自定义属性")]
         public Color SetBackColor
         {
             get { return layeredButton1.BaseColor; }
@@ -37,6 +33,13 @@ namespace MusicNetease.Controls
             {
                 layeredButton1.BaseColor = value;
             }
+        }
+
+        [Description("是否显示边框"), Category("自定义属性")]
+        public bool IsShowBorder
+        {
+            get { return layeredButton1.ShowBorder; }
+            set { layeredButton1.ShowBorder = value; }
         }
     }
 }

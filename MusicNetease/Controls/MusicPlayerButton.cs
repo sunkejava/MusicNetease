@@ -17,21 +17,6 @@ namespace MusicNetease.Controls
             InitializeComponent();
         }
 
-        private void skinButton_play_Click(object sender, EventArgs e)
-        {
-            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            if (btn.Tag.ToString() == "播放")
-            {
-                btn.BackgroundImage = global::MusicNetease.Properties.Resources.pause;
-                btn.Tag = "暂停";
-            }
-            else
-            {
-                btn.BackgroundImage = global::MusicNetease.Properties.Resources.play;
-                btn.Tag = "播放";
-            }
-        }
-
         private void skinButton_MouseEnter(object sender, EventArgs e)
         {
             CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
@@ -197,6 +182,21 @@ namespace MusicNetease.Controls
             else
             {
                 btn.Tag = "打开播放列表";
+            }
+        }
+
+        private void radiusControlButton_play_Click(object sender, EventArgs e)
+        {
+            RadiusControlButton btn = sender as RadiusControlButton;
+            if (btn.Tag.ToString() == "播放")
+            {
+               btn.IsSelect = true;
+                btn.Tag = "暂停";
+            }
+            else
+            {
+                btn.IsSelect = false;
+                btn.Tag = "播放";
             }
         }
     }
