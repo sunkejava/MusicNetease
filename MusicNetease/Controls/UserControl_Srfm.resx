@@ -117,107 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="skinWaterTextBox1.Text" xml:space="preserve">
-    <value>One two three
-一二三
-I've been running from the pain
-我已脱离痛境
-Trying not to feel the same
-试着不再重蹈覆辙
-But it's a shame that we're sinking
-但遗憾的是我们都在沉沦
-See, my confidence is shaking
-看见我的信心在动摇了
-And my heart is feeling vacant
-而我的内心也倍感空虚
-So you try to fill it in
-所以你尽力去填补空白
-You say "I could fix the broken in your heart
-你说“我可以修复你的玻璃心
-You're worth saving darling"
-亲爱的你值得我拯救
-But I don't know why you're shooting in the dark
-但我不明白你为什么要在深夜落荒逃离
-I got faith in nothing
-我对万事无自信
-But love, pray for me
-但是爱，它为我祈祷
-I never had somebody
-我从未幸得某人呵护
-So I don't know how to love
-所以我不懂怎么去爱
-Pray for me
-请为我祈祷
-I know I need somebody
-我知道我需要某个人陪伴
-So I can learn how to love
-所以我可以学会去热爱
-I know it's been a while
-我知道我已经恍惚很久
-Cause my memory's on trial
-因为我在审判我的回忆
-For the way I used to be
-我曾经亦是如此
-My head is running miles
-我的思绪飞跃几英里
-Round in circles and I try
-循环往复而我在努力
-To find the little light in me
-去探寻心中的那盏小明灯
-You say "I could fix the broken in your heart
-你说“我可以修复你的玻璃心
-You're worth saving darling"
-亲爱的你值得我拯救”
-But I don't know why you're shooting in the dark
-但我不明白你为什么要在深夜落荒逃离
-I got faith in nothing
-我对万事无自信
-But love, pray for me
-但是爱，它为我祈祷
-I never had somebody
-我从未幸得某人呵护
-So I don't know how to love
-所以我不懂怎么去爱
-Pray for me
-请为我祈祷
-I know I need somebody
-我知道我需要某个人陪伴
-So I can learn how to love
-所以我可以学会去热爱
-I know I need somebody
-我知道我需要某个人陪伴
-I know I need somebody
-我知道我需要某个人陪伴
-I know I need somebody
-我知道我需要某个人陪伴
-So I can learn how to love
-所以我可以学会去热爱
-How to love
-所以我可以学会去热爱
-How to love
-所以我可以学会去热爱
-So I can learn how to love
-所以我可以学会去热爱
-How to love
-所以我可以学会去热爱
-How to love
-所以我可以学会去热爱
-How to love, love, love, love, love, love, love, oh
-所以我可以学会去热爱
-I know I need somebody
-我知道我需要某个人陪伴
-I know I need somebody
-我知道我需要某个人陪伴
-I know I need somebody
-我知道我需要某个人陪伴
-So I can learn how to love
-所以我可以学会去热爱
-(Need somebody now
-我需要某个人陪伴
-How to love, love
-所以我可以学会去热爱
-How to love, love)
-所以我可以学会去热爱
-歌词贡献者：蜥蜴沼质</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="layeredBaseControl_gc.Canvas" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAVcAAAEsCAYAAAB31PAaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAuxpJVgABYV1vngAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

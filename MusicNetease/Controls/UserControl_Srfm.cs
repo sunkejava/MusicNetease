@@ -16,5 +16,18 @@ namespace MusicNetease.Controls
         {
             InitializeComponent();
         }
+
+        private void UserControl_Srfm_Load(object sender, EventArgs e)
+        {
+            LayeredSkin.DirectUI.DuiTextBox dText = new LayeredSkin.DirectUI.DuiTextBox();
+            dText.BackColor = Color.Transparent;
+            dText.ReadOnly = true;
+            dText.Text = global::MusicNetease.Properties.Resources.DefaultLyric;
+            dText.RollSize = 20;
+            dText.Dock = DockStyle.Fill;
+            dText.TextRenderMode = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            dText.Multiline = true;
+            layeredBaseControl_gc.DUIControls.Add(dText);
+        }
     }
 }

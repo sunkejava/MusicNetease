@@ -191,6 +191,43 @@ namespace MusicNetease.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Let&apos;s go, lose control
+        ///动起来，失去理智的我们
+        ///Slip, slap on the dance floor
+        ///在光滑的舞池上打着节奏
+        ///Let&apos;s go, lose control
+        ///无法控制自己
+        ///Slip Slip, slap on the dance floor
+        ///摇摆，摇摆，今夜的节奏
+        ///Let&apos;s go, lose control
+        ///像我说的：动起来
+        ///Slip, slap on the dance floor
+        ///鲜花为你开！
+        ///Let&apos;s go, lose control
+        ///来吧，放纵自己
+        ///Three, two, one, drop it!
+        ///跟我倒数三二一
+        /// 
+        ///
+        ///Are you ready for this?
+        ///准备好与我共舞了吗？
+        ///Fast that back to the gaming boys
+        ///奇妙的游戏快开始了
+        ///Let&apos;s go, lose control
+        ///让我们不要停下
+        ///Slip, slap on the dance floor
+        ///共舞的喘息弥漫在舞池
+        ///Let&apos;s go, lose control
+        ///噢！失去控制
+        ///Slip Slip, s [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        public static string DefaultLyric {
+            get {
+                return ResourceManager.GetString("DefaultLyric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         public static System.Drawing.Bitmap download0 {

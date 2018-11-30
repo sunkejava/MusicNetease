@@ -38,9 +38,7 @@
             this.skinLabel_gs = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_zjName = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_gsName = new CCWin.SkinControl.SkinLabel();
-            this.skinWaterTextBox1 = new CCWin.SkinControl.SkinWaterTextBox();
-            this.radiusControlButton1 = new MusicNetease.Controls.RadiusControlButton();
-            this.radiusControl1 = new MusicNetease.Controls.RadiusControl();
+            this.layeredBaseControl_gc = new LayeredSkin.Controls.LayeredBaseControl();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_sys)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +101,7 @@
             this.skinLabel_zj.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_zj.BorderColor = System.Drawing.Color.White;
             this.skinLabel_zj.Font = new System.Drawing.Font("微软雅黑", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_zj.Location = new System.Drawing.Point(454, 68);
+            this.skinLabel_zj.Location = new System.Drawing.Point(454, 62);
             this.skinLabel_zj.Name = "skinLabel_zj";
             this.skinLabel_zj.Size = new System.Drawing.Size(41, 16);
             this.skinLabel_zj.TabIndex = 13;
@@ -115,7 +113,7 @@
             this.skinLabel_gs.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_gs.BorderColor = System.Drawing.Color.White;
             this.skinLabel_gs.Font = new System.Drawing.Font("微软雅黑", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_gs.Location = new System.Drawing.Point(633, 68);
+            this.skinLabel_gs.Location = new System.Drawing.Point(633, 62);
             this.skinLabel_gs.Name = "skinLabel_gs";
             this.skinLabel_gs.Size = new System.Drawing.Size(41, 16);
             this.skinLabel_gs.TabIndex = 14;
@@ -128,7 +126,7 @@
             this.skinLabel_zjName.BorderColor = System.Drawing.Color.White;
             this.skinLabel_zjName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_zjName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(134)))), ((int)(((byte)(200)))));
-            this.skinLabel_zjName.Location = new System.Drawing.Point(487, 67);
+            this.skinLabel_zjName.Location = new System.Drawing.Point(487, 61);
             this.skinLabel_zjName.Name = "skinLabel_zjName";
             this.skinLabel_zjName.Size = new System.Drawing.Size(144, 23);
             this.skinLabel_zjName.TabIndex = 15;
@@ -141,64 +139,36 @@
             this.skinLabel_gsName.BorderColor = System.Drawing.Color.White;
             this.skinLabel_gsName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_gsName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(134)))), ((int)(((byte)(200)))));
-            this.skinLabel_gsName.Location = new System.Drawing.Point(668, 68);
+            this.skinLabel_gsName.Location = new System.Drawing.Point(668, 62);
             this.skinLabel_gsName.Name = "skinLabel_gsName";
             this.skinLabel_gsName.Size = new System.Drawing.Size(142, 17);
             this.skinLabel_gsName.TabIndex = 16;
-            this.skinLabel_gsName.Text = "Cash Cash / Sofia Re";
+            this.skinLabel_gsName.Text = "Cash Cash / Sofia Re 安蔚然按时";
             // 
-            // skinWaterTextBox1
+            // layeredBaseControl_gc
             // 
-            this.skinWaterTextBox1.AcceptsReturn = true;
-            this.skinWaterTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.skinWaterTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.skinWaterTextBox1.HideSelection = false;
-            this.skinWaterTextBox1.Location = new System.Drawing.Point(460, 96);
-            this.skinWaterTextBox1.Multiline = true;
-            this.skinWaterTextBox1.Name = "skinWaterTextBox1";
-            this.skinWaterTextBox1.ReadOnly = true;
-            this.skinWaterTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.skinWaterTextBox1.Size = new System.Drawing.Size(332, 287);
-            this.skinWaterTextBox1.TabIndex = 17;
-            this.skinWaterTextBox1.Text = resources.GetString("skinWaterTextBox1.Text");
-            this.skinWaterTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinWaterTextBox1.WaterText = "";
-            // 
-            // radiusControlButton1
-            // 
-            this.radiusControlButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton1.IsBdtb = false;
-            this.radiusControlButton1.IsSelect = false;
-            this.radiusControlButton1.IsShowBorder = true;
-            this.radiusControlButton1.Location = new System.Drawing.Point(219, 185);
-            this.radiusControlButton1.Name = "radiusControlButton1";
-            this.radiusControlButton1.Radius = 80;
-            this.radiusControlButton1.SetBackColor = System.Drawing.Color.Transparent;
-            this.radiusControlButton1.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
-            this.radiusControlButton1.SetIconSize = 40;
-            this.radiusControlButton1.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
-            this.radiusControlButton1.Size = new System.Drawing.Size(80, 80);
-            this.radiusControlButton1.TabIndex = 18;
-            // 
-            // radiusControl1
-            // 
-            this.radiusControl1.BackColor = System.Drawing.Color.Transparent;
-            this.radiusControl1.IsShowBorder = true;
-            this.radiusControl1.Location = new System.Drawing.Point(327, 303);
-            this.radiusControl1.Name = "radiusControl1";
-            this.radiusControl1.Radius = 80;
-            this.radiusControl1.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.radiusControl1.Size = new System.Drawing.Size(80, 80);
-            this.radiusControl1.TabIndex = 19;
+            this.layeredBaseControl_gc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.layeredBaseControl_gc.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.layeredBaseControl_gc.Borders.BottomWidth = 1;
+            this.layeredBaseControl_gc.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.layeredBaseControl_gc.Borders.LeftWidth = 1;
+            this.layeredBaseControl_gc.Borders.RightColor = System.Drawing.Color.Empty;
+            this.layeredBaseControl_gc.Borders.RightWidth = 1;
+            this.layeredBaseControl_gc.Borders.TopColor = System.Drawing.Color.Empty;
+            this.layeredBaseControl_gc.Borders.TopWidth = 1;
+            this.layeredBaseControl_gc.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredBaseControl_gc.Canvas")));
+            this.layeredBaseControl_gc.Location = new System.Drawing.Point(457, 84);
+            this.layeredBaseControl_gc.Name = "layeredBaseControl_gc";
+            this.layeredBaseControl_gc.Size = new System.Drawing.Size(343, 300);
+            this.layeredBaseControl_gc.TabIndex = 17;
+            this.layeredBaseControl_gc.Text = "layeredBaseControl1";
             // 
             // UserControl_Srfm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.radiusControl1);
-            this.Controls.Add(this.radiusControlButton1);
-            this.Controls.Add(this.skinWaterTextBox1);
+            this.Controls.Add(this.layeredBaseControl_gc);
             this.Controls.Add(this.skinLabel_gsName);
             this.Controls.Add(this.skinLabel_zjName);
             this.Controls.Add(this.skinLabel_gs);
@@ -209,6 +179,7 @@
             this.Controls.Add(this.skinPictureBox_sys);
             this.Name = "UserControl_Srfm";
             this.Size = new System.Drawing.Size(866, 503);
+            this.Load += new System.EventHandler(this.UserControl_Srfm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_sys)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -226,8 +197,6 @@
         private CCWin.SkinControl.SkinLabel skinLabel_gs;
         private CCWin.SkinControl.SkinLabel skinLabel_zjName;
         private CCWin.SkinControl.SkinLabel skinLabel_gsName;
-        private CCWin.SkinControl.SkinWaterTextBox skinWaterTextBox1;
-        private RadiusControlButton radiusControlButton1;
-        private RadiusControl radiusControl1;
+        private LayeredSkin.Controls.LayeredBaseControl layeredBaseControl_gc;
     }
 }
