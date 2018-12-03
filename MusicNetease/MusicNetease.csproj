@@ -214,6 +214,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\Img_right1.png" />
+    <None Include="Resources\Img_right0.png" />
+    <None Include="Resources\Img_left1.png" />
+    <None Include="Resources\Img_left0.png" />
     <None Include="Resources\layeredTrackBar1.PointImage.png" />
     <None Include="Resources\layeredTrackBar1.PointImageHover.png" />
     <None Include="Resources\layeredTrackBar1.PointImagePressed.png" />

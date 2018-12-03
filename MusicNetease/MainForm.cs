@@ -59,5 +59,10 @@ namespace MusicNetease
                 }
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.skinTabControl_Main.SendToBack();
+        }
     }
 }

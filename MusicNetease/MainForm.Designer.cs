@@ -36,6 +36,7 @@
             this.skinTabPage_fxyy = new CCWin.SkinControl.SkinTabPage();
             this.mainTabControl1 = new MusicNetease.Controls.MainTabControl_Fxyy();
             this.skinTabPage_srfm = new CCWin.SkinControl.SkinTabPage();
+            this.userControl_Srfm1 = new MusicNetease.Controls.UserControl_Srfm();
             this.skinTabPage_tv = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_friend = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_bdyy = new CCWin.SkinControl.SkinTabPage();
@@ -44,7 +45,6 @@
             this.skinTabPage_wddt = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_wdsc = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
-            this.userControl_Srfm1 = new MusicNetease.Controls.UserControl_Srfm();
             this.skinPanel3.SuspendLayout();
             this.skinTabControl_Main.SuspendLayout();
             this.skinTabPage_fxyy.SuspendLayout();
@@ -103,8 +103,9 @@
             this.skinTabControl_Main.Controls.Add(this.skinTabPage_wdsc);
             this.skinTabControl_Main.Controls.Add(this.skinTabPage_gd);
             this.skinTabControl_Main.HeadBack = null;
+            this.skinTabControl_Main.HeadBackRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.skinTabControl_Main.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl_Main.ItemSize = new System.Drawing.Size(70, 36);
+            this.skinTabControl_Main.ItemSize = new System.Drawing.Size(84, 36);
             this.skinTabControl_Main.Location = new System.Drawing.Point(177, 16);
             this.skinTabControl_Main.Name = "skinTabControl_Main";
             this.skinTabControl_Main.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageArrowDown")));
@@ -115,7 +116,7 @@
             this.skinTabControl_Main.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_Main.PageHover")));
             this.skinTabControl_Main.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_Main.PageNorml = null;
-            this.skinTabControl_Main.SelectedIndex = 1;
+            this.skinTabControl_Main.SelectedIndex = 0;
             this.skinTabControl_Main.Size = new System.Drawing.Size(845, 602);
             this.skinTabControl_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_Main.TabIndex = 3;
@@ -145,6 +146,7 @@
             this.skinTabPage_srfm.BackColor = System.Drawing.Color.White;
             this.skinTabPage_srfm.Controls.Add(this.userControl_Srfm1);
             this.skinTabPage_srfm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_srfm.IsSelectTab = false;
             this.skinTabPage_srfm.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_srfm.Name = "skinTabPage_srfm";
             this.skinTabPage_srfm.Size = new System.Drawing.Size(845, 566);
@@ -152,10 +154,20 @@
             this.skinTabPage_srfm.TabItemImage = null;
             this.skinTabPage_srfm.Text = "私人FM";
             // 
+            // userControl_Srfm1
+            // 
+            this.userControl_Srfm1.BackColor = System.Drawing.SystemColors.Control;
+            this.userControl_Srfm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl_Srfm1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_Srfm1.Name = "userControl_Srfm1";
+            this.userControl_Srfm1.Size = new System.Drawing.Size(845, 566);
+            this.userControl_Srfm1.TabIndex = 0;
+            // 
             // skinTabPage_tv
             // 
             this.skinTabPage_tv.BackColor = System.Drawing.Color.White;
             this.skinTabPage_tv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_tv.IsSelectTab = false;
             this.skinTabPage_tv.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_tv.Name = "skinTabPage_tv";
             this.skinTabPage_tv.Size = new System.Drawing.Size(845, 566);
@@ -167,6 +179,7 @@
             // 
             this.skinTabPage_friend.BackColor = System.Drawing.Color.White;
             this.skinTabPage_friend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_friend.IsSelectTab = false;
             this.skinTabPage_friend.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_friend.Name = "skinTabPage_friend";
             this.skinTabPage_friend.Size = new System.Drawing.Size(845, 566);
@@ -178,6 +191,7 @@
             // 
             this.skinTabPage_bdyy.BackColor = System.Drawing.Color.White;
             this.skinTabPage_bdyy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_bdyy.IsSelectTab = false;
             this.skinTabPage_bdyy.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_bdyy.Name = "skinTabPage_bdyy";
             this.skinTabPage_bdyy.Size = new System.Drawing.Size(845, 566);
@@ -189,6 +203,7 @@
             // 
             this.skinTabPage_xzgl.BackColor = System.Drawing.Color.White;
             this.skinTabPage_xzgl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_xzgl.IsSelectTab = false;
             this.skinTabPage_xzgl.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_xzgl.Name = "skinTabPage_xzgl";
             this.skinTabPage_xzgl.Size = new System.Drawing.Size(845, 566);
@@ -200,6 +215,7 @@
             // 
             this.skinTabPage_yun.BackColor = System.Drawing.Color.White;
             this.skinTabPage_yun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_yun.IsSelectTab = false;
             this.skinTabPage_yun.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_yun.Name = "skinTabPage_yun";
             this.skinTabPage_yun.Size = new System.Drawing.Size(845, 566);
@@ -211,6 +227,7 @@
             // 
             this.skinTabPage_wddt.BackColor = System.Drawing.Color.White;
             this.skinTabPage_wddt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_wddt.IsSelectTab = false;
             this.skinTabPage_wddt.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_wddt.Name = "skinTabPage_wddt";
             this.skinTabPage_wddt.Size = new System.Drawing.Size(845, 566);
@@ -222,6 +239,7 @@
             // 
             this.skinTabPage_wdsc.BackColor = System.Drawing.Color.White;
             this.skinTabPage_wdsc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_wdsc.IsSelectTab = false;
             this.skinTabPage_wdsc.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_wdsc.Name = "skinTabPage_wdsc";
             this.skinTabPage_wdsc.Size = new System.Drawing.Size(845, 566);
@@ -233,21 +251,13 @@
             // 
             this.skinTabPage_gd.BackColor = System.Drawing.Color.White;
             this.skinTabPage_gd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_gd.IsSelectTab = false;
             this.skinTabPage_gd.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_gd.Name = "skinTabPage_gd";
             this.skinTabPage_gd.Size = new System.Drawing.Size(845, 566);
             this.skinTabPage_gd.TabIndex = 9;
             this.skinTabPage_gd.TabItemImage = null;
             this.skinTabPage_gd.Text = "歌单";
-            // 
-            // userControl_Srfm1
-            // 
-            this.userControl_Srfm1.BackColor = System.Drawing.SystemColors.Control;
-            this.userControl_Srfm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl_Srfm1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Srfm1.Name = "userControl_Srfm1";
-            this.userControl_Srfm1.Size = new System.Drawing.Size(845, 566);
-            this.userControl_Srfm1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -257,6 +267,7 @@
             this.Controls.Add(this.skinPanel3);
             this.Controls.Add(this.skinTabControl_Main);
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Controls.SetChildIndex(this.skinTabControl_Main, 0);
             this.Controls.SetChildIndex(this.skinPanel3, 0);
             this.Controls.SetChildIndex(this.menuListControl1, 0);

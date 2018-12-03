@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin.SkinControl;
 
 namespace MusicNetease.Controls
 {
@@ -25,6 +26,11 @@ namespace MusicNetease.Controls
             skinLabel_tag_Update();
             skinLabel_gxtj.Tag = true;
             skinLabel_gxtj.ForeColor = Color.FromArgb(255, 92, 138);
+            skinPictureBox_left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg").GetResponse().GetResponseStream());
+            skinPictureBox_main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg").GetResponse().GetResponseStream());
+            skinPictureBox_right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg").GetResponse().GetResponseStream());
+            skinButton_ImgLeft.Visible = false;
+            skinButton_ImgRight.Visible = false;
         }
 
         /// <summary>
@@ -106,6 +112,26 @@ namespace MusicNetease.Controls
             skinLabel_phb.ForeColor = System.Drawing.SystemColors.ControlText;
             skinLabel_gs.ForeColor = System.Drawing.SystemColors.ControlText;
             skinLabel_zxyy.ForeColor = System.Drawing.SystemColors.ControlText;
+        }
+
+        private void DoAnimation()
+        {
+            //等到所有的动画将完成
+            animator.WaitAllAnimations();
+            animator.DefaultAnimation = Animation.ScaleAndHorizSlide;
+            animator.Show(skinPictureBox_main);
+        }
+
+        private void skinPictureBox_main_MouseEnter(object sender, EventArgs e)
+        {
+            skinButton_ImgLeft.Visible = true;
+            skinButton_ImgRight.Visible = true;
+        }
+
+        private void skinPictureBox_main_MouseLeave(object sender, EventArgs e)
+        {
+            skinButton_ImgLeft.Visible = false;
+            skinButton_ImgRight.Visible = false;
         }
     }
 }

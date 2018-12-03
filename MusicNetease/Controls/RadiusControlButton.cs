@@ -71,6 +71,21 @@ namespace MusicNetease.Controls
                 _DefaultImage = value;
             }
         }
+        [Description("设置默认图标圆角度数"), Category("自定义属性")]
+        public int SetDefaultRadius
+        {
+            get { return skinButton_play.Radius; }
+            set
+            {
+                skinButton_play.Radius = value;
+            }
+        }
+        [Description("设置默认图片布局"), Category("自定义属性")]
+        public ImageLayout SetDefaultImageLayout
+        {
+            get { return skinButton_play.BackgroundImageLayout; }
+            set { skinButton_play.BackgroundImageLayout = value; }
+        }
         /// <summary>
         /// 是否变动图标，如果是变动图标，默认选择之后图标会更改为选择后的图标，否则一直为默认图标
         /// </summary>

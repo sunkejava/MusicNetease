@@ -41,5 +41,20 @@ namespace MusicNetease.Controls
             get { return layeredButton1.ShowBorder; }
             set { layeredButton1.ShowBorder = value; }
         }
+
+        [Description("设置背景图片"),Category("自定义属性")]
+        public Image SetBackgroundImage
+        {
+            get { return layeredButton1.BackgroundImage; }
+            set { layeredButton1.BackgroundImage = value; }
+        }
+        [Description("设置背景图片布局"),Category("自定义属性")]
+        public ImageLayout SetBackgroundImageLayout
+        {
+            get { return layeredButton1.BackgroundImageLayout; }
+            set { layeredButton1.BackgroundImageLayout = value; }
+        }
+
+
     }
 }
