@@ -146,7 +146,6 @@
             this.skinTabPage_srfm.BackColor = System.Drawing.Color.White;
             this.skinTabPage_srfm.Controls.Add(this.userControl_Srfm1);
             this.skinTabPage_srfm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_srfm.IsSelectTab = false;
             this.skinTabPage_srfm.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_srfm.Name = "skinTabPage_srfm";
             this.skinTabPage_srfm.Size = new System.Drawing.Size(845, 566);
@@ -167,7 +166,6 @@
             // 
             this.skinTabPage_tv.BackColor = System.Drawing.Color.White;
             this.skinTabPage_tv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_tv.IsSelectTab = false;
             this.skinTabPage_tv.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_tv.Name = "skinTabPage_tv";
             this.skinTabPage_tv.Size = new System.Drawing.Size(845, 566);
@@ -179,7 +177,6 @@
             // 
             this.skinTabPage_friend.BackColor = System.Drawing.Color.White;
             this.skinTabPage_friend.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_friend.IsSelectTab = false;
             this.skinTabPage_friend.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_friend.Name = "skinTabPage_friend";
             this.skinTabPage_friend.Size = new System.Drawing.Size(845, 566);
@@ -191,7 +188,6 @@
             // 
             this.skinTabPage_bdyy.BackColor = System.Drawing.Color.White;
             this.skinTabPage_bdyy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_bdyy.IsSelectTab = false;
             this.skinTabPage_bdyy.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_bdyy.Name = "skinTabPage_bdyy";
             this.skinTabPage_bdyy.Size = new System.Drawing.Size(845, 566);
@@ -203,7 +199,6 @@
             // 
             this.skinTabPage_xzgl.BackColor = System.Drawing.Color.White;
             this.skinTabPage_xzgl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_xzgl.IsSelectTab = false;
             this.skinTabPage_xzgl.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_xzgl.Name = "skinTabPage_xzgl";
             this.skinTabPage_xzgl.Size = new System.Drawing.Size(845, 566);
@@ -215,7 +210,6 @@
             // 
             this.skinTabPage_yun.BackColor = System.Drawing.Color.White;
             this.skinTabPage_yun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_yun.IsSelectTab = false;
             this.skinTabPage_yun.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_yun.Name = "skinTabPage_yun";
             this.skinTabPage_yun.Size = new System.Drawing.Size(845, 566);
@@ -227,7 +221,6 @@
             // 
             this.skinTabPage_wddt.BackColor = System.Drawing.Color.White;
             this.skinTabPage_wddt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_wddt.IsSelectTab = false;
             this.skinTabPage_wddt.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_wddt.Name = "skinTabPage_wddt";
             this.skinTabPage_wddt.Size = new System.Drawing.Size(845, 566);
@@ -239,7 +232,6 @@
             // 
             this.skinTabPage_wdsc.BackColor = System.Drawing.Color.White;
             this.skinTabPage_wdsc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_wdsc.IsSelectTab = false;
             this.skinTabPage_wdsc.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_wdsc.Name = "skinTabPage_wdsc";
             this.skinTabPage_wdsc.Size = new System.Drawing.Size(845, 566);
@@ -251,7 +243,6 @@
             // 
             this.skinTabPage_gd.BackColor = System.Drawing.Color.White;
             this.skinTabPage_gd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_gd.IsSelectTab = false;
             this.skinTabPage_gd.Location = new System.Drawing.Point(0, 36);
             this.skinTabPage_gd.Name = "skinTabPage_gd";
             this.skinTabPage_gd.Size = new System.Drawing.Size(845, 566);
