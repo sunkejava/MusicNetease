@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin.SkinControl;
+using LayeredSkin.DirectUI;
 
 namespace MusicNetease.Controls
 {
     public partial class MainTabControl_Fxyy : UserControl
     {
+        DuiButton btn_ImgLeft = new DuiButton();
+        DuiButton btn_ImgRight = new DuiButton();
         public MainTabControl_Fxyy()
         {
             InitializeComponent();
@@ -29,8 +32,20 @@ namespace MusicNetease.Controls
             skinPictureBox_left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg").GetResponse().GetResponseStream());
             skinPictureBox_main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg").GetResponse().GetResponseStream());
             skinPictureBox_right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg").GetResponse().GetResponseStream());
-            skinButton_ImgLeft.Visible = false;
-            skinButton_ImgRight.Visible = false;
+            
+            btn_ImgLeft.Location = new Point(23,110);
+            btn_ImgRight.Location = new Point(848, 110);
+
+            btn_ImgLeft.NormalImage = Properties.Resources.Img_left0;
+            btn_ImgLeft.HoverImage = Properties.Resources.Img_left1;
+            btn_ImgLeft.PressedImage = Properties.Resources.Img_left1;
+            btn_ImgRight.NormalImage = Properties.Resources.Img_right0;
+            btn_ImgRight.HoverImage = Properties.Resources.Img_right1;
+            btn_ImgRight.PressedImage = Properties.Resources.Img_right1;
+            this.layeredPanel1.DUIControls.Add(btn_ImgLeft);
+            this.layeredPanel1.DUIControls.Add(btn_ImgRight);
+            btn_ImgLeft.Visible = false;
+            btn_ImgRight.Visible = false;
         }
 
         /// <summary>
@@ -124,14 +139,14 @@ namespace MusicNetease.Controls
 
         private void skinPictureBox_main_MouseEnter(object sender, EventArgs e)
         {
-            skinButton_ImgLeft.Visible = true;
-            skinButton_ImgRight.Visible = true;
+            btn_ImgLeft.Visible = true;
+            btn_ImgRight.Visible = true;
         }
 
         private void skinPictureBox_main_MouseLeave(object sender, EventArgs e)
         {
-            skinButton_ImgLeft.Visible = false;
-            skinButton_ImgRight.Visible = false;
+            btn_ImgLeft.Visible = false;
+            btn_ImgRight.Visible = false;
         }
     }
 }
