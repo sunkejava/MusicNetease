@@ -673,6 +673,7 @@
             this.animator.SetDecoration(this, CCWin.SkinControl.DecorationType.None);
             this.Name = "MainTabControl_Fxyy";
             this.Size = new System.Drawing.Size(889, 615);
+            this.Load += new System.EventHandler(this.MainTabControl_Fxyy_Load);
             this.skinTabControl1.ResumeLayout(false);
             this.skinTabPage_gxtj.ResumeLayout(false);
             this.skinPanel_gxtj.ResumeLayout(false);

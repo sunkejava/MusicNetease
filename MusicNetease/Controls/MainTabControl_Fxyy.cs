@@ -19,10 +19,18 @@ namespace MusicNetease.Controls
         DuiPictureBox PictureBox_Left = new DuiPictureBox();
         DuiPictureBox PictureBox_Right = new DuiPictureBox();
         DuiPictureBox PictureBox_Main = new DuiPictureBox();
+        int NowNum = 0;
+        String[] ImgsString = new String[]{ "http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg",
+                                         "http://p1.music.126.net/MxnT6B0uFfOIqmUET0Hkyg==/109951163706538300.jpg",
+                                         "http://p1.music.126.net/uvBie7e5Ozxd9zXaIzl4kQ==/109951163707092059.jpg",
+                                         "http://p1.music.126.net/aHr6k_A6lRdhvjZw4dZcoQ==/109951163706085420.jpg",
+                                         "http://p1.music.126.net/Dk0_tclnpP2og2R0tTIHmQ==/109951163707089759.jpg",
+                                         "http://p1.music.126.net/6VnvL-JGcie9lMMtQXYlrg==/109951163707206569.jpg",
+                                         "http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg",
+                                         "http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg" };
         public MainTabControl_Fxyy()
         {
             InitializeComponent();
-            userControlLoad();
         }
         /// <summary>
         /// 首次加载需要初始赋值的信息
@@ -32,9 +40,8 @@ namespace MusicNetease.Controls
             skinLabel_tag_Update();
             skinLabel_gxtj.Tag = true;
             skinLabel_gxtj.ForeColor = Color.FromArgb(255, 92, 138);
-            PictureBox_Left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg").GetResponse().GetResponseStream());
-            PictureBox_Main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg").GetResponse().GetResponseStream());
-            PictureBox_Right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg").GetResponse().GetResponseStream());
+
+            LoadNImg(NowNum);
 
             PictureBox_Left.BackgroundImageLayout = ImageLayout.Stretch;
             PictureBox_Main.BackgroundImageLayout = ImageLayout.Stretch;
@@ -56,8 +63,14 @@ namespace MusicNetease.Controls
             PictureBox_Left.Location = new Point(lwidth,30);
             PictureBox_Main.Location = new Point((layeredPanel1.Width-540)/2,20);
             PictureBox_Right.Location = new Point(layeredPanel1.Width-520-lwidth,30);
-            btn_ImgLeft.Location = new Point(lwidth+10,125);
-            btn_ImgRight.Location = new Point(layeredPanel1.Width-lwidth-10, 125);
+            btn_ImgLeft.Location = new Point(lwidth+20,110);
+            btn_ImgRight.Location = new Point(layeredPanel1.Width-lwidth-20, 110);
+
+            PictureBox_Left.Cursor = Cursors.Hand;
+            PictureBox_Main.Cursor = PictureBox_Left.Cursor;
+            PictureBox_Right.Cursor = PictureBox_Left.Cursor;
+            btn_ImgLeft.Cursor = PictureBox_Left.Cursor;
+            btn_ImgLeft.Cursor = PictureBox_Left.Cursor;
 
             PictureBox_Left.MouseEnter += PictureBox_main_MouseEnter;
             PictureBox_Left.MouseLeave += PictureBox_main_MouseLeave;
@@ -65,6 +78,7 @@ namespace MusicNetease.Controls
             PictureBox_Main.MouseLeave += PictureBox_main_MouseLeave;
             PictureBox_Right.MouseEnter += PictureBox_main_MouseEnter;
             PictureBox_Right.MouseLeave += PictureBox_main_MouseLeave;
+
 
 
             btn_ImgLeft.Size = new Size(20,20);
@@ -75,6 +89,14 @@ namespace MusicNetease.Controls
             btn_ImgRight.NormalImage = Properties.Resources.Img_right0;
             btn_ImgRight.HoverImage = Properties.Resources.Img_right1;
             btn_ImgRight.PressedImage = Properties.Resources.Img_right1;
+            btn_ImgLeft.AdaptImage = false;
+            btn_ImgRight.AdaptImage = false;
+            btn_ImgLeft.Name = "btn_Left";
+            btn_ImgRight.Name = "btn_Right";
+
+            btn_ImgLeft.MouseClick += Btn_ImgLeft_MouseClick;
+            btn_ImgRight.MouseClick += Btn_ImgLeft_MouseClick;
+
             this.layeredPanel1.DUIControls.Add(PictureBox_Left);
             this.layeredPanel1.DUIControls.Add(PictureBox_Right);
             this.layeredPanel1.DUIControls.Add(PictureBox_Main);
@@ -82,6 +104,44 @@ namespace MusicNetease.Controls
             this.layeredPanel1.DUIControls.Add(btn_ImgRight);
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
+        }
+
+        private void Btn_ImgLeft_MouseClick(object sender, DuiMouseEventArgs e)
+        {
+            DuiButton btn = sender as DuiButton;
+            if (btn.Name == "btn_Left")
+            {
+                NowNum = ((NowNum - 1) < 0 ? ImgsString.Length - 1 : NowNum - 1);
+            }
+            else
+            {
+                NowNum = ((NowNum + 1) >= ImgsString.Length ? 0 : NowNum + 1);
+            }
+            LoadNImg(NowNum);
+        }
+
+        /// <summary>
+        /// 加载滚动图
+        /// </summary>
+        /// <param name="x"></param>
+        private void LoadNImg(int Num)
+        {
+            int count = ImgsString.Length;
+            int prevNum = ((Num - 1) < 0 ? count - 1 : Num - 1);
+            int nextNum = ((Num + 1) >= count ? 0 : Num + 1);
+            PictureBox_Left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[prevNum]).GetResponse().GetResponseStream());
+            PictureBox_Main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[Num]).GetResponse().GetResponseStream());
+            PictureBox_Right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[nextNum]).GetResponse().GetResponseStream());
+        }
+
+        /// <summary>
+        /// 设置控件大小
+        /// </summary>
+        [Description("设置控件大小"), Category("自定义属性")]
+        public int SetSize
+        {
+            get { return layeredPanel1.Width; }
+            set { layeredPanel1.Width = value; }
         }
 
         /// <summary>
@@ -183,6 +243,11 @@ namespace MusicNetease.Controls
         {
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
+        }
+
+        private void MainTabControl_Fxyy_Load(object sender, EventArgs e)
+        {
+            userControlLoad();
         }
     }
 }
