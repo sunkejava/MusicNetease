@@ -16,6 +16,9 @@ namespace MusicNetease.Controls
     {
         DuiButton btn_ImgLeft = new DuiButton();
         DuiButton btn_ImgRight = new DuiButton();
+        DuiPictureBox PictureBox_Left = new DuiPictureBox();
+        DuiPictureBox PictureBox_Right = new DuiPictureBox();
+        DuiPictureBox PictureBox_Main = new DuiPictureBox();
         public MainTabControl_Fxyy()
         {
             InitializeComponent();
@@ -29,19 +32,52 @@ namespace MusicNetease.Controls
             skinLabel_tag_Update();
             skinLabel_gxtj.Tag = true;
             skinLabel_gxtj.ForeColor = Color.FromArgb(255, 92, 138);
-            skinPictureBox_left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg").GetResponse().GetResponseStream());
-            skinPictureBox_main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg").GetResponse().GetResponseStream());
-            skinPictureBox_right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg").GetResponse().GetResponseStream());
-            
-            btn_ImgLeft.Location = new Point(23,110);
-            btn_ImgRight.Location = new Point(848, 110);
+            PictureBox_Left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/Vhs30rVOFjYEf5H5tQmsQg==/109951163703653548.jpg").GetResponse().GetResponseStream());
+            PictureBox_Main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/eNUJlf-kLWdny2ZjXG-TuA==/109951163702694238.jpg").GetResponse().GetResponseStream());
+            PictureBox_Right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create("http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg").GetResponse().GetResponseStream());
 
+            PictureBox_Left.BackgroundImageLayout = ImageLayout.Stretch;
+            PictureBox_Main.BackgroundImageLayout = ImageLayout.Stretch;
+            PictureBox_Right.BackgroundImageLayout = ImageLayout.Stretch;
+
+            PictureBox_Main.Size = new Size(540, 200);
+            PictureBox_Left.Size = new Size(520, 190);
+            PictureBox_Right.Size = new Size(520, 190);
+
+            int lwidth = 0;
+            if (layeredPanel1.Width > 1020)
+            {
+                lwidth = (layeredPanel1.Width - 1040) / 2;
+            }
+            else
+            {
+                lwidth = 30;
+            }
+            PictureBox_Left.Location = new Point(lwidth,30);
+            PictureBox_Main.Location = new Point((layeredPanel1.Width-540)/2,20);
+            PictureBox_Right.Location = new Point(layeredPanel1.Width-520-lwidth,30);
+            btn_ImgLeft.Location = new Point(lwidth+10,125);
+            btn_ImgRight.Location = new Point(layeredPanel1.Width-lwidth-10, 125);
+
+            PictureBox_Left.MouseEnter += PictureBox_main_MouseEnter;
+            PictureBox_Left.MouseLeave += PictureBox_main_MouseLeave;
+            PictureBox_Main.MouseEnter += PictureBox_main_MouseEnter;
+            PictureBox_Main.MouseLeave += PictureBox_main_MouseLeave;
+            PictureBox_Right.MouseEnter += PictureBox_main_MouseEnter;
+            PictureBox_Right.MouseLeave += PictureBox_main_MouseLeave;
+
+
+            btn_ImgLeft.Size = new Size(20,20);
+            btn_ImgRight.Size = btn_ImgLeft.Size;
             btn_ImgLeft.NormalImage = Properties.Resources.Img_left0;
             btn_ImgLeft.HoverImage = Properties.Resources.Img_left1;
             btn_ImgLeft.PressedImage = Properties.Resources.Img_left1;
             btn_ImgRight.NormalImage = Properties.Resources.Img_right0;
             btn_ImgRight.HoverImage = Properties.Resources.Img_right1;
             btn_ImgRight.PressedImage = Properties.Resources.Img_right1;
+            this.layeredPanel1.DUIControls.Add(PictureBox_Left);
+            this.layeredPanel1.DUIControls.Add(PictureBox_Right);
+            this.layeredPanel1.DUIControls.Add(PictureBox_Main);
             this.layeredPanel1.DUIControls.Add(btn_ImgLeft);
             this.layeredPanel1.DUIControls.Add(btn_ImgRight);
             btn_ImgLeft.Visible = false;
@@ -134,16 +170,16 @@ namespace MusicNetease.Controls
             //等到所有的动画将完成
             animator.WaitAllAnimations();
             animator.DefaultAnimation = Animation.ScaleAndHorizSlide;
-            animator.Show(skinPictureBox_main);
+            //animator.Show(PictureBox_Main.Controls);
         }
 
-        private void skinPictureBox_main_MouseEnter(object sender, EventArgs e)
+        private void PictureBox_main_MouseEnter(object sender, EventArgs e)
         {
             btn_ImgLeft.Visible = true;
             btn_ImgRight.Visible = true;
         }
 
-        private void skinPictureBox_main_MouseLeave(object sender, EventArgs e)
+        private void PictureBox_main_MouseLeave(object sender, EventArgs e)
         {
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;

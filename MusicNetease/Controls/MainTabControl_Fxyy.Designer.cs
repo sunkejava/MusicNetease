@@ -29,11 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl_Fxyy));
+            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_gxtj = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gxtj = new CCWin.SkinControl.SkinPanel();
+            this.layeredPanel1 = new LayeredSkin.Controls.LayeredPanel();
+            this.skinLine_8 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_7 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_6 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_5 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_4 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_3 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_2 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_1 = new CCWin.SkinControl.SkinLine();
             this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gd = new CCWin.SkinControl.SkinPanel();
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
@@ -59,21 +68,10 @@
             this.skinLabel_gxtj = new CCWin.SkinControl.SkinLabel();
             this.skinLine1 = new CCWin.SkinControl.SkinLine();
             this.animator = new CCWin.SkinControl.SkinAnimator(this.components);
-            this.layeredPanel1 = new LayeredSkin.Controls.LayeredPanel();
-            this.skinLine_8 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_7 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_6 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_5 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_4 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_3 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_2 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_1 = new CCWin.SkinControl.SkinLine();
-            this.skinPictureBox_main = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPictureBox_left = new CCWin.SkinControl.SkinPictureBox();
-            this.skinPictureBox_right = new CCWin.SkinControl.SkinPictureBox();
             this.skinTabControl1.SuspendLayout();
             this.skinTabPage_gxtj.SuspendLayout();
             this.skinPanel_gxtj.SuspendLayout();
+            this.layeredPanel1.SuspendLayout();
             this.skinTabPage_gd.SuspendLayout();
             this.skinPanel_gd.SuspendLayout();
             this.skinTabPage_zbdt.SuspendLayout();
@@ -85,10 +83,6 @@
             this.skinTabPage_zxyy.SuspendLayout();
             this.skinPanel_zxyy.SuspendLayout();
             this.skinPanel_top.SuspendLayout();
-            this.layeredPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_main)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_left)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_right)).BeginInit();
             this.SuspendLayout();
             // 
             // skinTabControl1
@@ -153,6 +147,138 @@
             this.skinPanel_gxtj.NormlBack = null;
             this.skinPanel_gxtj.Size = new System.Drawing.Size(889, 579);
             this.skinPanel_gxtj.TabIndex = 0;
+            // 
+            // layeredPanel1
+            // 
+            this.layeredPanel1.AutoSize = true;
+            this.layeredPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.layeredPanel1.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.layeredPanel1.Borders.BottomWidth = 1;
+            this.layeredPanel1.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.layeredPanel1.Borders.LeftWidth = 1;
+            this.layeredPanel1.Borders.RightColor = System.Drawing.Color.Empty;
+            this.layeredPanel1.Borders.RightWidth = 1;
+            this.layeredPanel1.Borders.TopColor = System.Drawing.Color.Empty;
+            this.layeredPanel1.Borders.TopWidth = 1;
+            this.layeredPanel1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredPanel1.Canvas")));
+            this.layeredPanel1.Controls.Add(this.skinLine_8);
+            this.layeredPanel1.Controls.Add(this.skinLine_7);
+            this.layeredPanel1.Controls.Add(this.skinLine_6);
+            this.layeredPanel1.Controls.Add(this.skinLine_5);
+            this.layeredPanel1.Controls.Add(this.skinLine_4);
+            this.layeredPanel1.Controls.Add(this.skinLine_3);
+            this.layeredPanel1.Controls.Add(this.skinLine_2);
+            this.layeredPanel1.Controls.Add(this.skinLine_1);
+            this.animator.SetDecoration(this.layeredPanel1, CCWin.SkinControl.DecorationType.None);
+            this.layeredPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.layeredPanel1.Location = new System.Drawing.Point(0, 0);
+            this.layeredPanel1.Name = "layeredPanel1";
+            this.layeredPanel1.Size = new System.Drawing.Size(889, 247);
+            this.layeredPanel1.TabIndex = 2;
+            // 
+            // skinLine_8
+            // 
+            this.skinLine_8.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_8, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_8.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_8.LineHeight = 2;
+            this.skinLine_8.Location = new System.Drawing.Point(552, 234);
+            this.skinLine_8.Name = "skinLine_8";
+            this.skinLine_8.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_8.TabIndex = 28;
+            this.skinLine_8.Text = "skinLine9";
+            // 
+            // skinLine_7
+            // 
+            this.skinLine_7.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_7, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_7.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_7.LineHeight = 2;
+            this.skinLine_7.Location = new System.Drawing.Point(523, 234);
+            this.skinLine_7.Name = "skinLine_7";
+            this.skinLine_7.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_7.TabIndex = 27;
+            this.skinLine_7.Text = "skinLine8";
+            // 
+            // skinLine_6
+            // 
+            this.skinLine_6.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_6, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_6.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_6.LineHeight = 2;
+            this.skinLine_6.Location = new System.Drawing.Point(495, 234);
+            this.skinLine_6.Name = "skinLine_6";
+            this.skinLine_6.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_6.TabIndex = 26;
+            this.skinLine_6.Text = "skinLine7";
+            // 
+            // skinLine_5
+            // 
+            this.skinLine_5.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_5, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_5.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_5.LineHeight = 2;
+            this.skinLine_5.Location = new System.Drawing.Point(468, 234);
+            this.skinLine_5.Name = "skinLine_5";
+            this.skinLine_5.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_5.TabIndex = 25;
+            this.skinLine_5.Text = "skinLine6";
+            // 
+            // skinLine_4
+            // 
+            this.skinLine_4.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_4, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_4.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_4.LineHeight = 2;
+            this.skinLine_4.Location = new System.Drawing.Point(440, 234);
+            this.skinLine_4.Name = "skinLine_4";
+            this.skinLine_4.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_4.TabIndex = 24;
+            this.skinLine_4.Text = "skinLine5";
+            // 
+            // skinLine_3
+            // 
+            this.skinLine_3.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_3, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_3.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_3.LineHeight = 2;
+            this.skinLine_3.Location = new System.Drawing.Point(414, 234);
+            this.skinLine_3.Name = "skinLine_3";
+            this.skinLine_3.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_3.TabIndex = 23;
+            this.skinLine_3.Text = "skinLine4";
+            // 
+            // skinLine_2
+            // 
+            this.skinLine_2.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_2, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_2.LineColor = System.Drawing.Color.Silver;
+            this.skinLine_2.LineHeight = 2;
+            this.skinLine_2.Location = new System.Drawing.Point(388, 234);
+            this.skinLine_2.Name = "skinLine_2";
+            this.skinLine_2.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_2.TabIndex = 22;
+            this.skinLine_2.Text = "skinLine3";
+            // 
+            // skinLine_1
+            // 
+            this.skinLine_1.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_1, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinLine_1.LineHeight = 2;
+            this.skinLine_1.Location = new System.Drawing.Point(363, 234);
+            this.skinLine_1.Name = "skinLine_1";
+            this.skinLine_1.Size = new System.Drawing.Size(20, 10);
+            this.skinLine_1.TabIndex = 21;
+            this.skinLine_1.Text = "skinLine2";
             // 
             // skinTabPage_gd
             // 
@@ -538,182 +664,6 @@
             animation1.TransparencyCoeff = 0F;
             this.animator.DefaultAnimation = animation1;
             // 
-            // layeredPanel1
-            // 
-            this.layeredPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.layeredPanel1.Borders.BottomColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.BottomWidth = 1;
-            this.layeredPanel1.Borders.LeftColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.LeftWidth = 1;
-            this.layeredPanel1.Borders.RightColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.RightWidth = 1;
-            this.layeredPanel1.Borders.TopColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.TopWidth = 1;
-            this.layeredPanel1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredPanel1.Canvas")));
-            this.layeredPanel1.Controls.Add(this.skinLine_8);
-            this.layeredPanel1.Controls.Add(this.skinLine_7);
-            this.layeredPanel1.Controls.Add(this.skinLine_6);
-            this.layeredPanel1.Controls.Add(this.skinLine_5);
-            this.layeredPanel1.Controls.Add(this.skinLine_4);
-            this.layeredPanel1.Controls.Add(this.skinLine_3);
-            this.layeredPanel1.Controls.Add(this.skinLine_2);
-            this.layeredPanel1.Controls.Add(this.skinLine_1);
-            this.layeredPanel1.Controls.Add(this.skinPictureBox_main);
-            this.layeredPanel1.Controls.Add(this.skinPictureBox_left);
-            this.layeredPanel1.Controls.Add(this.skinPictureBox_right);
-            this.animator.SetDecoration(this.layeredPanel1, CCWin.SkinControl.DecorationType.None);
-            this.layeredPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layeredPanel1.Location = new System.Drawing.Point(0, 0);
-            this.layeredPanel1.Name = "layeredPanel1";
-            this.layeredPanel1.Size = new System.Drawing.Size(889, 268);
-            this.layeredPanel1.TabIndex = 2;
-            // 
-            // skinLine_8
-            // 
-            this.skinLine_8.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_8, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_8.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_8.LineHeight = 2;
-            this.skinLine_8.Location = new System.Drawing.Point(552, 234);
-            this.skinLine_8.Name = "skinLine_8";
-            this.skinLine_8.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_8.TabIndex = 28;
-            this.skinLine_8.Text = "skinLine9";
-            // 
-            // skinLine_7
-            // 
-            this.skinLine_7.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_7, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_7.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_7.LineHeight = 2;
-            this.skinLine_7.Location = new System.Drawing.Point(523, 234);
-            this.skinLine_7.Name = "skinLine_7";
-            this.skinLine_7.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_7.TabIndex = 27;
-            this.skinLine_7.Text = "skinLine8";
-            // 
-            // skinLine_6
-            // 
-            this.skinLine_6.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_6, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_6.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_6.LineHeight = 2;
-            this.skinLine_6.Location = new System.Drawing.Point(495, 234);
-            this.skinLine_6.Name = "skinLine_6";
-            this.skinLine_6.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_6.TabIndex = 26;
-            this.skinLine_6.Text = "skinLine7";
-            // 
-            // skinLine_5
-            // 
-            this.skinLine_5.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_5, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_5.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_5.LineHeight = 2;
-            this.skinLine_5.Location = new System.Drawing.Point(468, 234);
-            this.skinLine_5.Name = "skinLine_5";
-            this.skinLine_5.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_5.TabIndex = 25;
-            this.skinLine_5.Text = "skinLine6";
-            // 
-            // skinLine_4
-            // 
-            this.skinLine_4.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_4, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_4.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_4.LineHeight = 2;
-            this.skinLine_4.Location = new System.Drawing.Point(440, 234);
-            this.skinLine_4.Name = "skinLine_4";
-            this.skinLine_4.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_4.TabIndex = 24;
-            this.skinLine_4.Text = "skinLine5";
-            // 
-            // skinLine_3
-            // 
-            this.skinLine_3.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_3, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_3.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_3.LineHeight = 2;
-            this.skinLine_3.Location = new System.Drawing.Point(414, 234);
-            this.skinLine_3.Name = "skinLine_3";
-            this.skinLine_3.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_3.TabIndex = 23;
-            this.skinLine_3.Text = "skinLine4";
-            // 
-            // skinLine_2
-            // 
-            this.skinLine_2.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_2, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_2.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_2.LineHeight = 2;
-            this.skinLine_2.Location = new System.Drawing.Point(388, 234);
-            this.skinLine_2.Name = "skinLine_2";
-            this.skinLine_2.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_2.TabIndex = 22;
-            this.skinLine_2.Text = "skinLine3";
-            // 
-            // skinLine_1
-            // 
-            this.skinLine_1.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_1, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_1.LineHeight = 2;
-            this.skinLine_1.Location = new System.Drawing.Point(363, 234);
-            this.skinLine_1.Name = "skinLine_1";
-            this.skinLine_1.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_1.TabIndex = 21;
-            this.skinLine_1.Text = "skinLine2";
-            // 
-            // skinPictureBox_main
-            // 
-            this.skinPictureBox_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinPictureBox_main.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinPictureBox_main.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.animator.SetDecoration(this.skinPictureBox_main, CCWin.SkinControl.DecorationType.None);
-            this.skinPictureBox_main.Location = new System.Drawing.Point(211, 24);
-            this.skinPictureBox_main.Name = "skinPictureBox_main";
-            this.skinPictureBox_main.Size = new System.Drawing.Size(453, 200);
-            this.skinPictureBox_main.TabIndex = 18;
-            this.skinPictureBox_main.TabStop = false;
-            // 
-            // skinPictureBox_left
-            // 
-            this.skinPictureBox_left.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinPictureBox_left.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox_left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinPictureBox_left.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.animator.SetDecoration(this.skinPictureBox_left, CCWin.SkinControl.DecorationType.None);
-            this.skinPictureBox_left.Location = new System.Drawing.Point(21, 38);
-            this.skinPictureBox_left.Name = "skinPictureBox_left";
-            this.skinPictureBox_left.Size = new System.Drawing.Size(453, 186);
-            this.skinPictureBox_left.TabIndex = 19;
-            this.skinPictureBox_left.TabStop = false;
-            // 
-            // skinPictureBox_right
-            // 
-            this.skinPictureBox_right.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinPictureBox_right.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinPictureBox_right.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.animator.SetDecoration(this.skinPictureBox_right, CCWin.SkinControl.DecorationType.None);
-            this.skinPictureBox_right.Location = new System.Drawing.Point(412, 38);
-            this.skinPictureBox_right.Name = "skinPictureBox_right";
-            this.skinPictureBox_right.Size = new System.Drawing.Size(453, 186);
-            this.skinPictureBox_right.TabIndex = 20;
-            this.skinPictureBox_right.TabStop = false;
-            // 
             // MainTabControl_Fxyy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -726,6 +676,8 @@
             this.skinTabControl1.ResumeLayout(false);
             this.skinTabPage_gxtj.ResumeLayout(false);
             this.skinPanel_gxtj.ResumeLayout(false);
+            this.skinPanel_gxtj.PerformLayout();
+            this.layeredPanel1.ResumeLayout(false);
             this.skinTabPage_gd.ResumeLayout(false);
             this.skinPanel_gd.ResumeLayout(false);
             this.skinPanel_gd.PerformLayout();
@@ -743,10 +695,6 @@
             this.skinPanel_zxyy.PerformLayout();
             this.skinPanel_top.ResumeLayout(false);
             this.skinPanel_top.PerformLayout();
-            this.layeredPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_main)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_left)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_right)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -790,8 +738,5 @@
         private CCWin.SkinControl.SkinLine skinLine_3;
         private CCWin.SkinControl.SkinLine skinLine_2;
         private CCWin.SkinControl.SkinLine skinLine_1;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox_main;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox_left;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox_right;
     }
 }
