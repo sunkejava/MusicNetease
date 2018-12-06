@@ -41,7 +41,7 @@ namespace MusicNetease.Controls
             skinLabel_gxtj.Tag = true;
             skinLabel_gxtj.ForeColor = Color.FromArgb(255, 92, 138);
 
-            LoadNImg(NowNum);
+            LoadSliderImg(NowNum);
 
             PictureBox_Left.BackgroundImageLayout = ImageLayout.Stretch;
             PictureBox_Main.BackgroundImageLayout = ImageLayout.Stretch;
@@ -108,6 +108,7 @@ namespace MusicNetease.Controls
 
         private void Btn_ImgLeft_MouseClick(object sender, DuiMouseEventArgs e)
         {
+
             DuiButton btn = sender as DuiButton;
             if (btn.Name == "btn_Left")
             {
@@ -117,14 +118,15 @@ namespace MusicNetease.Controls
             {
                 NowNum = ((NowNum + 1) >= ImgsString.Length ? 0 : NowNum + 1);
             }
-            LoadNImg(NowNum);
+            LoadSliderImg(NowNum);
+            setSelectLineColor();
         }
 
         /// <summary>
         /// 加载滚动图
         /// </summary>
         /// <param name="x"></param>
-        private void LoadNImg(int Num)
+        private void LoadSliderImg(int Num)
         {
             int count = ImgsString.Length;
             int prevNum = ((Num - 1) < 0 ? count - 1 : Num - 1);
@@ -248,6 +250,61 @@ namespace MusicNetease.Controls
         private void MainTabControl_Fxyy_Load(object sender, EventArgs e)
         {
             userControlLoad();
+        }
+
+        /// <summary>
+        /// 更新选择线条颜色为初始颜色
+        /// </summary>
+        private void skinLine_Update()
+        {
+            skinLine_1.LineColor = Color.Silver;
+            skinLine_2.LineColor = skinLine_1.LineColor;
+            skinLine_3.LineColor = skinLine_1.LineColor;
+            skinLine_4.LineColor = skinLine_1.LineColor;
+            skinLine_5.LineColor = skinLine_1.LineColor;
+            skinLine_6.LineColor = skinLine_1.LineColor;
+            skinLine_7.LineColor = skinLine_1.LineColor;
+            skinLine_8.LineColor = skinLine_1.LineColor;
+        }
+
+        private void setSelectLineColor()
+        {
+            skinLine_Update();
+            switch (NowNum)
+            {
+                case 0:
+                    skinLine_1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 1:
+                    skinLine_2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 3:
+                    skinLine_3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 4:
+                    skinLine_4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 5:
+                    skinLine_5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 6:
+                    skinLine_6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                case 7:
+                    skinLine_7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void skinLine_MouseEnter(object sender, EventArgs e)
+        {
+            skinLine_Update();
+            SkinLine btn = sender as SkinLine;
+            btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            NowNum = int.Parse(btn.Tag.ToString());
+            LoadSliderImg(NowNum);
         }
     }
 }

@@ -66,7 +66,7 @@
             this.skinLabel_zbdt = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_gq = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_gxtj = new CCWin.SkinControl.SkinLabel();
-            this.skinLine1 = new CCWin.SkinControl.SkinLine();
+            this.skinLine_xzDown = new CCWin.SkinControl.SkinLine();
             this.animator = new CCWin.SkinControl.SkinAnimator(this.components);
             this.skinTabControl1.SuspendLayout();
             this.skinTabPage_gxtj.SuspendLayout();
@@ -187,7 +187,9 @@
             this.skinLine_8.Name = "skinLine_8";
             this.skinLine_8.Size = new System.Drawing.Size(20, 10);
             this.skinLine_8.TabIndex = 28;
+            this.skinLine_8.Tag = "7";
             this.skinLine_8.Text = "skinLine9";
+            this.skinLine_8.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_7
             // 
@@ -200,7 +202,9 @@
             this.skinLine_7.Name = "skinLine_7";
             this.skinLine_7.Size = new System.Drawing.Size(20, 10);
             this.skinLine_7.TabIndex = 27;
+            this.skinLine_7.Tag = "6";
             this.skinLine_7.Text = "skinLine8";
+            this.skinLine_7.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_6
             // 
@@ -213,7 +217,9 @@
             this.skinLine_6.Name = "skinLine_6";
             this.skinLine_6.Size = new System.Drawing.Size(20, 10);
             this.skinLine_6.TabIndex = 26;
+            this.skinLine_6.Tag = "5";
             this.skinLine_6.Text = "skinLine7";
+            this.skinLine_6.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_5
             // 
@@ -226,7 +232,9 @@
             this.skinLine_5.Name = "skinLine_5";
             this.skinLine_5.Size = new System.Drawing.Size(20, 10);
             this.skinLine_5.TabIndex = 25;
+            this.skinLine_5.Tag = "4";
             this.skinLine_5.Text = "skinLine6";
+            this.skinLine_5.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_4
             // 
@@ -239,7 +247,9 @@
             this.skinLine_4.Name = "skinLine_4";
             this.skinLine_4.Size = new System.Drawing.Size(20, 10);
             this.skinLine_4.TabIndex = 24;
+            this.skinLine_4.Tag = "3";
             this.skinLine_4.Text = "skinLine5";
+            this.skinLine_4.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_3
             // 
@@ -252,7 +262,9 @@
             this.skinLine_3.Name = "skinLine_3";
             this.skinLine_3.Size = new System.Drawing.Size(20, 10);
             this.skinLine_3.TabIndex = 23;
+            this.skinLine_3.Tag = "2";
             this.skinLine_3.Text = "skinLine4";
+            this.skinLine_3.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_2
             // 
@@ -265,7 +277,9 @@
             this.skinLine_2.Name = "skinLine_2";
             this.skinLine_2.Size = new System.Drawing.Size(20, 10);
             this.skinLine_2.TabIndex = 22;
+            this.skinLine_2.Tag = "1";
             this.skinLine_2.Text = "skinLine3";
+            this.skinLine_2.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinLine_1
             // 
@@ -278,7 +292,9 @@
             this.skinLine_1.Name = "skinLine_1";
             this.skinLine_1.Size = new System.Drawing.Size(20, 10);
             this.skinLine_1.TabIndex = 21;
+            this.skinLine_1.Tag = "0";
             this.skinLine_1.Text = "skinLine2";
+            this.skinLine_1.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
             // 
             // skinTabPage_gd
             // 
@@ -487,6 +503,8 @@
             // 
             // skinPanel_top
             // 
+            this.skinPanel_top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.skinPanel_top.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel_top.Controls.Add(this.skinLine_xz);
             this.skinPanel_top.Controls.Add(this.skinLabel_zxyy);
@@ -495,7 +513,7 @@
             this.skinPanel_top.Controls.Add(this.skinLabel_zbdt);
             this.skinPanel_top.Controls.Add(this.skinLabel_gq);
             this.skinPanel_top.Controls.Add(this.skinLabel_gxtj);
-            this.skinPanel_top.Controls.Add(this.skinLine1);
+            this.skinPanel_top.Controls.Add(this.skinLine_xzDown);
             this.skinPanel_top.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.animator.SetDecoration(this.skinPanel_top, CCWin.SkinControl.DecorationType.None);
             this.skinPanel_top.DownBack = null;
@@ -630,18 +648,19 @@
             this.skinLabel_gxtj.MouseEnter += new System.EventHandler(this.skinLabel_gxtj_MouseEnter);
             this.skinLabel_gxtj.MouseLeave += new System.EventHandler(this.skinLabel_gq_MouseLeave);
             // 
-            // skinLine1
+            // skinLine_xzDown
             // 
-            this.skinLine1.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine1, CCWin.SkinControl.DecorationType.None);
-            this.skinLine1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinLine1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
-            this.skinLine1.LineHeight = 1;
-            this.skinLine1.Location = new System.Drawing.Point(0, 36);
-            this.skinLine1.Name = "skinLine1";
-            this.skinLine1.Size = new System.Drawing.Size(889, 7);
-            this.skinLine1.TabIndex = 0;
-            this.skinLine1.Text = "skinLine1";
+            this.skinLine_xzDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLine_xzDown.BackColor = System.Drawing.Color.Transparent;
+            this.animator.SetDecoration(this.skinLine_xzDown, CCWin.SkinControl.DecorationType.None);
+            this.skinLine_xzDown.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(226)))));
+            this.skinLine_xzDown.LineHeight = 1;
+            this.skinLine_xzDown.Location = new System.Drawing.Point(0, 36);
+            this.skinLine_xzDown.Name = "skinLine_xzDown";
+            this.skinLine_xzDown.Size = new System.Drawing.Size(889, 7);
+            this.skinLine_xzDown.TabIndex = 0;
+            this.skinLine_xzDown.Text = "skinLine1";
             // 
             // animator
             // 
@@ -721,7 +740,7 @@
         private CCWin.SkinControl.SkinPanel skinPanel_zxyy;
         private CCWin.SkinControl.SkinLabel skinLabel6;
         private CCWin.SkinControl.SkinPanel skinPanel_top;
-        private CCWin.SkinControl.SkinLine skinLine1;
+        private CCWin.SkinControl.SkinLine skinLine_xzDown;
         private CCWin.SkinControl.SkinLabel skinLabel_gxtj;
         private CCWin.SkinControl.SkinLabel skinLabel_gq;
         private CCWin.SkinControl.SkinLabel skinLabel_zbdt;
