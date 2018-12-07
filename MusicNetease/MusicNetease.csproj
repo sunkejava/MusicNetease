@@ -101,12 +101,6 @@
     <Compile Include="Controls\MusicPlayerButton.Designer.cs">
       <DependentUpon>MusicPlayerButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PanelControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controls\PanelControl.Designer.cs">
-      <DependentUpon>PanelControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\RadiusControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
