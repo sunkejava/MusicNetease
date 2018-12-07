@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.skinPanel_top = new CCWin.SkinControl.SkinPanel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.skinPanel_UserRadius = new CCWin.SkinControl.SkinPanel();
+            this.skinButton_UserRadius = new CCWin.SkinControl.SkinButton();
             this.skinPanel_user = new CCWin.SkinControl.SkinPanel();
             this.skinButton_userDown = new CCWin.SkinControl.SkinButton();
             this.skinButton_User = new CCWin.SkinControl.SkinButton();
@@ -57,17 +59,15 @@
             this.toolStripMenuItem_lock = new System.Windows.Forms.ToolStripMenuItem();
             this.skinToolTip1 = new CCWin.SkinToolTip(this.components);
             this.skinButton_Img = new CCWin.SkinControl.SkinButton();
-            this.skinPanel_UserRadius = new CCWin.SkinControl.SkinPanel();
-            this.skinButton_UserRadius = new CCWin.SkinControl.SkinButton();
             this.skinPanel_top.SuspendLayout();
             this.skinPanel2.SuspendLayout();
+            this.skinPanel_UserRadius.SuspendLayout();
             this.skinPanel_user.SuspendLayout();
             this.skinPanel_search.SuspendLayout();
             this.skinPanel1.SuspendLayout();
             this.skinPanel_buttons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
-            this.skinPanel_UserRadius.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel_top
@@ -104,6 +104,49 @@
             this.skinPanel2.Size = new System.Drawing.Size(200, 50);
             this.skinPanel2.TabIndex = 3;
             this.skinPanel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
+            // 
+            // skinPanel_UserRadius
+            // 
+            this.skinPanel_UserRadius.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_UserRadius.Controls.Add(this.skinButton_UserRadius);
+            this.skinPanel_UserRadius.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_UserRadius.DownBack = null;
+            this.skinPanel_UserRadius.Location = new System.Drawing.Point(6, 5);
+            this.skinPanel_UserRadius.MouseBack = null;
+            this.skinPanel_UserRadius.Name = "skinPanel_UserRadius";
+            this.skinPanel_UserRadius.NormlBack = null;
+            this.skinPanel_UserRadius.Radius = 40;
+            this.skinPanel_UserRadius.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinPanel_UserRadius.Size = new System.Drawing.Size(40, 40);
+            this.skinPanel_UserRadius.TabIndex = 3;
+            // 
+            // skinButton_UserRadius
+            // 
+            this.skinButton_UserRadius.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.BackgroundImage = global::MusicNetease.Properties.Resources.melog;
+            this.skinButton_UserRadius.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.skinButton_UserRadius.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
+            this.skinButton_UserRadius.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_UserRadius.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_UserRadius.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinButton_UserRadius.DownBack = null;
+            this.skinButton_UserRadius.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.ImageSize = new System.Drawing.Size(20, 20);
+            this.skinButton_UserRadius.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.IsDrawBorder = false;
+            this.skinButton_UserRadius.IsDrawGlass = false;
+            this.skinButton_UserRadius.Location = new System.Drawing.Point(0, 0);
+            this.skinButton_UserRadius.MouseBack = null;
+            this.skinButton_UserRadius.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_UserRadius.Name = "skinButton_UserRadius";
+            this.skinButton_UserRadius.NormlBack = null;
+            this.skinButton_UserRadius.Size = new System.Drawing.Size(40, 40);
+            this.skinButton_UserRadius.TabIndex = 7;
+            this.skinButton_UserRadius.Tag = "换肤";
+            this.skinButton_UserRadius.UseVisualStyleBackColor = false;
             // 
             // skinPanel_user
             // 
@@ -570,8 +613,8 @@
             // skinContextMenuStrip1
             // 
             this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
-            this.skinContextMenuStrip1.Back = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.skinContextMenuStrip1.Back = System.Drawing.Color.Snow;
+            this.skinContextMenuStrip1.BackColor = System.Drawing.Color.Snow;
             this.skinContextMenuStrip1.BackRadius = 4;
             this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
             this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
@@ -630,9 +673,13 @@
             // skinToolTip1
             // 
             this.skinToolTip1.AutoPopDelay = 5000;
+            this.skinToolTip1.BackColor2 = System.Drawing.Color.White;
+            this.skinToolTip1.Border = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.skinToolTip1.InitialDelay = 500;
             this.skinToolTip1.OwnerDraw = true;
             this.skinToolTip1.ReshowDelay = 800;
+            this.skinToolTip1.TipFore = System.Drawing.Color.Black;
+            this.skinToolTip1.TitleFore = System.Drawing.Color.Black;
             // 
             // skinButton_Img
             // 
@@ -667,49 +714,6 @@
             this.skinButton_Img.TabIndex = 0;
             this.skinButton_Img.UseVisualStyleBackColor = false;
             // 
-            // skinPanel_UserRadius
-            // 
-            this.skinPanel_UserRadius.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_UserRadius.Controls.Add(this.skinButton_UserRadius);
-            this.skinPanel_UserRadius.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel_UserRadius.DownBack = null;
-            this.skinPanel_UserRadius.Location = new System.Drawing.Point(6, 5);
-            this.skinPanel_UserRadius.MouseBack = null;
-            this.skinPanel_UserRadius.Name = "skinPanel_UserRadius";
-            this.skinPanel_UserRadius.NormlBack = null;
-            this.skinPanel_UserRadius.Radius = 40;
-            this.skinPanel_UserRadius.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel_UserRadius.Size = new System.Drawing.Size(40, 40);
-            this.skinPanel_UserRadius.TabIndex = 3;
-            // 
-            // skinButton_UserRadius
-            // 
-            this.skinButton_UserRadius.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.BackgroundImage = global::MusicNetease.Properties.Resources.melog;
-            this.skinButton_UserRadius.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinButton_UserRadius.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
-            this.skinButton_UserRadius.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_UserRadius.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_UserRadius.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinButton_UserRadius.DownBack = null;
-            this.skinButton_UserRadius.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.ImageSize = new System.Drawing.Size(20, 20);
-            this.skinButton_UserRadius.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.IsDrawBorder = false;
-            this.skinButton_UserRadius.IsDrawGlass = false;
-            this.skinButton_UserRadius.Location = new System.Drawing.Point(0, 0);
-            this.skinButton_UserRadius.MouseBack = null;
-            this.skinButton_UserRadius.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_UserRadius.Name = "skinButton_UserRadius";
-            this.skinButton_UserRadius.NormlBack = null;
-            this.skinButton_UserRadius.Size = new System.Drawing.Size(40, 40);
-            this.skinButton_UserRadius.TabIndex = 7;
-            this.skinButton_UserRadius.Tag = "换肤";
-            this.skinButton_UserRadius.UseVisualStyleBackColor = false;
-            // 
             // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -719,6 +723,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.skinPanel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MdiBorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MinimizeBox = false;
@@ -734,6 +739,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             this.skinPanel_top.ResumeLayout(false);
             this.skinPanel2.ResumeLayout(false);
+            this.skinPanel_UserRadius.ResumeLayout(false);
             this.skinPanel_user.ResumeLayout(false);
             this.skinPanel_search.ResumeLayout(false);
             this.skinPanel1.ResumeLayout(false);
@@ -741,7 +747,6 @@
             this.skinPanel_buttons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox_logo)).EndInit();
             this.skinContextMenuStrip1.ResumeLayout(false);
-            this.skinPanel_UserRadius.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

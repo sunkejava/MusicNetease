@@ -31,13 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuListControl));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinButton_icon = new CCWin.SkinControl.SkinButton();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.skinPanel_MyFavorite = new CCWin.SkinControl.SkinPanel();
+            this.skinPanel_newMusicList = new CCWin.SkinControl.SkinPanel();
+            this.skinButton_MusicList = new CCWin.SkinControl.SkinButton();
+            this.skinButton_icon = new CCWin.SkinControl.SkinButton();
+            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_MyFavoriteList = new CCWin.SkinControl.SkinButton();
+            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
             this.menuControl_wddt = new MusicNetease.Controls.MenuControl();
             this.menuControl_wdsc = new MusicNetease.Controls.MenuControl();
             this.menuControl_xzgl = new MusicNetease.Controls.MenuControl();
@@ -48,16 +50,16 @@
             this.menuControl_srFm = new MusicNetease.Controls.MenuControl();
             this.menuControl_fxyy = new MusicNetease.Controls.MenuControl();
             this.skinPanel1.SuspendLayout();
+            this.skinPanel_MyFavorite.SuspendLayout();
+            this.skinPanel_newMusicList.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel1
             // 
+            this.skinPanel1.AutoScroll = true;
             this.skinPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.skinPanel1.Controls.Add(this.skinButton2);
-            this.skinPanel1.Controls.Add(this.skinLabel4);
-            this.skinPanel1.Controls.Add(this.skinButton1);
-            this.skinPanel1.Controls.Add(this.skinButton_icon);
-            this.skinPanel1.Controls.Add(this.skinLabel3);
+            this.skinPanel1.Controls.Add(this.skinPanel_newMusicList);
+            this.skinPanel1.Controls.Add(this.skinPanel_MyFavorite);
             this.skinPanel1.Controls.Add(this.menuControl_wddt);
             this.skinPanel1.Controls.Add(this.menuControl_wdsc);
             this.skinPanel1.Controls.Add(this.menuControl_xzgl);
@@ -78,113 +80,6 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Size = new System.Drawing.Size(177, 574);
             this.skinPanel1.TabIndex = 0;
-            // 
-            // skinButton2
-            // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BackgroundImage = global::MusicNetease.Properties.Resources.Arrowright0;
-            this.skinButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.skinButton2.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
-            this.skinButton2.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton2.DownBack = global::MusicNetease.Properties.Resources.Arrowright1;
-            this.skinButton2.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton2.ImageSize = new System.Drawing.Size(16, 16);
-            this.skinButton2.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton2.IsDrawBorder = false;
-            this.skinButton2.IsDrawGlass = false;
-            this.skinButton2.Location = new System.Drawing.Point(156, 408);
-            this.skinButton2.MouseBack = global::MusicNetease.Properties.Resources.Arrowright1;
-            this.skinButton2.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = global::MusicNetease.Properties.Resources.Arrowright0;
-            this.skinButton2.Size = new System.Drawing.Size(12, 12);
-            this.skinButton2.TabIndex = 15;
-            this.skinButton2.Tag = "展开";
-            this.skinButton2.UseVisualStyleBackColor = false;
-            // 
-            // skinLabel4
-            // 
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.skinLabel4.Location = new System.Drawing.Point(10, 405);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(68, 17);
-            this.skinLabel4.TabIndex = 14;
-            this.skinLabel4.Text = "收藏的歌单";
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BackgroundImage = global::MusicNetease.Properties.Resources.Arrowright0;
-            this.skinButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.skinButton1.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
-            this.skinButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton1.DownBack = global::MusicNetease.Properties.Resources.Arrowright1;
-            this.skinButton1.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ImageSize = new System.Drawing.Size(16, 16);
-            this.skinButton1.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton1.IsDrawBorder = false;
-            this.skinButton1.IsDrawGlass = false;
-            this.skinButton1.Location = new System.Drawing.Point(156, 363);
-            this.skinButton1.MouseBack = global::MusicNetease.Properties.Resources.Arrowright1;
-            this.skinButton1.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = global::MusicNetease.Properties.Resources.Arrowright0;
-            this.skinButton1.Size = new System.Drawing.Size(12, 12);
-            this.skinButton1.TabIndex = 13;
-            this.skinButton1.Tag = "展开";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            // 
-            // skinButton_icon
-            // 
-            this.skinButton_icon.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.BackgroundImage = global::MusicNetease.Properties.Resources.add0;
-            this.skinButton_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.skinButton_icon.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
-            this.skinButton_icon.BaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.BorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_icon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinButton_icon.DownBack = global::MusicNetease.Properties.Resources.add1;
-            this.skinButton_icon.DownBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.GlowColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.ImageSize = new System.Drawing.Size(16, 16);
-            this.skinButton_icon.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.IsDrawBorder = false;
-            this.skinButton_icon.IsDrawGlass = false;
-            this.skinButton_icon.Location = new System.Drawing.Point(127, 361);
-            this.skinButton_icon.MouseBack = global::MusicNetease.Properties.Resources.add1;
-            this.skinButton_icon.MouseBaseColor = System.Drawing.Color.Transparent;
-            this.skinButton_icon.Name = "skinButton_icon";
-            this.skinButton_icon.NormlBack = global::MusicNetease.Properties.Resources.add0;
-            this.skinButton_icon.Size = new System.Drawing.Size(16, 16);
-            this.skinButton_icon.TabIndex = 12;
-            this.skinButton_icon.Tag = "新建歌单";
-            this.skinButton_icon.UseVisualStyleBackColor = false;
-            // 
-            // skinLabel3
-            // 
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.skinLabel3.Location = new System.Drawing.Point(10, 360);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(68, 17);
-            this.skinLabel3.TabIndex = 11;
-            this.skinLabel3.Text = "创建的歌单";
             // 
             // skinLabel2
             // 
@@ -211,6 +106,144 @@
             this.skinLabel1.Size = new System.Drawing.Size(32, 17);
             this.skinLabel1.TabIndex = 0;
             this.skinLabel1.Text = "推荐";
+            // 
+            // skinPanel_MyFavorite
+            // 
+            this.skinPanel_MyFavorite.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_MyFavorite.Controls.Add(this.skinButton_MyFavoriteList);
+            this.skinPanel_MyFavorite.Controls.Add(this.skinLabel4);
+            this.skinPanel_MyFavorite.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_MyFavorite.DownBack = null;
+            this.skinPanel_MyFavorite.Location = new System.Drawing.Point(0, 384);
+            this.skinPanel_MyFavorite.MouseBack = null;
+            this.skinPanel_MyFavorite.Name = "skinPanel_MyFavorite";
+            this.skinPanel_MyFavorite.NormlBack = null;
+            this.skinPanel_MyFavorite.Size = new System.Drawing.Size(177, 38);
+            this.skinPanel_MyFavorite.TabIndex = 16;
+            // 
+            // skinPanel_newMusicList
+            // 
+            this.skinPanel_newMusicList.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_newMusicList.Controls.Add(this.skinButton_MusicList);
+            this.skinPanel_newMusicList.Controls.Add(this.skinButton_icon);
+            this.skinPanel_newMusicList.Controls.Add(this.skinLabel3);
+            this.skinPanel_newMusicList.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel_newMusicList.DownBack = null;
+            this.skinPanel_newMusicList.Location = new System.Drawing.Point(0, 346);
+            this.skinPanel_newMusicList.MouseBack = null;
+            this.skinPanel_newMusicList.Name = "skinPanel_newMusicList";
+            this.skinPanel_newMusicList.NormlBack = null;
+            this.skinPanel_newMusicList.Size = new System.Drawing.Size(177, 38);
+            this.skinPanel_newMusicList.TabIndex = 17;
+            // 
+            // skinButton_MusicList
+            // 
+            this.skinButton_MusicList.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.BackgroundImage = global::MusicNetease.Properties.Resources.Arrowright0;
+            this.skinButton_MusicList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton_MusicList.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
+            this.skinButton_MusicList.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MusicList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_MusicList.DownBack = global::MusicNetease.Properties.Resources.Arrowright1;
+            this.skinButton_MusicList.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.ImageSize = new System.Drawing.Size(16, 16);
+            this.skinButton_MusicList.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.IsDrawBorder = false;
+            this.skinButton_MusicList.IsDrawGlass = false;
+            this.skinButton_MusicList.Location = new System.Drawing.Point(155, 14);
+            this.skinButton_MusicList.MouseBack = global::MusicNetease.Properties.Resources.Arrowright1;
+            this.skinButton_MusicList.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MusicList.Name = "skinButton_MusicList";
+            this.skinButton_MusicList.NormlBack = global::MusicNetease.Properties.Resources.Arrowright0;
+            this.skinButton_MusicList.Size = new System.Drawing.Size(12, 12);
+            this.skinButton_MusicList.TabIndex = 16;
+            this.skinButton_MusicList.Tag = "展开";
+            this.skinButton_MusicList.UseVisualStyleBackColor = false;
+            this.skinButton_MusicList.Click += new System.EventHandler(this.skinButton_MusicList_Click);
+            // 
+            // skinButton_icon
+            // 
+            this.skinButton_icon.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.BackgroundImage = global::MusicNetease.Properties.Resources.add0;
+            this.skinButton_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton_icon.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
+            this.skinButton_icon.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_icon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_icon.DownBack = global::MusicNetease.Properties.Resources.add1;
+            this.skinButton_icon.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.ImageSize = new System.Drawing.Size(16, 16);
+            this.skinButton_icon.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.IsDrawBorder = false;
+            this.skinButton_icon.IsDrawGlass = false;
+            this.skinButton_icon.Location = new System.Drawing.Point(126, 12);
+            this.skinButton_icon.MouseBack = global::MusicNetease.Properties.Resources.add1;
+            this.skinButton_icon.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_icon.Name = "skinButton_icon";
+            this.skinButton_icon.NormlBack = global::MusicNetease.Properties.Resources.add0;
+            this.skinButton_icon.Size = new System.Drawing.Size(16, 16);
+            this.skinButton_icon.TabIndex = 15;
+            this.skinButton_icon.Tag = "新建歌单";
+            this.skinButton_icon.UseVisualStyleBackColor = false;
+            // 
+            // skinLabel3
+            // 
+            this.skinLabel3.AutoSize = true;
+            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel3.BorderColor = System.Drawing.Color.White;
+            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.skinLabel3.Location = new System.Drawing.Point(9, 11);
+            this.skinLabel3.Name = "skinLabel3";
+            this.skinLabel3.Size = new System.Drawing.Size(68, 17);
+            this.skinLabel3.TabIndex = 14;
+            this.skinLabel3.Text = "创建的歌单";
+            // 
+            // skinButton_MyFavoriteList
+            // 
+            this.skinButton_MyFavoriteList.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.BackgroundImage = global::MusicNetease.Properties.Resources.Arrowright0;
+            this.skinButton_MyFavoriteList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton_MyFavoriteList.BackRectangle = new System.Drawing.Rectangle(10, 10, 16, 16);
+            this.skinButton_MyFavoriteList.BaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.BorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MyFavoriteList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinButton_MyFavoriteList.DownBack = global::MusicNetease.Properties.Resources.Arrowright1;
+            this.skinButton_MyFavoriteList.DownBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.GlowColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.ImageSize = new System.Drawing.Size(16, 16);
+            this.skinButton_MyFavoriteList.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.IsDrawBorder = false;
+            this.skinButton_MyFavoriteList.IsDrawGlass = false;
+            this.skinButton_MyFavoriteList.Location = new System.Drawing.Point(155, 14);
+            this.skinButton_MyFavoriteList.MouseBack = global::MusicNetease.Properties.Resources.Arrowright1;
+            this.skinButton_MyFavoriteList.MouseBaseColor = System.Drawing.Color.Transparent;
+            this.skinButton_MyFavoriteList.Name = "skinButton_MyFavoriteList";
+            this.skinButton_MyFavoriteList.NormlBack = global::MusicNetease.Properties.Resources.Arrowright0;
+            this.skinButton_MyFavoriteList.Size = new System.Drawing.Size(12, 12);
+            this.skinButton_MyFavoriteList.TabIndex = 17;
+            this.skinButton_MyFavoriteList.Tag = "展开";
+            this.skinButton_MyFavoriteList.UseVisualStyleBackColor = false;
+            this.skinButton_MyFavoriteList.Click += new System.EventHandler(this.skinButton_MusicList_Click);
+            // 
+            // skinLabel4
+            // 
+            this.skinLabel4.AutoSize = true;
+            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel4.BorderColor = System.Drawing.Color.White;
+            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.skinLabel4.Location = new System.Drawing.Point(9, 11);
+            this.skinLabel4.Name = "skinLabel4";
+            this.skinLabel4.Size = new System.Drawing.Size(68, 17);
+            this.skinLabel4.TabIndex = 16;
+            this.skinLabel4.Text = "收藏的歌单";
             // 
             // menuControl_wddt
             // 
@@ -375,6 +408,10 @@
             this.Size = new System.Drawing.Size(177, 574);
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
+            this.skinPanel_MyFavorite.ResumeLayout(false);
+            this.skinPanel_MyFavorite.PerformLayout();
+            this.skinPanel_newMusicList.ResumeLayout(false);
+            this.skinPanel_newMusicList.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,11 +422,6 @@
         private CCWin.SkinControl.SkinLabel skinLabel1;
         private MenuControl menuControl_fxyy;
         private CCWin.SkinControl.SkinLabel skinLabel2;
-        private CCWin.SkinControl.SkinLabel skinLabel3;
-        public CCWin.SkinControl.SkinButton skinButton_icon;
-        public CCWin.SkinControl.SkinButton skinButton1;
-        public CCWin.SkinControl.SkinButton skinButton2;
-        private CCWin.SkinControl.SkinLabel skinLabel4;
         public MenuControl menuControl_srFm;
         public MenuControl menuControl_tv;
         public MenuControl menuControl_friend;
@@ -398,5 +430,12 @@
         public MenuControl menuControl_yun;
         public MenuControl menuControl_wddt;
         public MenuControl menuControl_wdsc;
+        private CCWin.SkinControl.SkinPanel skinPanel_newMusicList;
+        public CCWin.SkinControl.SkinButton skinButton_MusicList;
+        public CCWin.SkinControl.SkinButton skinButton_icon;
+        private CCWin.SkinControl.SkinLabel skinLabel3;
+        private CCWin.SkinControl.SkinPanel skinPanel_MyFavorite;
+        public CCWin.SkinControl.SkinButton skinButton_MyFavoriteList;
+        private CCWin.SkinControl.SkinLabel skinLabel4;
     }
 }
