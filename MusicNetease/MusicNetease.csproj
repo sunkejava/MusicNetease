@@ -126,6 +126,9 @@
     <Compile Include="FormMessage.Designer.cs">
       <DependentUpon>FormMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="LayeredSkinControl\SongSheetControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +211,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\btn_iliked_p.png" />
+    <None Include="Resources\btn_iliked_n.png" />
+    <None Include="Resources\btn_iliked_h.png" />
+    <None Include="Resources\btn_iliked_dis.png" />
+    <None Include="Resources\music_move.png" />
     <None Include="Resources\Img_right1.png" />
     <None Include="Resources\Img_right0.png" />
     <None Include="Resources\Img_left1.png" />
