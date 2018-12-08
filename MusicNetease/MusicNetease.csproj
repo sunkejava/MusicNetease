@@ -120,6 +120,7 @@
       <DependentUpon>UserControl_Srfm.cs</DependentUpon>
     </Compile>
     <Compile Include="decline\Enums.cs" />
+    <Compile Include="Entity\MenuEntity.cs" />
     <Compile Include="FormMessage.cs">
       <SubType>Form</SubType>
     </Compile>

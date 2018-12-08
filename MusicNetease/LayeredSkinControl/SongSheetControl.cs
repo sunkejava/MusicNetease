@@ -1,4 +1,5 @@
 ﻿using LayeredSkin.DirectUI;
+using MusicNetease.Entity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -175,18 +176,6 @@ namespace MusicNetease.LayeredSkinControl
         {
             pauseMusic();
         }
-        private void Btnplay_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.Show("播放", FindForm(), MousePosition.X - FindForm().Left + 10, MousePosition.Y - FindForm().Top + 10, 3000);
-        }
-        private void Btndel_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.Show("删除", FindForm(), MousePosition.X - FindForm().Left + 10, MousePosition.Y - FindForm().Top + 10, 3000);
-        }
-        private void Btnpause_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.Show("暂停", FindForm(), MousePosition.X - FindForm().Left + 10, MousePosition.Y - FindForm().Top + 10, 3000);
-        }
         private void Btnplay_MouseLeave(object sender, EventArgs e)
         {
             toolTip1.Hide(FindForm());
@@ -232,18 +221,18 @@ namespace MusicNetease.LayeredSkinControl
         }
         private void Listx_MouseEnter(object sender, EventArgs e)
         {
-            ((DuiBaseControl)sender).BackColor = Color.FromArgb(50, Color.White);
-            if (((DuiBaseControl)sender).Name == IsPlaying && ((DuiBaseControl)sender).Tag.ToString() == IsPlayingList)
-            {
-                Un4seen.Bass.BASSActive b = Un4seen.Bass.Bass.BASS_ChannelIsActive(((FormMain)FindForm()).stream);
-                if (b == Un4seen.Bass.BASSActive.BASS_ACTIVE_PLAYING)
-                    ((DuiBaseControl)sender).FindControl("btnpause")[0].Visible = true;
-                else if (b == Un4seen.Bass.BASSActive.BASS_ACTIVE_PAUSED)
-                    ((DuiBaseControl)sender).FindControl("btnplay")[0].Visible = true;
-            }
-            else
-                ((DuiBaseControl)sender).FindControl("btnplay")[0].Visible = true;
-            ((DuiBaseControl)sender).FindControl("btndel")[0].Visible = true;
+            //((DuiBaseControl)sender).BackColor = Color.FromArgb(50, Color.White);
+            //if (((DuiBaseControl)sender).Name == IsPlaying && ((DuiBaseControl)sender).Tag.ToString() == IsPlayingList)
+            //{
+            //    Un4seen.Bass.BASSActive b = Un4seen.Bass.Bass.BASS_ChannelIsActive(((FormMain)FindForm()).stream);
+            //    if (b == Un4seen.Bass.BASSActive.BASS_ACTIVE_PLAYING)
+            //        ((DuiBaseControl)sender).FindControl("btnpause")[0].Visible = true;
+            //    else if (b == Un4seen.Bass.BASSActive.BASS_ACTIVE_PAUSED)
+            //        ((DuiBaseControl)sender).FindControl("btnplay")[0].Visible = true;
+            //}
+            //else
+            //    ((DuiBaseControl)sender).FindControl("btnplay")[0].Visible = true;
+            //((DuiBaseControl)sender).FindControl("btndel")[0].Visible = true;
         }
         private void Listx_MouseLeave(object sender, EventArgs e)
         {
@@ -595,17 +584,17 @@ namespace MusicNetease.LayeredSkinControl
                     if (File.Exists(name))
                     {
                         #region 本地音乐
-                        Mp3Info info = MP3Info.GetMp3Info(name);
+                        MenuEntity info = new MenuEntity();
 
-                        string artists = info.Artist;
-                        string album = info.Album;
-                        string length = info.MusicLength;
-                        string title = info.Title;
+                        string MenuName = info.MenuName;
+                        Image album = info.Icon;
+                        bool length = info.IsEndLevel;
+                        MenuEntity[] title = info.Menus;
                         DuiLabel infoforsinger = new DuiLabel();
                         infoforsinger.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAlias;
                         infoforsinger.Size = new Size(140, 20);
-                        if (artists != "")
-                            infoforsinger.Text = "-" + artists;
+                        if (MenuName != "")
+                            infoforsinger.Text = "-" + MenuName;
                         infoforsinger.Location = new Point(160, 4);
                         infoforsinger.ForeColor = Color.FromArgb(220, 220, 220);
                         infoforsinger.Font = new Font("微软雅黑", 9F);
@@ -628,44 +617,13 @@ namespace MusicNetease.LayeredSkinControl
                         infoforTimer.Name = "infoforTimer";
                         infoforTimer.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
-                        DuiButton btnplay = new DuiButton();
-                        btnplay.Size = new Size(20, 20);
-                        btnplay.Location = new Point(295, 3);
-                        btnplay.NormalImage = Properties.Resources.list_btn_play_normal;
-                        btnplay.HoverImage = Properties.Resources.list_btn_play_hover;
-                        btnplay.PressedImage = Properties.Resources.list_btn_play_press;
-                        btnplay.MouseClick += Btnplay_MouseDown;
-                        btnplay.MouseEnter += Btnplay_MouseEnter;
-                        btnplay.MouseLeave += Btnplay_MouseLeave;
-                        btnplay.Name = "btnplay";
-                        btnplay.Tag = name;
-                        btnplay.Visible = false;
-
-                        DuiButton btnpause = new DuiButton();
-                        btnpause.Size = new Size(20, 20);
-                        btnpause.Location = new Point(295, 3);
-                        btnpause.NormalImage = Properties.Resources.list_btn_pause_normal;
-                        btnpause.HoverImage = Properties.Resources.list_btn_pause_hover;
-                        btnpause.PressedImage = Properties.Resources.list_btn_pause_press;
-                        btnpause.MouseClick += Btnpause_MouseClick;
-                        btnpause.Name = "btnpause";
-                        btnpause.Tag = name;
-                        btnpause.MouseEnter += Btnpause_MouseEnter;
-                        btnpause.MouseLeave += Btnpause_MouseLeave;
-                        btnpause.Visible = false;
-
-                        DuiButton btndel = new DuiButton();
-                        btndel.Size = new Size(20, 20);
-                        btndel.Location = new Point(317, 3);
-                        btndel.NormalImage = Properties.Resources.btn_del_h;
-                        btndel.HoverImage = Properties.Resources.btn_del_n;
-                        btndel.PressedImage = Properties.Resources.btn_del_p;
-                        btndel.MouseClick += Btndel_MouseClick;
-                        btndel.MouseEnter += Btndel_MouseEnter;
-                        btndel.MouseLeave += Btndel_MouseLeave;
-                        btndel.Name = "btndel";
-                        btndel.Tag = listname;
-                        btndel.Visible = false;
+                        DuiButton btnPlay = new DuiButton();
+                        btnPlay.Size = new Size(20, 20);
+                        btnPlay.Location = new Point(317, 3);
+                        btnPlay.NormalImage = Properties.Resources.volume0;
+                        btnPlay.Name = "btnPlay";
+                        btnPlay.Tag = listname;
+                        btnPlay.Visible = false;
 
                         DuiLabel lbl = new DuiLabel();
                         lbl.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAlias;
