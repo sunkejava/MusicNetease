@@ -34,6 +34,7 @@
             this.menuListControl1 = new MusicNetease.Controls.MenuListControl();
             this.skinTabControl_Main = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_fxyy = new CCWin.SkinControl.SkinTabPage();
+            this.songSheetList1 = new MusicNetease.LayeredSkinControl.SongSheetList();
             this.mainTabControl1 = new MusicNetease.Controls.MainTabControl_Fxyy();
             this.skinTabPage_srfm = new CCWin.SkinControl.SkinTabPage();
             this.userControl_Srfm1 = new MusicNetease.Controls.UserControl_Srfm();
@@ -45,6 +46,7 @@
             this.skinTabPage_wddt = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_wdsc = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
+            this.scorllbar = new LayeredSkin.Controls.LayeredBaseControl();
             this.skinPanel3.SuspendLayout();
             this.skinTabControl_Main.SuspendLayout();
             this.skinTabPage_fxyy.SuspendLayout();
@@ -124,6 +126,8 @@
             // skinTabPage_fxyy
             // 
             this.skinTabPage_fxyy.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_fxyy.Controls.Add(this.scorllbar);
+            this.skinTabPage_fxyy.Controls.Add(this.songSheetList1);
             this.skinTabPage_fxyy.Controls.Add(this.mainTabControl1);
             this.skinTabPage_fxyy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage_fxyy.Location = new System.Drawing.Point(0, 36);
@@ -133,11 +137,46 @@
             this.skinTabPage_fxyy.TabItemImage = null;
             this.skinTabPage_fxyy.Text = "发现音乐";
             // 
+            // songSheetList1
+            // 
+            this.songSheetList1.AutoFocus = false;
+            this.songSheetList1.BackColor = System.Drawing.Color.Transparent;
+            this.songSheetList1.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.songSheetList1.Borders.BottomWidth = 1;
+            this.songSheetList1.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.songSheetList1.Borders.LeftWidth = 1;
+            this.songSheetList1.Borders.RightColor = System.Drawing.Color.Empty;
+            this.songSheetList1.Borders.RightWidth = 1;
+            this.songSheetList1.Borders.TopColor = System.Drawing.Color.Empty;
+            this.songSheetList1.Borders.TopWidth = 1;
+            this.songSheetList1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("songSheetList1.Canvas")));
+            this.songSheetList1.EnabledMouseWheel = true;
+            this.songSheetList1.ItemSize = new System.Drawing.Size(100, 100);
+            this.songSheetList1.ListTop = 0;
+            this.songSheetList1.Location = new System.Drawing.Point(29, 255);
+            this.songSheetList1.Name = "songSheetList1";
+            this.songSheetList1.Orientation = LayeredSkin.Controls.ListOrientation.Vertical;
+            this.songSheetList1.RollSize = 20;
+            this.songSheetList1.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.songSheetList1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.songSheetList1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.songSheetList1.ScrollBarWidth = 10;
+            this.songSheetList1.SetSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            this.songSheetList1.ShowScrollBar = true;
+            this.songSheetList1.Size = new System.Drawing.Size(175, 283);
+            this.songSheetList1.SmoothScroll = false;
+            this.songSheetList1.TabIndex = 1;
+            this.songSheetList1.Text = "songSheetList1";
+            this.songSheetList1.Ulmul = false;
+            this.songSheetList1.Value = 0D;
+            this.songSheetList1.RefreshListed += new System.EventHandler(this.songSheetList1_RefreshListed);
+            // 
             // mainTabControl1
             // 
             this.mainTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl1.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl1.Name = "mainTabControl1";
+            this.mainTabControl1.SetSize = 845;
             this.mainTabControl1.Size = new System.Drawing.Size(845, 566);
             this.mainTabControl1.TabIndex = 0;
             // 
@@ -250,6 +289,24 @@
             this.skinTabPage_gd.TabItemImage = null;
             this.skinTabPage_gd.Text = "歌单";
             // 
+            // scorllbar
+            // 
+            this.scorllbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.scorllbar.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.BottomWidth = 1;
+            this.scorllbar.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.LeftWidth = 1;
+            this.scorllbar.Borders.RightColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.RightWidth = 1;
+            this.scorllbar.Borders.TopColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.TopWidth = 1;
+            this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
+            this.scorllbar.Location = new System.Drawing.Point(194, 255);
+            this.scorllbar.Name = "scorllbar";
+            this.scorllbar.Size = new System.Drawing.Size(5, 151);
+            this.scorllbar.TabIndex = 2;
+            this.scorllbar.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -288,5 +345,7 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage_gd;
         private Controls.MainTabControl_Fxyy mainTabControl1;
         private Controls.UserControl_Srfm userControl_Srfm1;
+        private LayeredSkinControl.SongSheetList songSheetList1;
+        private LayeredSkin.Controls.LayeredBaseControl scorllbar;
     }
 }

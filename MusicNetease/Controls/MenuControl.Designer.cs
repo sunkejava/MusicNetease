@@ -107,6 +107,7 @@
             this.skinLabel_name.BorderColor = System.Drawing.Color.White;
             this.skinLabel_name.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skinLabel_name.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_name.ForeColor = System.Drawing.Color.DimGray;
             this.skinLabel_name.Location = new System.Drawing.Point(43, 5);
             this.skinLabel_name.Name = "skinLabel_name";
             this.skinLabel_name.Size = new System.Drawing.Size(56, 17);
