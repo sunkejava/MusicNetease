@@ -236,7 +236,7 @@
             this.skinPanel_search.MouseBack = null;
             this.skinPanel_search.Name = "skinPanel_search";
             this.skinPanel_search.NormlBack = null;
-            this.skinPanel_search.Size = new System.Drawing.Size(310, 50);
+            this.skinPanel_search.Size = new System.Drawing.Size(324, 50);
             this.skinPanel_search.TabIndex = 2;
             this.skinPanel_search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinPanel_top_MouseDown);
             // 
@@ -247,7 +247,7 @@
             this.skinPanel1.Controls.Add(this.search_text);
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel1.DownBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
-            this.skinPanel1.Location = new System.Drawing.Point(89, 14);
+            this.skinPanel1.Location = new System.Drawing.Point(102, 14);
             this.skinPanel1.MouseBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = global::MusicNetease.Properties.Resources.skinPanel1_NormlBack;
@@ -306,7 +306,7 @@
             this.skinButton_back.ImageSize = new System.Drawing.Size(20, 20);
             this.skinButton_back.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_back.IsDrawGlass = false;
-            this.skinButton_back.Location = new System.Drawing.Point(21, 13);
+            this.skinButton_back.Location = new System.Drawing.Point(34, 13);
             this.skinButton_back.MouseBack = null;
             this.skinButton_back.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_back.Name = "skinButton_back";
@@ -337,7 +337,7 @@
             this.skinButton_forward.ImageSize = new System.Drawing.Size(16, 16);
             this.skinButton_forward.InnerBorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_forward.IsDrawGlass = false;
-            this.skinButton_forward.Location = new System.Drawing.Point(49, 13);
+            this.skinButton_forward.Location = new System.Drawing.Point(62, 13);
             this.skinButton_forward.MouseBack = null;
             this.skinButton_forward.MouseBaseColor = System.Drawing.Color.Transparent;
             this.skinButton_forward.Name = "skinButton_forward";

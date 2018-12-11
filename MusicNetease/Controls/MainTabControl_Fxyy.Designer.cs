@@ -183,7 +183,7 @@
             this.skinLine_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_8.LineColor = System.Drawing.Color.Silver;
             this.skinLine_8.LineHeight = 2;
-            this.skinLine_8.Location = new System.Drawing.Point(552, 234);
+            this.skinLine_8.Location = new System.Drawing.Point(524, 234);
             this.skinLine_8.Name = "skinLine_8";
             this.skinLine_8.Size = new System.Drawing.Size(20, 10);
             this.skinLine_8.TabIndex = 28;
@@ -198,7 +198,7 @@
             this.skinLine_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_7.LineColor = System.Drawing.Color.Silver;
             this.skinLine_7.LineHeight = 2;
-            this.skinLine_7.Location = new System.Drawing.Point(523, 234);
+            this.skinLine_7.Location = new System.Drawing.Point(495, 234);
             this.skinLine_7.Name = "skinLine_7";
             this.skinLine_7.Size = new System.Drawing.Size(20, 10);
             this.skinLine_7.TabIndex = 27;
@@ -213,7 +213,7 @@
             this.skinLine_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_6.LineColor = System.Drawing.Color.Silver;
             this.skinLine_6.LineHeight = 2;
-            this.skinLine_6.Location = new System.Drawing.Point(495, 234);
+            this.skinLine_6.Location = new System.Drawing.Point(467, 234);
             this.skinLine_6.Name = "skinLine_6";
             this.skinLine_6.Size = new System.Drawing.Size(20, 10);
             this.skinLine_6.TabIndex = 26;
@@ -228,7 +228,7 @@
             this.skinLine_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_5.LineColor = System.Drawing.Color.Silver;
             this.skinLine_5.LineHeight = 2;
-            this.skinLine_5.Location = new System.Drawing.Point(468, 234);
+            this.skinLine_5.Location = new System.Drawing.Point(440, 234);
             this.skinLine_5.Name = "skinLine_5";
             this.skinLine_5.Size = new System.Drawing.Size(20, 10);
             this.skinLine_5.TabIndex = 25;
@@ -243,7 +243,7 @@
             this.skinLine_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_4.LineColor = System.Drawing.Color.Silver;
             this.skinLine_4.LineHeight = 2;
-            this.skinLine_4.Location = new System.Drawing.Point(440, 234);
+            this.skinLine_4.Location = new System.Drawing.Point(412, 234);
             this.skinLine_4.Name = "skinLine_4";
             this.skinLine_4.Size = new System.Drawing.Size(20, 10);
             this.skinLine_4.TabIndex = 24;
@@ -258,7 +258,7 @@
             this.skinLine_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_3.LineColor = System.Drawing.Color.Silver;
             this.skinLine_3.LineHeight = 2;
-            this.skinLine_3.Location = new System.Drawing.Point(414, 234);
+            this.skinLine_3.Location = new System.Drawing.Point(386, 234);
             this.skinLine_3.Name = "skinLine_3";
             this.skinLine_3.Size = new System.Drawing.Size(20, 10);
             this.skinLine_3.TabIndex = 23;
@@ -273,7 +273,7 @@
             this.skinLine_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_2.LineColor = System.Drawing.Color.Silver;
             this.skinLine_2.LineHeight = 2;
-            this.skinLine_2.Location = new System.Drawing.Point(388, 234);
+            this.skinLine_2.Location = new System.Drawing.Point(360, 234);
             this.skinLine_2.Name = "skinLine_2";
             this.skinLine_2.Size = new System.Drawing.Size(20, 10);
             this.skinLine_2.TabIndex = 22;
@@ -288,7 +288,7 @@
             this.skinLine_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.skinLine_1.LineHeight = 2;
-            this.skinLine_1.Location = new System.Drawing.Point(363, 234);
+            this.skinLine_1.Location = new System.Drawing.Point(335, 234);
             this.skinLine_1.Name = "skinLine_1";
             this.skinLine_1.Size = new System.Drawing.Size(20, 10);
             this.skinLine_1.TabIndex = 21;

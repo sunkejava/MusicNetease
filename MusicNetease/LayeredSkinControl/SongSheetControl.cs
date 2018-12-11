@@ -179,7 +179,7 @@ namespace MusicNetease.LayeredSkinControl
                 {
                     //底层控件
                     DuiBaseControl baseControl = new DuiBaseControl();
-                    baseControl.Size = new Size(Width, 30);
+                    baseControl.Size = new Size(Width, 35);
                     baseControl.BackColor = Color.FromArgb(245, 245, 247);
                     //边框
                     Borders baseBorder = new Borders(baseControl);
@@ -190,9 +190,9 @@ namespace MusicNetease.LayeredSkinControl
                     //菜单名称
                     DuiLabel menuName = new DuiLabel();
                     menuName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-                    menuName.Location = new Point(10, 5);
+                    menuName.Location = new Point(10, 10);
                     menuName.AutoSize = true;
-                    menuName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
+                    menuName.Font = new Font("微软雅黑", 9F, FontStyle.Bold);
                     menuName.ForeColor = Color.DimGray;
                     menuName.Text = thisMenu.MenuName;
                     menuName.Name = "list_" + thisMenu.MenuText;
@@ -215,19 +215,21 @@ namespace MusicNetease.LayeredSkinControl
                             addMenuIcon.NormalImage = thisMenu.Icon;
                             addMenuIcon.HoverImage = thisMenu.HoverIcon;
                             addMenuIcon.PressedImage = thisMenu.HoverIcon;
-                            addMenuIcon.Size = new Size(10, 10);
+                            addMenuIcon.AdaptImage = false;
+                            addMenuIcon.Size = new Size(16, 16);
                             addMenuIcon.Location = new Point(126, 12);
                             //新增事件搬绑定
                             addMenuIcon.MouseDown += addMenuIcon_MouseDown;
                         }
                         //收起展开图标
                         menuIcon = new DuiButton();
-                        menuIcon.BackgroundImage = thisMenu.Icon;
+                        menuIcon.BackgroundImage = Properties.Resources.Arrowright0;
                         menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                         menuIcon.NormalImage = Properties.Resources.Arrowright0;
                         menuIcon.HoverImage = Properties.Resources.Arrowright1;
                         menuIcon.PressedImage = Properties.Resources.Arrowright1;
-                        menuIcon.Size = new Size(10, 10);
+                        menuIcon.AdaptImage = false;
+                        menuIcon.Size = new Size(16, 16);
                         baseControl.Tag = "openList";
                         menuIcon.Location = new Point(155, 12);
 
@@ -259,18 +261,19 @@ namespace MusicNetease.LayeredSkinControl
                     menuName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
                     menuName.Location = new Point(43, 5);
                     menuName.AutoSize = true;
-                    menuName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
+                    menuName.Font = new Font("微软雅黑", 9F, FontStyle.Regular);
                     menuName.ForeColor = Color.DimGray;
                     menuName.Text = thisMenu.MenuName;
                     menuName.Name = "list_" + thisMenu.MenuText;
                     //菜单图标
                     DuiButton menuIcon = new DuiButton();
                     menuIcon.BackgroundImage = thisMenu.Icon;
+                    menuIcon.AdaptImage = false;
                     menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
                     menuIcon.NormalImage = thisMenu.Icon;
                     menuIcon.HoverImage = thisMenu.HoverIcon;
                     menuIcon.PressedImage = thisMenu.HoverIcon;
-                    menuIcon.Size = new Size(10, 10);
+                    menuIcon.Size = new Size(16, 16);
                     menuIcon.Location = new Point(15, 5);
                     //上层控件
                     DuiBaseControl scControl = new DuiBaseControl();
