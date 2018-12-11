@@ -212,6 +212,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="format.ico" />
+    <None Include="Resources\ilike0.png" />
+    <None Include="Resources\ilike1.png" />
     <None Include="Resources\btn_iliked_p.png" />
     <None Include="Resources\btn_iliked_n.png" />
     <None Include="Resources\btn_iliked_h.png" />

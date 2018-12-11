@@ -26,9 +26,13 @@ namespace MusicNetease.Entity
         /// </summary>
         private Image hoverIcon;
         /// <summary>
-        /// 是否包含下级
+        /// 是否末级菜单
         /// </summary>
         private bool isEndLevel;
+        /// <summary>
+        /// 是否顶级菜单
+        /// </summary>
+        private bool isTopLevel = false;
         /// <summary>
         /// 下级菜单集合
         /// </summary>
@@ -68,6 +72,14 @@ namespace MusicNetease.Entity
         public bool IsEndLevel {
             get { return isEndLevel; }
             set { isEndLevel = value; }
+        }
+        /// <summary>
+        /// 是否顶级菜单
+        /// </summary>
+        public bool IsTopLevel
+        {
+            get { return isTopLevel; }
+            set { isTopLevel = value; }
         }
         /// <summary>
         /// 下级菜单集合

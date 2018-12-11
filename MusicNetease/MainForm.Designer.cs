@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.musicPlayerButton1 = new MusicNetease.Controls.MusicPlayerButton();
-            this.menuListControl1 = new MusicNetease.Controls.MenuListControl();
             this.skinTabControl_Main = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_fxyy = new CCWin.SkinControl.SkinTabPage();
+            this.scorllbar = new LayeredSkin.Controls.LayeredBaseControl();
             this.songSheetList1 = new MusicNetease.LayeredSkinControl.SongSheetList();
             this.mainTabControl1 = new MusicNetease.Controls.MainTabControl_Fxyy();
             this.skinTabPage_srfm = new CCWin.SkinControl.SkinTabPage();
@@ -46,7 +46,6 @@
             this.skinTabPage_wddt = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_wdsc = new CCWin.SkinControl.SkinTabPage();
             this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
-            this.scorllbar = new LayeredSkin.Controls.LayeredBaseControl();
             this.skinPanel3.SuspendLayout();
             this.skinTabControl_Main.SuspendLayout();
             this.skinTabPage_fxyy.SuspendLayout();
@@ -75,17 +74,6 @@
             this.musicPlayerButton1.Name = "musicPlayerButton1";
             this.musicPlayerButton1.Size = new System.Drawing.Size(1014, 49);
             this.musicPlayerButton1.TabIndex = 2;
-            // 
-            // menuListControl1
-            // 
-            this.menuListControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.menuListControl1.BackColor = System.Drawing.Color.Transparent;
-            this.menuListControl1.Location = new System.Drawing.Point(0, 50);
-            this.menuListControl1.Name = "menuListControl1";
-            this.menuListControl1.Size = new System.Drawing.Size(175, 568);
-            this.menuListControl1.TabIndex = 2;
-            this.menuListControl1.MenuControl_MouseDown += new MusicNetease.Controls.MenuListControl.MenuControlMouseDown(this.menuListControl1_MenuControl_MouseDown);
             // 
             // skinTabControl_Main
             // 
@@ -127,7 +115,6 @@
             // 
             this.skinTabPage_fxyy.BackColor = System.Drawing.Color.White;
             this.skinTabPage_fxyy.Controls.Add(this.scorllbar);
-            this.skinTabPage_fxyy.Controls.Add(this.songSheetList1);
             this.skinTabPage_fxyy.Controls.Add(this.mainTabControl1);
             this.skinTabPage_fxyy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage_fxyy.Location = new System.Drawing.Point(0, 36);
@@ -137,8 +124,28 @@
             this.skinTabPage_fxyy.TabItemImage = null;
             this.skinTabPage_fxyy.Text = "发现音乐";
             // 
+            // scorllbar
+            // 
+            this.scorllbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.scorllbar.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.BottomWidth = 1;
+            this.scorllbar.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.LeftWidth = 1;
+            this.scorllbar.Borders.RightColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.RightWidth = 1;
+            this.scorllbar.Borders.TopColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.TopWidth = 1;
+            this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
+            this.scorllbar.Location = new System.Drawing.Point(194, 255);
+            this.scorllbar.Name = "scorllbar";
+            this.scorllbar.Size = new System.Drawing.Size(5, 151);
+            this.scorllbar.TabIndex = 2;
+            this.scorllbar.Visible = false;
+            // 
             // songSheetList1
             // 
+            this.songSheetList1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.songSheetList1.AutoFocus = false;
             this.songSheetList1.BackColor = System.Drawing.Color.Transparent;
             this.songSheetList1.Borders.BottomColor = System.Drawing.Color.Empty;
@@ -153,7 +160,7 @@
             this.songSheetList1.EnabledMouseWheel = true;
             this.songSheetList1.ItemSize = new System.Drawing.Size(100, 100);
             this.songSheetList1.ListTop = 0;
-            this.songSheetList1.Location = new System.Drawing.Point(29, 255);
+            this.songSheetList1.Location = new System.Drawing.Point(0, 51);
             this.songSheetList1.Name = "songSheetList1";
             this.songSheetList1.Orientation = LayeredSkin.Controls.ListOrientation.Vertical;
             this.songSheetList1.RollSize = 20;
@@ -163,7 +170,7 @@
             this.songSheetList1.ScrollBarWidth = 10;
             this.songSheetList1.SetSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.songSheetList1.ShowScrollBar = true;
-            this.songSheetList1.Size = new System.Drawing.Size(175, 283);
+            this.songSheetList1.Size = new System.Drawing.Size(175, 567);
             this.songSheetList1.SmoothScroll = false;
             this.songSheetList1.TabIndex = 1;
             this.songSheetList1.Text = "songSheetList1";
@@ -289,36 +296,18 @@
             this.skinTabPage_gd.TabItemImage = null;
             this.skinTabPage_gd.Text = "歌单";
             // 
-            // scorllbar
-            // 
-            this.scorllbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.scorllbar.Borders.BottomColor = System.Drawing.Color.Empty;
-            this.scorllbar.Borders.BottomWidth = 1;
-            this.scorllbar.Borders.LeftColor = System.Drawing.Color.Empty;
-            this.scorllbar.Borders.LeftWidth = 1;
-            this.scorllbar.Borders.RightColor = System.Drawing.Color.Empty;
-            this.scorllbar.Borders.RightWidth = 1;
-            this.scorllbar.Borders.TopColor = System.Drawing.Color.Empty;
-            this.scorllbar.Borders.TopWidth = 1;
-            this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
-            this.scorllbar.Location = new System.Drawing.Point(194, 255);
-            this.scorllbar.Name = "scorllbar";
-            this.scorllbar.Size = new System.Drawing.Size(5, 151);
-            this.scorllbar.TabIndex = 2;
-            this.scorllbar.Visible = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(1022, 670);
-            this.Controls.Add(this.menuListControl1);
+            this.Controls.Add(this.songSheetList1);
             this.Controls.Add(this.skinPanel3);
             this.Controls.Add(this.skinTabControl_Main);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Controls.SetChildIndex(this.skinTabControl_Main, 0);
             this.Controls.SetChildIndex(this.skinPanel3, 0);
-            this.Controls.SetChildIndex(this.menuListControl1, 0);
+            this.Controls.SetChildIndex(this.songSheetList1, 0);
             this.skinPanel3.ResumeLayout(false);
             this.skinTabControl_Main.ResumeLayout(false);
             this.skinTabPage_fxyy.ResumeLayout(false);
@@ -331,7 +320,6 @@
 
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private Controls.MusicPlayerButton musicPlayerButton1;
-        private Controls.MenuListControl menuListControl1;
         private CCWin.SkinControl.SkinTabControl skinTabControl_Main;
         private CCWin.SkinControl.SkinTabPage skinTabPage_fxyy;
         private CCWin.SkinControl.SkinTabPage skinTabPage_srfm;

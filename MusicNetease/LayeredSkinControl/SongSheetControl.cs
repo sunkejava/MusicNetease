@@ -88,6 +88,11 @@ namespace MusicNetease.LayeredSkinControl
 
 
         #region 控件事件
+        /// <summary>
+        /// 菜单或图标点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuName_MouseDown(object sender, MouseEventArgs e)
         {
             setBackColor();
@@ -96,6 +101,43 @@ namespace MusicNetease.LayeredSkinControl
             DuiBaseControl bControl = scControl.Parent as DuiBaseControl;
             bControl.BackColor = _SelectColor;
         }
+        /// <summary>
+        /// 顶级菜单下级显示或隐藏
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TopMenuName_MouseDown(object sender, MouseEventArgs e)
+        {
+            DuiBaseControl bControl = ((DuiLabel)sender).Parent as DuiBaseControl;
+            if (bControl.Tag.ToString() == "openList")
+            {
+                bControl.Tag = "closeList";
+                DuiBaseControl bs = bControl.Parent as DuiBaseControl;
+                foreach (DuiBaseControl item in bs.FindControl(bControl.Name.Replace("list_", "")))
+                {
+                    item.Visible = true;
+                }
+            }
+            else
+            {
+                bControl.Tag = "openList";
+                DuiBaseControl bs = bControl.Parent as DuiBaseControl;
+                foreach (DuiBaseControl item in bs.FindControl(bControl.Name.Replace("list_", "")))
+                {
+                    item.Visible = false;
+                }
+            }
+        }
+        /// <summary>
+        /// 新增事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addMenuIcon_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
         #endregion
 
         #region 自定义事件
@@ -122,7 +164,6 @@ namespace MusicNetease.LayeredSkinControl
         {
             //是否已存在
             bool isExists = false;
-            int xHeight = 0;
             foreach (MenuEntity item in Groups)
             {
                 if (item == thisMenu)
@@ -130,55 +171,128 @@ namespace MusicNetease.LayeredSkinControl
                     isExists = true;
                 }
             }
-            xHeight = ((Groups.Count - 1) <=0 ? 28 : (Groups.Count - 1) * 28);
+            //如果不存在则添加
             if (!isExists)
             {
-                //菜单名称
-                DuiBaseControl baseControl = new DuiBaseControl();
-                baseControl.Size = new Size(Width, 28);
-                baseControl.BackColor = Color.FromArgb(245, 245, 247);
+                //创建顶级菜单
+                if (thisMenu.IsTopLevel)
+                {
+                    //底层控件
+                    DuiBaseControl baseControl = new DuiBaseControl();
+                    baseControl.Size = new Size(Width, 30);
+                    baseControl.BackColor = Color.FromArgb(245, 245, 247);
+                    //边框
+                    Borders baseBorder = new Borders(baseControl);
+                    baseBorder.BottomWidth = 5;
+                    baseBorder.TopWidth = 5;
+                    baseBorder.BottomColor = Color.FromArgb(245, 245, 247);
+                    baseControl.Borders = baseBorder;
+                    //菜单名称
+                    DuiLabel menuName = new DuiLabel();
+                    menuName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                    menuName.Location = new Point(10, 5);
+                    menuName.AutoSize = true;
+                    menuName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
+                    menuName.ForeColor = Color.DimGray;
+                    menuName.Text = thisMenu.MenuName;
+                    menuName.Name = "list_" + thisMenu.MenuText;
+                    
 
-                //边框
-                //Borders baseBorder = new Borders(baseControl);
-                //baseBorder.BottomWidth = 2;
-                //baseBorder.BottomColor = Color.FromArgb(50, 0, 0, 0);
-                //baseControl.Borders = baseBorder;
+                    //新增图标
+                    DuiButton addMenuIcon = null;
+                    //收起展开图标
+                    DuiButton menuIcon = null;
+                    //如果不是底层菜单，增加图标
+                    if (!thisMenu.IsEndLevel)
+                    {
+                        //如果是创建的歌单增加新增图标按钮
+                        if (thisMenu.MenuName == "创建的歌单")
+                        {
+                            //新增图标
+                            addMenuIcon = new DuiButton();
+                            addMenuIcon.BackgroundImage = thisMenu.Icon;
+                            addMenuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                            addMenuIcon.NormalImage = thisMenu.Icon;
+                            addMenuIcon.HoverImage = thisMenu.HoverIcon;
+                            addMenuIcon.PressedImage = thisMenu.HoverIcon;
+                            addMenuIcon.Size = new Size(10, 10);
+                            addMenuIcon.Location = new Point(126, 12);
+                            //新增事件搬绑定
+                            addMenuIcon.MouseDown += addMenuIcon_MouseDown;
+                        }
+                        //收起展开图标
+                        menuIcon = new DuiButton();
+                        menuIcon.BackgroundImage = thisMenu.Icon;
+                        menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        menuIcon.NormalImage = Properties.Resources.Arrowright0;
+                        menuIcon.HoverImage = Properties.Resources.Arrowright1;
+                        menuIcon.PressedImage = Properties.Resources.Arrowright1;
+                        menuIcon.Size = new Size(10, 10);
+                        baseControl.Tag = "openList";
+                        menuIcon.Location = new Point(155, 12);
 
-                //菜单名称
-                DuiLabel menuName = new DuiLabel();
-                menuName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-                menuName.Location = new Point(43, 5);
-                menuName.AutoSize = true;
-                menuName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
-                menuName.ForeColor = Color.DimGray;
-                menuName.Text = thisMenu.MenuName;
-                menuName.Name = "list_" +thisMenu.MenuText;
-                DuiButton menuIcon = new DuiButton();
-                menuIcon.BackgroundImage = thisMenu.Icon;
-                menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                menuIcon.NormalImage = thisMenu.Icon;
-                menuIcon.HoverImage = thisMenu.HoverIcon;
-                menuIcon.PressedImage = thisMenu.HoverIcon;
-                menuIcon.Size = new Size(10, 10);
-                menuIcon.Location = new Point(15, 5);
-                DuiBaseControl scControl = new DuiBaseControl();
-                scControl.BackColor = Color.FromArgb(245, 245, 247);
-                //通过控制上下层Control背景色实现菜单样式
-                //dcControl.Size = new Size(Width, 28);
-                scControl.Size = new Size(Width - 3, 28);
-                scControl.Location = new Point(3,0);
-                //添加菜单名控件到上层控件
-                scControl.Controls.Add(menuIcon);
-                scControl.Controls.Add(menuName);
-                scControl.Name = "scControl";
-                //dcControl.Controls.Add(scControl);
-                baseControl.Controls.Add(scControl);
-                baseControl.Name = "list_"+thisMenu.MenuText;
+                        //菜单名称及收起展开图标事件绑定
+                        menuName.MouseDown += TopMenuName_MouseDown;
+                        menuIcon.MouseDown += TopMenuName_MouseDown;
+                    }
+                    //添加菜单名控件到上层控件
+                    baseControl.Controls.Add(menuName);
+                    if (addMenuIcon != null)
+                    {
+                        baseControl.Controls.Add(addMenuIcon);
+                    }
+                    if (menuIcon != null)
+                    {
+                        baseControl.Controls.Add(menuIcon);
+                    }
+                    baseControl.Name = "list_" + thisMenu.MenuText;
+                    Items.Add(baseControl);
+                }
+                else
+                {
+                    //底层控件
+                    DuiBaseControl baseControl = new DuiBaseControl();
+                    baseControl.Size = new Size(Width, 28);
+                    baseControl.BackColor = Color.FromArgb(245, 245, 247);
+                    //菜单名称
+                    DuiLabel menuName = new DuiLabel();
+                    menuName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                    menuName.Location = new Point(43, 5);
+                    menuName.AutoSize = true;
+                    menuName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
+                    menuName.ForeColor = Color.DimGray;
+                    menuName.Text = thisMenu.MenuName;
+                    menuName.Name = "list_" + thisMenu.MenuText;
+                    //菜单图标
+                    DuiButton menuIcon = new DuiButton();
+                    menuIcon.BackgroundImage = thisMenu.Icon;
+                    menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    menuIcon.NormalImage = thisMenu.Icon;
+                    menuIcon.HoverImage = thisMenu.HoverIcon;
+                    menuIcon.PressedImage = thisMenu.HoverIcon;
+                    menuIcon.Size = new Size(10, 10);
+                    menuIcon.Location = new Point(15, 5);
+                    //上层控件
+                    DuiBaseControl scControl = new DuiBaseControl();
+                    scControl.BackColor = Color.FromArgb(245, 245, 247);
+                    //通过控制上下层Control背景色实现菜单样式
+                    //dcControl.Size = new Size(Width, 28);
+                    scControl.Size = new Size(Width - 3, 28);
+                    scControl.Location = new Point(3, 0);
+                    //添加菜单名控件到上层控件
+                    scControl.Controls.Add(menuIcon);
+                    scControl.Controls.Add(menuName);
+                    scControl.Name = "scControl";
+                    //dcControl.Controls.Add(scControl);
+                    baseControl.Controls.Add(scControl);
+                    baseControl.Name = "list_" + thisMenu.MenuText;
 
-                menuName.MouseDown += MenuName_MouseDown;
-                menuIcon.MouseDown += MenuName_MouseDown;
+                    menuName.MouseDown += MenuName_MouseDown;
+                    menuIcon.MouseDown += MenuName_MouseDown;
 
-                Items.Add(baseControl);
+                    Items.Add(baseControl);
+                }
+               
                 RefreshList();
                 Groups.Add(thisMenu);
             }

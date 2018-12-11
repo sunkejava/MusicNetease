@@ -63,6 +63,14 @@ namespace MusicNetease
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.skinTabControl_Main.SendToBack();
+            Entity.MenuEntity tjMenu = new Entity.MenuEntity();
+            tjMenu.MenuName = "推荐";
+            tjMenu.MenuText = "tjlb";
+            tjMenu.Icon = null;
+            tjMenu.HoverIcon = null;
+            tjMenu.IsEndLevel = true;
+            tjMenu.IsTopLevel = true;
+            songSheetList1.AddMenun(tjMenu);
             Entity.MenuEntity fxyyMenu = new Entity.MenuEntity();
             fxyyMenu.MenuName = "发现音乐";
             fxyyMenu.MenuText = "fxyy";
@@ -92,7 +100,14 @@ namespace MusicNetease
             friendMenu.IsEndLevel = true;
             songSheetList1.AddMenun(friendMenu);
 
-
+            Entity.MenuEntity myMusicMenu = new Entity.MenuEntity();
+            myMusicMenu.MenuName = "我的音乐";
+            myMusicMenu.MenuText = "wdyylb";
+            myMusicMenu.Icon = null;
+            myMusicMenu.HoverIcon = null;
+            myMusicMenu.IsEndLevel = true;
+            myMusicMenu.IsTopLevel = true;
+            songSheetList1.AddMenun(myMusicMenu);
             Entity.MenuEntity bdyyMenu = new Entity.MenuEntity();
             bdyyMenu.MenuName = "本地音乐";
             bdyyMenu.MenuText = "bdyy";
@@ -129,6 +144,46 @@ namespace MusicNetease
             wdscMenu.IsEndLevel = true;
             songSheetList1.AddMenun(wdscMenu);
 
+            
+            Entity.MenuEntity createdSongListMenu = new Entity.MenuEntity();
+            createdSongListMenu.MenuName = "创建的歌单";
+            createdSongListMenu.MenuText = "createdsongListlb";
+            createdSongListMenu.Icon = Properties.Resources.add0;
+            createdSongListMenu.HoverIcon = Properties.Resources.add1;
+            createdSongListMenu.IsEndLevel = false;
+            createdSongListMenu.IsTopLevel = true;
+            songSheetList1.AddMenun(createdSongListMenu);
+            Entity.MenuEntity iLikeMusicMenu = new Entity.MenuEntity();
+            iLikeMusicMenu.MenuName = "我喜欢的音乐";
+            iLikeMusicMenu.MenuText = "createdsongListlb_ilike";
+            iLikeMusicMenu.Icon = Properties.Resources.ilike0;
+            iLikeMusicMenu.HoverIcon = Properties.Resources.ilike1;
+            iLikeMusicMenu.IsEndLevel = true;
+            songSheetList1.AddMenun(iLikeMusicMenu);
+
+            Entity.MenuEntity collectionSongListMenu = new Entity.MenuEntity();
+            collectionSongListMenu.MenuName = "收藏的歌单";
+            collectionSongListMenu.MenuText = "collectionSongListlb";
+            collectionSongListMenu.Icon = Properties.Resources.add0;
+            collectionSongListMenu.HoverIcon = Properties.Resources.add1;
+            collectionSongListMenu.IsEndLevel = false;
+            collectionSongListMenu.IsTopLevel = true;
+            songSheetList1.AddMenun(collectionSongListMenu);
+
+            String[] menuStrings = new String[] { "WCTF 2018", "口哨系｜学会就可以撩妹了ΘˍΘ", "『开口脆』迷幻嗓音极致瞬间❤️", "华语百首 | 回忆伤人无声，唱不尽世间遗憾",
+            "90后的回忆杀 - 『持续更新』", "床前的催眠曲 - 八音盒系列", "【夜跑】把你的脚印留在城市的每一个角落。", "华语励志 | 吹灭读书灯，一身都是月", "Thug Life系列背景音乐", "天气渐凉，才觉一年将尽。", "加速燃脂，健身运动BGM" };
+            int i = 0;
+            foreach (var item in menuStrings)
+            {
+                Entity.MenuEntity MyMusicListMenu = new Entity.MenuEntity();
+                MyMusicListMenu.MenuName = item;
+                MyMusicListMenu.MenuText = "collectionSongListlb" + (i + 1).ToString();
+                MyMusicListMenu.Icon = Properties.Resources.bflb0;
+                MyMusicListMenu.HoverIcon = Properties.Resources.bflb1;
+                MyMusicListMenu.IsEndLevel = true;
+                songSheetList1.AddMenun(MyMusicListMenu);
+                i++;
+            }
 
 
 
