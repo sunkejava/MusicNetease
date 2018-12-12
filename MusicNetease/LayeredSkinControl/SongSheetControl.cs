@@ -100,6 +100,9 @@ namespace MusicNetease.LayeredSkinControl
             scControl.BackColor = Color.FromArgb(230, 231, 234);
             DuiBaseControl bControl = scControl.Parent as DuiBaseControl;
             bControl.BackColor = _SelectColor;
+            if (MenuNameMouseDown != null)
+                MenuNameMouseDown(this, new EventArgs());
+            
         }
         /// <summary>
         /// 顶级菜单下级显示或隐藏
@@ -316,7 +319,13 @@ namespace MusicNetease.LayeredSkinControl
         #endregion
 
         #region 委托事件
+        /// <summary>
+        /// 刷新列表事件
+        /// </summary>
+        [Description("列表刷新事件"),Category("自定义事件")]
         public event EventHandler RefreshListed;
+        [Description("菜单点击事件"), Category("自定义事件")]
+        public event EventHandler MenuNameMouseDown;
         #endregion
 
     }

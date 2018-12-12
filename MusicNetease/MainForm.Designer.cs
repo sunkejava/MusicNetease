@@ -294,6 +294,7 @@
             this.songSheetList1.Ulmul = false;
             this.songSheetList1.Value = 0D;
             this.songSheetList1.RefreshListed += new System.EventHandler(this.songSheetList1_RefreshListed);
+            this.songSheetList1.MenuNameMouseDown += new System.EventHandler(this.songSheetList1_MenuNameMouseDown);
             // 
             // MainForm
             // 
