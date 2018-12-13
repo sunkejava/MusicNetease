@@ -23,6 +23,16 @@ namespace MusicNetease.Entity
         private Image backImg;
         private string count;
         private string creater;
+        public SongSheetEntity(string _id, string _name, string _explain, Image _backImg, string _count, string _creater)
+        {
+            id = _id;
+            name = _name;
+            explain = _explain;
+            backImg = _backImg;
+            count = _count;
+            creater = _creater;
+
+        }
         /// <summary>
         /// 歌单ID
         /// </summary>

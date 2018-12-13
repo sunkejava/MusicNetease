@@ -104,6 +104,17 @@ namespace MusicNetease.Controls
             this.layeredPanel1.DUIControls.Add(btn_ImgRight);
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
+            recommendSongSheetControl1.ItemSize = new Size(160,200);
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("tj", "每日歌曲推荐", "根据您的音乐口味生成每日更新", Properties.Resources.melog, "", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2522866436", "又到了起床靠爆发力的日子了", "编辑推荐：我没有赖床，我不起床是有理由的！", GetImageByUrl("http://p3.music.126.net/XIFMgvpqDqY4AO94MQBijQ==/109951163679316040.jpg?param=200y200"), "202万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2514650991", "《你再不来，我要下雪了》", "编辑推荐：我是一个在黑暗中大雪纷飞的人啊", GetImageByUrl("http://p4.music.126.net/s6u3onN_JbFSikekDaHVmQ==/109951163722383797.jpg?param=200y200"), "44万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("1993039994", "90后回忆杀[持续更新中...]", "根据你喜欢的单曲《Go go yellow screen》推荐", GetImageByUrl("http://p4.music.126.net/2sBMF9-bT5rifngVyDKAFQ==/109951163102165084.jpg?param=200y200"), "247万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2226375840", "90后流行歌曲", "根据你喜欢的单曲《Go go yellow screen》推荐", GetImageByUrl("http://p4.music.126.net/oAIdonRUGMSewYu4lYVwHQ==/109951163240609542.jpg?param=200y200"), "148万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("988690134", "经典老歌，久听不厌", "根据你喜欢的单曲《爱我就跟我走》推荐", GetImageByUrl("http://p3.music.126.net/VFd5cboNTbnYsWZ5DBn9bg==/18953381440004340.jpg?param=200y200"), "3314万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2145434166", "「嗨爆」在宿舍御用的蹦迪歌曲", "根据你收藏的歌单《『开口脆』迷幻嗓音极致瞬间❤️》推荐", GetImageByUrl("http://p3.music.126.net/wMj_-xqpKxSjtBhAlSu7wQ==/19190875951790510.jpg?param=200y200"), "1815万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("10498213", "跑步！ 适合10km/h左右的节奏", "根据你收藏的歌单《【夜跑】把你的脚印留在城市的每一个角落。》推荐", GetImageByUrl("http://p3.music.126.net/0ld5m8w0S8KpJOXDDEwG3Q==/6038517859923212.jpg?param=200y200"), "35万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2134203011", "一百首‖让你瞬间勾起回忆的老歌", "根据你收藏的歌单《情歌还是老的好》推荐", GetImageByUrl("http://p4.music.126.net/pAidnPdX-0fhVakVXiHMzg==/18575149441852040.jpg?param=200y200"), "695万", ""));
+            recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("1980964492", "『修仙』 玩游戏/晨跑'必备BGM/耳机福利Δ", "根据你喜欢的单曲《Life》推荐", GetImageByUrl("http://p4.music.126.net/li9392RV26M4XZvDTr0dNg==/109951163145944715.jpg?param=200y200"), "670万", ""));
         }
 
         private void Btn_ImgLeft_MouseClick(object sender, DuiMouseEventArgs e)
@@ -136,6 +147,10 @@ namespace MusicNetease.Controls
             PictureBox_Right.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[nextNum]).GetResponse().GetResponseStream());
         }
 
+        private Image GetImageByUrl(string url)
+        {
+            return Image.FromStream(System.Net.WebRequest.Create(url).GetResponse().GetResponseStream());
+        }
         /// <summary>
         /// 设置控件大小
         /// </summary>
@@ -305,6 +320,16 @@ namespace MusicNetease.Controls
             btn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             NowNum = int.Parse(btn.Tag.ToString());
             LoadSliderImg(NowNum);
+        }
+
+        private void recommendSongSheetControl1_RecommendSongSheetMouseDown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void recommendSongSheetControl1_RefreshListed(object sender, EventArgs e)
+        {
+
         }
     }
 }

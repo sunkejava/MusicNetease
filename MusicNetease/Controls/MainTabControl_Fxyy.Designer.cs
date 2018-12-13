@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl_Fxyy));
             CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl_Fxyy));
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_gxtj = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gxtj = new CCWin.SkinControl.SkinPanel();
@@ -68,6 +68,7 @@
             this.skinLabel_gxtj = new CCWin.SkinControl.SkinLabel();
             this.skinLine_xzDown = new CCWin.SkinControl.SkinLine();
             this.animator = new CCWin.SkinControl.SkinAnimator(this.components);
+            this.recommendSongSheetControl1 = new MusicNetease.LayeredSkinControl.RecommendSongSheetControl();
             this.skinTabControl1.SuspendLayout();
             this.skinTabPage_gxtj.SuspendLayout();
             this.skinPanel_gxtj.SuspendLayout();
@@ -136,6 +137,7 @@
             // skinPanel_gxtj
             // 
             this.skinPanel_gxtj.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel_gxtj.Controls.Add(this.recommendSongSheetControl1);
             this.skinPanel_gxtj.Controls.Add(this.layeredPanel1);
             this.skinPanel_gxtj.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.animator.SetDecoration(this.skinPanel_gxtj, CCWin.SkinControl.DecorationType.None);
@@ -683,6 +685,43 @@
             animation1.TransparencyCoeff = 0F;
             this.animator.DefaultAnimation = animation1;
             // 
+            // recommendSongSheetControl1
+            // 
+            this.recommendSongSheetControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.recommendSongSheetControl1.AutoFocus = false;
+            this.recommendSongSheetControl1.BackColor = System.Drawing.Color.Transparent;
+            this.recommendSongSheetControl1.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.recommendSongSheetControl1.Borders.BottomWidth = 1;
+            this.recommendSongSheetControl1.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.recommendSongSheetControl1.Borders.LeftWidth = 1;
+            this.recommendSongSheetControl1.Borders.RightColor = System.Drawing.Color.Empty;
+            this.recommendSongSheetControl1.Borders.RightWidth = 1;
+            this.recommendSongSheetControl1.Borders.TopColor = System.Drawing.Color.Empty;
+            this.recommendSongSheetControl1.Borders.TopWidth = 1;
+            this.recommendSongSheetControl1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("recommendSongSheetControl1.Canvas")));
+            this.animator.SetDecoration(this.recommendSongSheetControl1, CCWin.SkinControl.DecorationType.BottomMirror);
+            this.recommendSongSheetControl1.EnabledMouseWheel = true;
+            this.recommendSongSheetControl1.ItemSize = new System.Drawing.Size(100, 100);
+            this.recommendSongSheetControl1.ListTop = 0;
+            this.recommendSongSheetControl1.Location = new System.Drawing.Point(3, 253);
+            this.recommendSongSheetControl1.Name = "recommendSongSheetControl1";
+            this.recommendSongSheetControl1.Orientation = LayeredSkin.Controls.ListOrientation.Vertical;
+            this.recommendSongSheetControl1.RollSize = 20;
+            this.recommendSongSheetControl1.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.recommendSongSheetControl1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.recommendSongSheetControl1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.recommendSongSheetControl1.ScrollBarWidth = 10;
+            this.recommendSongSheetControl1.ShowScrollBar = true;
+            this.recommendSongSheetControl1.Size = new System.Drawing.Size(883, 298);
+            this.recommendSongSheetControl1.SmoothScroll = false;
+            this.recommendSongSheetControl1.TabIndex = 3;
+            this.recommendSongSheetControl1.Text = "recommendSongSheetControl1";
+            this.recommendSongSheetControl1.Ulmul = true;
+            this.recommendSongSheetControl1.Value = 0D;
+            this.recommendSongSheetControl1.RefreshListed += new System.EventHandler(this.recommendSongSheetControl1_RefreshListed);
+            this.recommendSongSheetControl1.RecommendSongSheetMouseDown += new System.EventHandler(this.recommendSongSheetControl1_RecommendSongSheetMouseDown);
+            // 
             // MainTabControl_Fxyy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -758,5 +797,6 @@
         private CCWin.SkinControl.SkinLine skinLine_3;
         private CCWin.SkinControl.SkinLine skinLine_2;
         private CCWin.SkinControl.SkinLine skinLine_1;
+        private LayeredSkinControl.RecommendSongSheetControl recommendSongSheetControl1;
     }
 }

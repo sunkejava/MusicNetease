@@ -82,7 +82,19 @@ namespace MusicNetease.LayeredSkinControl
         /// <param name="e"></param>
         private void Dp_MouseLeave(object sender, EventArgs e)
         {
-            DuiPictureBox dp = sender as DuiPictureBox;
+            DuiBaseControl dp = null;
+            if (sender is DuiBaseControl)
+            {
+                dp = sender as DuiBaseControl;
+            }
+            if (sender is DuiLabel)
+            {
+                dp = (sender as DuiLabel).Parent as DuiBaseControl;
+            }
+            if (sender is DuiPictureBox)
+            {
+                dp = (sender as DuiPictureBox).Parent as DuiBaseControl;
+            }
             DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
             dl.Visible = false;
         }
@@ -94,7 +106,19 @@ namespace MusicNetease.LayeredSkinControl
         /// <param name="e"></param>
         private void Dp_MouseEnter(object sender, EventArgs e)
         {
-            DuiPictureBox dp = sender as DuiPictureBox;
+            DuiBaseControl dp = null;
+            if (sender is DuiBaseControl)
+            {
+                dp = sender as DuiBaseControl;
+            }
+            if (sender is DuiLabel)
+            {
+                dp = (sender as DuiLabel).Parent as DuiBaseControl;
+            }
+            if (sender is DuiPictureBox)
+            {
+                dp = (sender as DuiPictureBox).Parent as DuiBaseControl;
+            }
             DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
             dl.Visible = true;
         }
@@ -125,47 +149,88 @@ namespace MusicNetease.LayeredSkinControl
             {
                 //底层控件
                 DuiBaseControl baseControl = new DuiBaseControl();
-                baseControl.Size = new Size(195, 230);
+                baseControl.Size = new Size(140, 180);
                 baseControl.BackColor = Color.FromArgb(245, 245, 247);
                 //边框
                 Borders baseBorder = new Borders(baseControl);
-                baseBorder.BottomWidth = 1;
-                baseBorder.TopWidth = 1;
-                baseBorder.LeftWidth = 1;
-                baseBorder.RightWidth = 1;
-                baseBorder.BottomColor = Color.FromArgb(50, 0, 0, 0);
+                baseBorder.BottomWidth = 10;
+                baseBorder.TopWidth = 10;
+                baseBorder.LeftWidth = 10;
+                baseBorder.RightWidth = 10;
+                //baseBorder.BottomColor = Color.FromArgb(50, 0, 0, 0);
                 baseControl.Borders = baseBorder;
-                //背景图
-                DuiPictureBox dp = new DuiPictureBox();
-                dp.Size = new Size(195, 195);
-                dp.Location = new Point(0, 0);
-                dp.BackgroundImage = se.BackImg;
-                dp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-                dp.Name = "songSheetBackImg_"+se.Id;
-                dp.MouseEnter += Dp_MouseEnter;
-                dp.MouseLeave += Dp_MouseLeave;
+                if (se.Id == "tj")
+                {
+                    string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
+                    string week = Day[Convert.ToInt32(DateTime.Now.DayOfWeek.ToString("d"))].ToString();
+                    //星期标签
+                    DuiLabel weekName = new DuiLabel();
+                    weekName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                    weekName.Location = new Point(37, 30);
+                    weekName.Size = new Size(65, 30);
+                    weekName.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+                    weekName.ForeColor = Color.Black;
+                    weekName.TextAlign = ContentAlignment.TopCenter;
+                    weekName.Text = week;
+                    weekName.Name = "weekName";
+                    //日期标签
+                    DuiLabel dateName = new DuiLabel();
+                    dateName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                    dateName.Location = new Point(22, 50);
+                    dateName.Size = new Size(95, 95);
+                    dateName.Font = new Font("微软雅黑", 45F, FontStyle.Bold);
+                    dateName.ForeColor = Color.FromArgb(255, 92, 138);
+                    dateName.TextAlign = ContentAlignment.TopCenter;
+                    dateName.Text = DateTime.Now.Day.ToString();
+                    dateName.Name = "dateName";
+                    baseControl.Controls.Add(weekName);
+                    baseControl.Controls.Add(dateName);
+                    baseControl.MouseEnter += Dp_MouseEnter;
+                    baseControl.MouseLeave += Dp_MouseLeave;
+                    weekName.MouseEnter += Dp_MouseEnter;
+                    weekName.MouseLeave += Dp_MouseLeave;
+                    dateName.MouseEnter += Dp_MouseEnter;
+                    dateName.MouseLeave += Dp_MouseLeave;
+                }
+                else
+                {
+                    //背景图
+                    DuiPictureBox dp = new DuiPictureBox();
+                    dp.Size = new Size(140, 140);
+                    dp.Location = new Point(0, 0);
+                    dp.BackgroundImage = se.BackImg;
+                    dp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    dp.Name = "songSheetBackImg";
+                    dp.MouseEnter += Dp_MouseEnter;
+                    dp.MouseLeave += Dp_MouseLeave;
+                    baseControl.Controls.Add(dp);
+                }
                 //说明
                 DuiLabel songSheetExplain = new DuiLabel();
                 songSheetExplain.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-                songSheetExplain.Location = new Point(0, 195);
-                songSheetExplain.Size = new Size(195, 32);
-                songSheetExplain.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
-                songSheetExplain.ForeColor = Color.DimGray;
+                songSheetExplain.Location = new Point(0, 0);
+                songSheetExplain.Size = new Size(140, 40);
+                songSheetExplain.Font = new Font("微软雅黑", 9F, FontStyle.Regular);
+                songSheetExplain.ForeColor = Color.White;
+                songSheetExplain.TextPadding = 5;
+                songSheetExplain.TextAlign = ContentAlignment.TopCenter;
+                songSheetExplain.BackColor = Color.FromArgb(100, 0, 0, 0);
                 songSheetExplain.Text = se.Explain;
-                songSheetExplain.Name = "songSheetExplain_"+se.Id;
+                songSheetExplain.Name = "songSheetExplain";
                 songSheetExplain.Visible = false;
-                dp.Controls.Add(songSheetExplain);
                 //标题
-                DuiButton songSheetName = new DuiButton();
+                DuiLabel songSheetName = new DuiLabel();
                 songSheetName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-                songSheetName.Location = new Point(0, 195);
-                songSheetName.Font = new Font("微软雅黑", 11F, FontStyle.Bold);
+                songSheetName.Location = new Point(0, 140);
+                songSheetName.Size = new Size(140, 30);
+                songSheetName.Font = new Font("微软雅黑", 9F, FontStyle.Regular);
                 songSheetName.ForeColor = Color.Black;
+                songSheetName.TextAlign = ContentAlignment.TopCenter;
                 songSheetName.Text = se.Name;
                 songSheetName.Name = "songSheetName_"+se.Id;
 
-                baseControl.Controls.Add(dp);
                 baseControl.Controls.Add(songSheetName);
+                baseControl.Controls.Add(songSheetExplain);
                 Items.Add(baseControl);
 
                 //更新列表
