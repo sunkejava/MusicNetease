@@ -86,6 +86,8 @@
             this.radiusControlButton_sys.Radius = 40;
             this.radiusControlButton_sys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.radiusControlButton_sys.SetDefaultIcon = global::MusicNetease.Properties.Resources.sys;
+            this.radiusControlButton_sys.SetDefaultImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.radiusControlButton_sys.SetDefaultRadius = 8;
             this.radiusControlButton_sys.SetIconSize = 20;
             this.radiusControlButton_sys.SetSelectIcon = null;
             this.radiusControlButton_sys.Size = new System.Drawing.Size(40, 40);
@@ -104,6 +106,8 @@
             this.radiusControlButton_play.Radius = 40;
             this.radiusControlButton_play.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.radiusControlButton_play.SetDefaultIcon = global::MusicNetease.Properties.Resources.play;
+            this.radiusControlButton_play.SetDefaultImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.radiusControlButton_play.SetDefaultRadius = 8;
             this.radiusControlButton_play.SetIconSize = 20;
             this.radiusControlButton_play.SetSelectIcon = global::MusicNetease.Properties.Resources.pause;
             this.radiusControlButton_play.Size = new System.Drawing.Size(40, 40);
@@ -123,6 +127,8 @@
             this.radiusControlButton_xys.Radius = 40;
             this.radiusControlButton_xys.SetBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.radiusControlButton_xys.SetDefaultIcon = global::MusicNetease.Properties.Resources.xys;
+            this.radiusControlButton_xys.SetDefaultImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.radiusControlButton_xys.SetDefaultRadius = 8;
             this.radiusControlButton_xys.SetIconSize = 20;
             this.radiusControlButton_xys.SetSelectIcon = null;
             this.radiusControlButton_xys.Size = new System.Drawing.Size(40, 40);

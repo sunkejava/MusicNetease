@@ -95,8 +95,23 @@ namespace MusicNetease.LayeredSkinControl
             {
                 dp = (sender as DuiPictureBox).Parent as DuiBaseControl;
             }
-            DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
-            dl.Visible = false;
+            //隐藏说明
+            if (dp.FindControl("songSheetExplain").Count > 0)
+            {
+                DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
+                dl.Visible = false;
+            }
+            //显示收听量
+            if (dp.FindControl("lisentInCount").Count > 0)
+            {
+                DuiLabel ldl = (DuiLabel)dp.FindControl("lisentInCount")[0];
+                ldl.Visible = true;
+            }
+            if (dp.FindControl("lisentInIcon").Count > 0)
+            {
+                DuiButton ldb = (DuiButton)dp.FindControl("lisentInIcon")[0];
+                ldb.Visible = true;
+            }
         }
 
         /// <summary>
@@ -119,8 +134,23 @@ namespace MusicNetease.LayeredSkinControl
             {
                 dp = (sender as DuiPictureBox).Parent as DuiBaseControl;
             }
-            DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
-            dl.Visible = true;
+            //显示说明
+            if (dp.FindControl("songSheetExplain").Count > 0)
+            {
+                DuiLabel dl = (DuiLabel)dp.FindControl("songSheetExplain")[0];
+                dl.Visible = true;
+            }
+            //隐藏收听量
+            if (dp.FindControl("lisentInCount").Count > 0)
+            {
+                DuiLabel ldl = (DuiLabel)dp.FindControl("lisentInCount")[0];
+                ldl.Visible = false;
+            }
+            if (dp.FindControl("lisentInIcon").Count > 0)
+            {
+                DuiButton ldb = (DuiButton)dp.FindControl("lisentInIcon")[0];
+                ldb.Visible = false;
+            }
         }
         
 
@@ -204,6 +234,26 @@ namespace MusicNetease.LayeredSkinControl
                     dp.MouseEnter += Dp_MouseEnter;
                     dp.MouseLeave += Dp_MouseLeave;
                     baseControl.Controls.Add(dp);
+                    //收听量
+                    DuiLabel lisentInCount = new DuiLabel();
+                    lisentInCount.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                    lisentInCount.Location = new Point(0, 0);
+                    lisentInCount.Size = new Size(140, 20);
+                    lisentInCount.Font = new Font("微软雅黑", 9F, FontStyle.Regular);
+                    lisentInCount.ForeColor = Color.White;
+                    lisentInCount.TextAlign = ContentAlignment.TopRight;
+                    lisentInCount.BackColor = Color.FromArgb(100, 0, 0, 0);
+                    lisentInCount.Text = se.Count;
+                    lisentInCount.Name = "lisentInCount";
+                    //收听图标
+                    DuiButton lisentInIcon = new DuiButton();
+                    lisentInIcon.Location = new Point(90, 0);
+                    lisentInIcon.Size = new Size(14, 14);
+                    lisentInIcon.NormalImage = Properties.Resources.ej;
+                    lisentInIcon.AdaptImage = false;
+                    lisentInIcon.Name = "lisentInIcon";
+                    baseControl.Controls.Add(lisentInCount);
+                    baseControl.Controls.Add(lisentInIcon);
                 }
                 //说明
                 DuiLabel songSheetExplain = new DuiLabel();
@@ -218,6 +268,7 @@ namespace MusicNetease.LayeredSkinControl
                 songSheetExplain.Text = se.Explain;
                 songSheetExplain.Name = "songSheetExplain";
                 songSheetExplain.Visible = false;
+                
                 //标题
                 DuiLabel songSheetName = new DuiLabel();
                 songSheetName.TextRenderMode = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -227,6 +278,7 @@ namespace MusicNetease.LayeredSkinControl
                 songSheetName.ForeColor = Color.Black;
                 songSheetName.TextAlign = ContentAlignment.TopCenter;
                 songSheetName.Text = se.Name;
+                songSheetName.BackColor = Color.White;
                 songSheetName.Name = "songSheetName_"+se.Id;
 
                 baseControl.Controls.Add(songSheetName);

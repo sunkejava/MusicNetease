@@ -70,7 +70,7 @@ namespace MusicNetease.Controls
             PictureBox_Main.Cursor = PictureBox_Left.Cursor;
             PictureBox_Right.Cursor = PictureBox_Left.Cursor;
             btn_ImgLeft.Cursor = PictureBox_Left.Cursor;
-            btn_ImgLeft.Cursor = PictureBox_Left.Cursor;
+            btn_ImgRight.Cursor = PictureBox_Left.Cursor;
 
             PictureBox_Left.MouseEnter += PictureBox_main_MouseEnter;
             PictureBox_Left.MouseLeave += PictureBox_main_MouseLeave;
@@ -104,7 +104,8 @@ namespace MusicNetease.Controls
             this.layeredPanel1.DUIControls.Add(btn_ImgRight);
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
-            recommendSongSheetControl1.ItemSize = new Size(160,200);
+            recommendSongSheetControl1.Location = new Point(lwidth,layeredPanel1.Height+10);
+            recommendSongSheetControl1.ItemSize = new Size(155,175);
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("tj", "每日歌曲推荐", "根据您的音乐口味生成每日更新", Properties.Resources.melog, "", ""));
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2522866436", "又到了起床靠爆发力的日子了", "编辑推荐：我没有赖床，我不起床是有理由的！", GetImageByUrl("http://p3.music.126.net/XIFMgvpqDqY4AO94MQBijQ==/109951163679316040.jpg?param=200y200"), "202万", ""));
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2514650991", "《你再不来，我要下雪了》", "编辑推荐：我是一个在黑暗中大雪纷飞的人啊", GetImageByUrl("http://p4.music.126.net/s6u3onN_JbFSikekDaHVmQ==/109951163722383797.jpg?param=200y200"), "44万", ""));

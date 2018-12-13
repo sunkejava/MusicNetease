@@ -174,15 +174,31 @@ namespace MusicNetease.Controls
 
         private void skinButton_openPlayList_Click(object sender, EventArgs e)
         {
-            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            if (btn.Tag.ToString() == "打开播放列表")
+            if (sender is CCWin.SkinControl.SkinButton)
             {
-                btn.Tag = "关闭播放列表";
+                CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+                if (btn.Tag.ToString() == "打开播放列表")
+                {
+                    btn.Tag = "关闭播放列表";
+                }
+                else
+                {
+                    btn.Tag = "打开播放列表";
+                }
             }
             else
             {
-                btn.Tag = "打开播放列表";
+                CCWin.SkinControl.SkinLabel btn = sender as CCWin.SkinControl.SkinLabel;
+                if (btn.Tag.ToString() == "打开播放列表")
+                {
+                    btn.Tag = "关闭播放列表";
+                }
+                else
+                {
+                    btn.Tag = "打开播放列表";
+                }
             }
+            
         }
 
         private void radiusControlButton_play_Click(object sender, EventArgs e)
