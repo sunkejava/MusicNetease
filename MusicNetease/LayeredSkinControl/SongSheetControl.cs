@@ -93,7 +93,7 @@ namespace MusicNetease.LayeredSkinControl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MenuName_MouseDown(object sender, MouseEventArgs e)
+        public void MenuName_MouseDown(object sender, MouseEventArgs e)
         {
             setBackColor();
             DuiBaseControl scControl = ((DuiLabel)sender).Parent as DuiBaseControl;
@@ -101,7 +101,8 @@ namespace MusicNetease.LayeredSkinControl
             DuiBaseControl bControl = scControl.Parent as DuiBaseControl;
             bControl.BackColor = _SelectColor;
             if (MenuNameMouseDown != null)
-                MenuNameMouseDown(this, new EventArgs());
+                MenuNameMouseDown(sender, e);
+            
             
         }
         /// <summary>
@@ -132,7 +133,7 @@ namespace MusicNetease.LayeredSkinControl
             }
         }
         /// <summary>
-        /// 新增事件
+        /// 新增歌单事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -267,7 +268,8 @@ namespace MusicNetease.LayeredSkinControl
                     menuName.Font = new Font("微软雅黑", 9F, FontStyle.Regular);
                     menuName.ForeColor = Color.DimGray;
                     menuName.Text = thisMenu.MenuName;
-                    menuName.Name = "list_" + thisMenu.MenuText;
+                    menuName.Name = "listDl_" + thisMenu.MenuText;
+                    menuName.Tag = thisMenu.MenuText;
                     //菜单图标
                     DuiButton menuIcon = new DuiButton();
                     menuIcon.BackgroundImage = thisMenu.Icon;
@@ -278,6 +280,8 @@ namespace MusicNetease.LayeredSkinControl
                     menuIcon.PressedImage = thisMenu.HoverIcon;
                     menuIcon.Size = new Size(16, 16);
                     menuIcon.Location = new Point(15, 5);
+                    menuIcon.Name = "listDb_" + thisMenu.MenuText;
+                    menuIcon.Tag = thisMenu.MenuText;
                     //上层控件
                     DuiBaseControl scControl = new DuiBaseControl();
                     scControl.BackColor = Color.FromArgb(245, 245, 247);

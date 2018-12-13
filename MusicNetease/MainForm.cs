@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using LayeredSkin.DirectUI;
 
 namespace MusicNetease
 {
@@ -174,36 +175,36 @@ namespace MusicNetease
         /// <param name="e"></param>
         private void songSheetList1_MenuNameMouseDown(object sender, EventArgs e)
         {
-            if (sender is CCWin.SkinControl.SkinLabel)
+            if (sender is DuiButton || sender is DuiLabel)
             {
-                CCWin.SkinControl.SkinLabel mc = sender as CCWin.SkinControl.SkinLabel;
-                switch (mc.Name)
+                DuiBaseControl db = sender as DuiBaseControl;
+                switch (db.Tag.ToString())
                 {
-                    case "skinLabel_srfm":
+                    case "srfm":
                         skinTabControl_Main.SelectedTab = skinTabPage_srfm;
                         break;
-                    case "skinLabel_fxyy":
+                    case "fxyy":
                         skinTabControl_Main.SelectedTab = skinTabPage_fxyy;
                         break;
-                    case "skinLabel_tv":
+                    case "tv":
                         skinTabControl_Main.SelectedTab = skinTabPage_tv;
                         break;
-                    case "skinLabel_friend":
+                    case "friend":
                         skinTabControl_Main.SelectedTab = skinTabPage_friend;
                         break;
-                    case "skinLabel_bdyy":
+                    case "bdyy":
                         skinTabControl_Main.SelectedTab = skinTabPage_bdyy;
                         break;
-                    case "skinLabel_xzgl":
+                    case "xzgl":
                         skinTabControl_Main.SelectedTab = skinTabPage_xzgl;
                         break;
-                    case "skinLabel_yun":
+                    case "yun":
                         skinTabControl_Main.SelectedTab = skinTabPage_yun;
                         break;
-                    case "skinLabel_wddt":
+                    case "wddt":
                         skinTabControl_Main.SelectedTab = skinTabPage_wddt;
                         break;
-                    case "skinLabel_wdsc":
+                    case "wdsc":
                         skinTabControl_Main.SelectedTab = skinTabPage_wdsc;
                         break;
                     default:
