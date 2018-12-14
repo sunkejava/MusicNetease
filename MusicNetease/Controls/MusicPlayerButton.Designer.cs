@@ -192,9 +192,9 @@
             this.layeredTrackBar_yyjdt.Borders.TopColor = System.Drawing.Color.Empty;
             this.layeredTrackBar_yyjdt.Borders.TopWidth = 0;
             this.layeredTrackBar_yyjdt.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredTrackBar_yyjdt.Canvas")));
-            this.layeredTrackBar_yyjdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 380, 5);
+            this.layeredTrackBar_yyjdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 380, -5);
             this.layeredTrackBar_yyjdt.LineWidth = 3;
-            this.layeredTrackBar_yyjdt.Location = new System.Drawing.Point(0, 18);
+            this.layeredTrackBar_yyjdt.Location = new System.Drawing.Point(0, 22);
             this.layeredTrackBar_yyjdt.Margin = new System.Windows.Forms.Padding(0);
             this.layeredTrackBar_yyjdt.MouseCanControl = true;
             this.layeredTrackBar_yyjdt.Name = "layeredTrackBar_yyjdt";
@@ -203,7 +203,7 @@
             this.layeredTrackBar_yyjdt.PointImageHover = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImageHover;
             this.layeredTrackBar_yyjdt.PointImagePressed = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImagePressed;
             this.layeredTrackBar_yyjdt.PointState = LayeredSkin.Controls.ControlStates.Normal;
-            this.layeredTrackBar_yyjdt.Size = new System.Drawing.Size(390, 15);
+            this.layeredTrackBar_yyjdt.Size = new System.Drawing.Size(390, 5);
             this.layeredTrackBar_yyjdt.SurfaceImage = null;
             this.layeredTrackBar_yyjdt.SurfaceLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.layeredTrackBar_yyjdt.TabIndex = 3;
@@ -331,9 +331,9 @@
             this.layeredTrackBar_yljdt.Borders.TopColor = System.Drawing.Color.Empty;
             this.layeredTrackBar_yljdt.Borders.TopWidth = 0;
             this.layeredTrackBar_yljdt.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredTrackBar_yljdt.Canvas")));
-            this.layeredTrackBar_yljdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 105, 5);
+            this.layeredTrackBar_yljdt.ControlRectangle = new System.Drawing.Rectangle(5, 5, 105, -7);
             this.layeredTrackBar_yljdt.LineWidth = 3;
-            this.layeredTrackBar_yljdt.Location = new System.Drawing.Point(16, 17);
+            this.layeredTrackBar_yljdt.Location = new System.Drawing.Point(17, 23);
             this.layeredTrackBar_yljdt.Margin = new System.Windows.Forms.Padding(0);
             this.layeredTrackBar_yljdt.MouseCanControl = true;
             this.layeredTrackBar_yljdt.Name = "layeredTrackBar_yljdt";
@@ -342,7 +342,7 @@
             this.layeredTrackBar_yljdt.PointImageHover = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImageHover;
             this.layeredTrackBar_yljdt.PointImagePressed = global::MusicNetease.Properties.Resources.layeredTrackBar1_PointImagePressed;
             this.layeredTrackBar_yljdt.PointState = LayeredSkin.Controls.ControlStates.Normal;
-            this.layeredTrackBar_yljdt.Size = new System.Drawing.Size(115, 15);
+            this.layeredTrackBar_yljdt.Size = new System.Drawing.Size(115, 3);
             this.layeredTrackBar_yljdt.SurfaceImage = null;
             this.layeredTrackBar_yljdt.SurfaceLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             this.layeredTrackBar_yljdt.TabIndex = 13;

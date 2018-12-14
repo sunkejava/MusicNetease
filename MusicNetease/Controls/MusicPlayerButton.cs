@@ -19,9 +19,19 @@ namespace MusicNetease.Controls
 
         private void skinButton_MouseEnter(object sender, EventArgs e)
         {
-            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            skinToolTip1.ShowAlways = true;
-            skinToolTip1.SetToolTip(btn, btn.Tag.ToString());
+            if (sender is CCWin.SkinControl.SkinLabel)
+            {
+                CCWin.SkinControl.SkinLabel btn = sender as CCWin.SkinControl.SkinLabel;
+                skinToolTip1.ShowAlways = true;
+                skinToolTip1.SetToolTip(btn, btn.Tag.ToString());
+            }
+            if (sender is CCWin.SkinControl.SkinButton)
+            {
+                CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
+                skinToolTip1.ShowAlways = true;
+                skinToolTip1.SetToolTip(btn, btn.Tag.ToString());
+            }
+            
         }
 
         private void skinButton_volume_Click(object sender, EventArgs e)
@@ -151,25 +161,38 @@ namespace MusicNetease.Controls
         private void skinButton_Lyric_MouseHover(object sender, EventArgs e)
         {
             CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric1;
+            if (btn.Tag.ToString() == "打开歌词")
+            {
+                btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric1;
+            }
+            else
+            {
+                btn.BackgroundImage = global::MusicNetease.Properties.Resources.music_lyrics1;
+            }
+                
         }
 
         private void skinButton_Lyric_MouseLeave(object sender, EventArgs e)
         {
             CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric0;
+            if (btn.Tag.ToString() == "打开歌词")
+            {
+                btn.BackgroundImage = global::MusicNetease.Properties.Resources.lyric0;
+            }
+            else
+            {
+                btn.BackgroundImage = global::MusicNetease.Properties.Resources.music_lyrics0;
+            }
         }
 
         private void skinButton_openPlayList_MouseHover(object sender, EventArgs e)
         {
-            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            btn.BackgroundImage = global::MusicNetease.Properties.Resources.playList1;
+            this.skinButton_openPlayList.BackgroundImage = global::MusicNetease.Properties.Resources.playList1;
         }
 
         private void skinButton_openPlayList_MouseLeave(object sender, EventArgs e)
         {
-            CCWin.SkinControl.SkinButton btn = sender as CCWin.SkinControl.SkinButton;
-            btn.BackgroundImage = global::MusicNetease.Properties.Resources.playList0;
+            this.skinButton_openPlayList.BackgroundImage = global::MusicNetease.Properties.Resources.playList0;
         }
 
         private void skinButton_openPlayList_Click(object sender, EventArgs e)
