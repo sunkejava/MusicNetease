@@ -253,11 +253,17 @@
             this.scorllbar.Borders.TopColor = System.Drawing.Color.Empty;
             this.scorllbar.Borders.TopWidth = 1;
             this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
-            this.scorllbar.Location = new System.Drawing.Point(181, 50);
+            this.scorllbar.Location = new System.Drawing.Point(189, 51);
             this.scorllbar.Name = "scorllbar";
             this.scorllbar.Size = new System.Drawing.Size(5, 567);
             this.scorllbar.TabIndex = 2;
             this.scorllbar.Visible = false;
+            this.scorllbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseDown);
+            this.scorllbar.MouseEnter += new System.EventHandler(this.scorllbar_MouseEnter);
+            this.scorllbar.MouseLeave += new System.EventHandler(this.scorllbar_MouseLeave);
+            this.scorllbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseMove);
+            this.scorllbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseUp);
+            this.scorllbar.Move += new System.EventHandler(this.scorllbar_Move);
             // 
             // songSheetList1
             // 
@@ -286,9 +292,9 @@
             this.songSheetList1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(177)))));
             this.songSheetList1.ScrollBarWidth = 10;
             this.songSheetList1.SetSelectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.songSheetList1.ShowScrollBar = true;
+            this.songSheetList1.ShowScrollBar = false;
             this.songSheetList1.Size = new System.Drawing.Size(194, 567);
-            this.songSheetList1.SmoothScroll = true;
+            this.songSheetList1.SmoothScroll = false;
             this.songSheetList1.TabIndex = 1;
             this.songSheetList1.Text = "songSheetList1";
             this.songSheetList1.Ulmul = false;

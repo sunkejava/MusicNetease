@@ -116,21 +116,26 @@ namespace MusicNetease.LayeredSkinControl
             if (bControl.Tag.ToString() == "openList")
             {
                 bControl.Tag = "closeList";
-                DuiBaseControl bs = bControl.Parent as DuiBaseControl;
-                foreach (DuiBaseControl item in bs.FindControl(bControl.Name.Replace("list_", "")))
+                foreach (DuiBaseControl item in Items)
                 {
-                    item.Visible = true;
+                    if (item.Name.Replace("list_", "").Contains(bControl.Name.Replace("list_", "")) && item.Name.Replace("list_", "").Length > bControl.Name.Replace("list_", "").Length)
+                    {
+                        item.Visible = true;
+                    }
                 }
             }
             else
             {
                 bControl.Tag = "openList";
-                DuiBaseControl bs = bControl.Parent as DuiBaseControl;
-                foreach (DuiBaseControl item in bs.FindControl(bControl.Name.Replace("list_", "")))
+                foreach (DuiBaseControl item in Items)
                 {
-                    item.Visible = false;
+                    if (item.Name.Replace("list_", "").Contains(bControl.Name.Replace("list_", "")) && item.Name.Replace("list_", "").Length > bControl.Name.Replace("list_", "").Length)
+                    {
+                        item.Visible = false;
+                    }
                 }
             }
+            RefreshList();
         }
         /// <summary>
         /// 新增歌单事件
@@ -227,12 +232,10 @@ namespace MusicNetease.LayeredSkinControl
                         }
                         //收起展开图标
                         menuIcon = new DuiButton();
-                        menuIcon.BackgroundImage = Properties.Resources.Arrowright0;
-                        menuIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                        menuIcon.AdaptImage = false;
                         menuIcon.NormalImage = Properties.Resources.Arrowright0;
                         menuIcon.HoverImage = Properties.Resources.Arrowright1;
-                        menuIcon.PressedImage = Properties.Resources.Arrowright1;
-                        menuIcon.AdaptImage = false;
+                        menuIcon.PressedImage = Properties.Resources.Arrowright1;                        
                         menuIcon.Size = new Size(16, 16);
                         baseControl.Tag = "openList";
                         menuIcon.Location = new Point(155, 12);
@@ -296,7 +299,14 @@ namespace MusicNetease.LayeredSkinControl
                     //dcControl.Controls.Add(scControl);
                     baseControl.Controls.Add(scControl);
                     baseControl.Name = "list_" + thisMenu.MenuText;
-
+                    if (thisMenu.MenuText.Contains("createdsongListlb") && thisMenu.MenuText.Length > "createdsongListlb".Length)
+                    {
+                        baseControl.Visible = false;
+                    }
+                    if (thisMenu.MenuText.Contains("collectionSongListlb") && thisMenu.MenuText.Length > "collectionSongListlb".Length)
+                    {
+                        baseControl.Visible = false;
+                    }
                     menuName.MouseDown += MenuName_MouseDown;
                     menuIcon.MouseDown += MenuName_MouseDown;
 

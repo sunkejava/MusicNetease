@@ -15,7 +15,9 @@ namespace MusicNetease
         {
             InitializeComponent();
         }
-        
+
+        private bool scorlling = false;
+        private int mousetop = 0;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -134,7 +136,7 @@ namespace MusicNetease
             {
                 Entity.MenuEntity MyMusicListMenu = new Entity.MenuEntity();
                 MyMusicListMenu.MenuName = item;
-                MyMusicListMenu.MenuText = "collectionSongListlb" + (i + 1).ToString();
+                MyMusicListMenu.MenuText = "collectionSongListlb_" + (i + 1).ToString();
                 MyMusicListMenu.Icon = Properties.Resources.bflb0;
                 MyMusicListMenu.HoverIcon = Properties.Resources.bflb1;
                 MyMusicListMenu.IsEndLevel = true;
@@ -158,7 +160,7 @@ namespace MusicNetease
             if (pre < 1)
             {
                 if (songSheetList1.Visible)
-                    songSheetList1.Show();
+                    scorllbar.Show();
 
                 scorllbar.Height = (int)(pre * (double)songSheetList1.Height);
                 scorllbar.Top = (int)(songSheetList1.Value * (songSheetList1.Height - scorllbar.Height)) + songSheetList1.Top;
@@ -212,6 +214,50 @@ namespace MusicNetease
                         break;
                 }
             }
+        }
+
+        private void scorllbar_Move(object sender, EventArgs e)
+        {
+            if (scorlling)
+            {
+                songSheetList1.Value = (double)(scorllbar.Top - songSheetList1.Top) / (double)(songSheetList1.Height - scorllbar.Height);
+            }
+        }
+
+        private void scorllbar_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousetop = scorllbar.PointToClient(MousePosition).Y;
+            scorlling = true;
+            scorllbar.BackColor = Color.FromArgb(80, 55, 55, 55);
+        }
+
+        private void scorllbar_MouseEnter(object sender, EventArgs e)
+        {
+            if (scorllbar.Top < songSheetList1.Top)
+                scorllbar.Top = songSheetList1.Top + 2;
+            if (scorllbar.Top > (songSheetList1.Top + songSheetList1.Height - scorllbar.Height))
+                scorllbar.Top = (songSheetList1.Top + songSheetList1.Height - scorllbar.Height);
+            scorllbar.BackColor = Color.FromArgb(170, 255, 255, 255);
+        }
+
+        private void scorllbar_MouseLeave(object sender, EventArgs e)
+        {
+            scorllbar.BackColor = Color.FromArgb(100, 205, 205, 205);
+        }
+
+        private void scorllbar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (scorlling)
+            {
+                if (scorllbar.Top >= songSheetList1.Top && scorllbar.Top <= (songSheetList1.Top + songSheetList1.Height - scorllbar.Height))
+                    scorllbar.Top = PointToClient(MousePosition).Y - mousetop;
+            }
+        }
+
+        private void scorllbar_MouseUp(object sender, MouseEventArgs e)
+        {
+            mousetop = e.Y; scorlling = false;
+            scorllbar.BackColor = Color.FromArgb(170, 255, 255, 255);
         }
     }
 }
