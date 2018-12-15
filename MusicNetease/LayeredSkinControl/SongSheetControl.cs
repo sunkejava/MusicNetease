@@ -205,7 +205,6 @@ namespace MusicNetease.LayeredSkinControl
                     menuName.ForeColor = Color.DimGray;
                     menuName.Text = thisMenu.MenuName;
                     menuName.Name = "list_" + thisMenu.MenuText;
-                    
 
                     //新增图标
                     DuiButton addMenuIcon = null;
@@ -227,6 +226,7 @@ namespace MusicNetease.LayeredSkinControl
                             addMenuIcon.AdaptImage = false;
                             addMenuIcon.Size = new Size(16, 16);
                             addMenuIcon.Location = new Point(126, 12);
+                            addMenuIcon.Cursor = Cursors.Hand;
                             //新增事件搬绑定
                             addMenuIcon.MouseDown += addMenuIcon_MouseDown;
                         }
@@ -237,9 +237,10 @@ namespace MusicNetease.LayeredSkinControl
                         menuIcon.HoverImage = Properties.Resources.Arrowright1;
                         menuIcon.PressedImage = Properties.Resources.Arrowright1;                        
                         menuIcon.Size = new Size(16, 16);
+                        menuIcon.Cursor = Cursors.Hand;
                         baseControl.Tag = "openList";
                         menuIcon.Location = new Point(155, 12);
-
+                        menuName.Cursor = Cursors.Hand;
                         //菜单名称及收起展开图标事件绑定
                         menuName.MouseDown += TopMenuName_MouseDown;
                         menuIcon.MouseDown += TopMenuName_MouseDown;
@@ -273,6 +274,7 @@ namespace MusicNetease.LayeredSkinControl
                     menuName.Text = thisMenu.MenuName;
                     menuName.Name = "listDl_" + thisMenu.MenuText;
                     menuName.Tag = thisMenu.MenuText;
+                    menuName.Cursor = Cursors.Hand;
                     //菜单图标
                     DuiButton menuIcon = new DuiButton();
                     menuIcon.BackgroundImage = thisMenu.Icon;
@@ -285,6 +287,7 @@ namespace MusicNetease.LayeredSkinControl
                     menuIcon.Location = new Point(15, 5);
                     menuIcon.Name = "listDb_" + thisMenu.MenuText;
                     menuIcon.Tag = thisMenu.MenuText;
+                    menuIcon.Cursor = Cursors.Hand;
                     //上层控件
                     DuiBaseControl scControl = new DuiBaseControl();
                     scControl.BackColor = Color.FromArgb(245, 245, 247);

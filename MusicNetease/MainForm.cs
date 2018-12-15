@@ -143,9 +143,7 @@ namespace MusicNetease
                 songSheetList1.AddMenun(MyMusicListMenu);
                 i++;
             }
-
-
-
+            scorllbar.BackColor  = Color.FromArgb(100, 205, 205, 205);
         }
 
         private void songSheetList1_RefreshListed(object sender, EventArgs e)
@@ -237,7 +235,7 @@ namespace MusicNetease
                 scorllbar.Top = songSheetList1.Top + 2;
             if (scorllbar.Top > (songSheetList1.Top + songSheetList1.Height - scorllbar.Height))
                 scorllbar.Top = (songSheetList1.Top + songSheetList1.Height - scorllbar.Height);
-            scorllbar.BackColor = Color.FromArgb(170, 255, 255, 255);
+            scorllbar.BackColor = Color.FromArgb(100, 55, 55, 55);
         }
 
         private void scorllbar_MouseLeave(object sender, EventArgs e)
@@ -257,7 +255,7 @@ namespace MusicNetease
         private void scorllbar_MouseUp(object sender, MouseEventArgs e)
         {
             mousetop = e.Y; scorlling = false;
-            scorllbar.BackColor = Color.FromArgb(170, 255, 255, 255);
+            scorllbar.BackColor = Color.FromArgb(100, 205, 205, 205);
         }
     }
 }

@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabControl_Fxyy));
+            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage_gxtj = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gxtj = new CCWin.SkinControl.SkinPanel();
-            this.layeredPanel1 = new LayeredSkin.Controls.LayeredPanel();
-            this.skinLine_8 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_7 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_6 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_5 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_4 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_3 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_2 = new CCWin.SkinControl.SkinLine();
-            this.skinLine_1 = new CCWin.SkinControl.SkinLine();
+            this.layeredPanel_gxtj = new LayeredSkin.Controls.LayeredPanel();
+            this.scorllbar = new LayeredSkin.Controls.LayeredBaseControl();
             this.skinTabPage_gd = new CCWin.SkinControl.SkinTabPage();
             this.skinPanel_gd = new CCWin.SkinControl.SkinPanel();
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
@@ -72,7 +65,7 @@
             this.skinTabControl1.SuspendLayout();
             this.skinTabPage_gxtj.SuspendLayout();
             this.skinPanel_gxtj.SuspendLayout();
-            this.layeredPanel1.SuspendLayout();
+            this.layeredPanel_gxtj.SuspendLayout();
             this.skinTabPage_gd.SuspendLayout();
             this.skinPanel_gd.SuspendLayout();
             this.skinTabPage_zbdt.SuspendLayout();
@@ -137,8 +130,7 @@
             // skinPanel_gxtj
             // 
             this.skinPanel_gxtj.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel_gxtj.Controls.Add(this.recommendSongSheetControl1);
-            this.skinPanel_gxtj.Controls.Add(this.layeredPanel1);
+            this.skinPanel_gxtj.Controls.Add(this.layeredPanel_gxtj);
             this.skinPanel_gxtj.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.animator.SetDecoration(this.skinPanel_gxtj, CCWin.SkinControl.DecorationType.None);
             this.skinPanel_gxtj.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -150,153 +142,54 @@
             this.skinPanel_gxtj.Size = new System.Drawing.Size(889, 579);
             this.skinPanel_gxtj.TabIndex = 0;
             // 
-            // layeredPanel1
+            // layeredPanel_gxtj
             // 
-            this.layeredPanel1.AutoSize = true;
-            this.layeredPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.layeredPanel1.Borders.BottomColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.BottomWidth = 1;
-            this.layeredPanel1.Borders.LeftColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.LeftWidth = 1;
-            this.layeredPanel1.Borders.RightColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.RightWidth = 1;
-            this.layeredPanel1.Borders.TopColor = System.Drawing.Color.Empty;
-            this.layeredPanel1.Borders.TopWidth = 1;
-            this.layeredPanel1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredPanel1.Canvas")));
-            this.layeredPanel1.Controls.Add(this.skinLine_8);
-            this.layeredPanel1.Controls.Add(this.skinLine_7);
-            this.layeredPanel1.Controls.Add(this.skinLine_6);
-            this.layeredPanel1.Controls.Add(this.skinLine_5);
-            this.layeredPanel1.Controls.Add(this.skinLine_4);
-            this.layeredPanel1.Controls.Add(this.skinLine_3);
-            this.layeredPanel1.Controls.Add(this.skinLine_2);
-            this.layeredPanel1.Controls.Add(this.skinLine_1);
-            this.animator.SetDecoration(this.layeredPanel1, CCWin.SkinControl.DecorationType.None);
-            this.layeredPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layeredPanel1.Location = new System.Drawing.Point(0, 0);
-            this.layeredPanel1.Name = "layeredPanel1";
-            this.layeredPanel1.Size = new System.Drawing.Size(889, 247);
-            this.layeredPanel1.TabIndex = 2;
+            this.layeredPanel_gxtj.AutoScroll = true;
+            this.layeredPanel_gxtj.AutoSize = true;
+            this.layeredPanel_gxtj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.layeredPanel_gxtj.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.layeredPanel_gxtj.Borders.BottomWidth = 1;
+            this.layeredPanel_gxtj.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.layeredPanel_gxtj.Borders.LeftWidth = 1;
+            this.layeredPanel_gxtj.Borders.RightColor = System.Drawing.Color.Empty;
+            this.layeredPanel_gxtj.Borders.RightWidth = 1;
+            this.layeredPanel_gxtj.Borders.TopColor = System.Drawing.Color.Empty;
+            this.layeredPanel_gxtj.Borders.TopWidth = 1;
+            this.layeredPanel_gxtj.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredPanel_gxtj.Canvas")));
+            this.layeredPanel_gxtj.Controls.Add(this.scorllbar);
+            this.layeredPanel_gxtj.Controls.Add(this.recommendSongSheetControl1);
+            this.animator.SetDecoration(this.layeredPanel_gxtj, CCWin.SkinControl.DecorationType.None);
+            this.layeredPanel_gxtj.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layeredPanel_gxtj.Location = new System.Drawing.Point(0, 0);
+            this.layeredPanel_gxtj.Name = "layeredPanel_gxtj";
+            this.layeredPanel_gxtj.Size = new System.Drawing.Size(889, 579);
+            this.layeredPanel_gxtj.TabIndex = 2;
             // 
-            // skinLine_8
+            // scorllbar
             // 
-            this.skinLine_8.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_8, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_8.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_8.LineHeight = 2;
-            this.skinLine_8.Location = new System.Drawing.Point(524, 234);
-            this.skinLine_8.Name = "skinLine_8";
-            this.skinLine_8.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_8.TabIndex = 28;
-            this.skinLine_8.Tag = "7";
-            this.skinLine_8.Text = "skinLine9";
-            this.skinLine_8.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_7
-            // 
-            this.skinLine_7.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_7, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_7.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_7.LineHeight = 2;
-            this.skinLine_7.Location = new System.Drawing.Point(495, 234);
-            this.skinLine_7.Name = "skinLine_7";
-            this.skinLine_7.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_7.TabIndex = 27;
-            this.skinLine_7.Tag = "6";
-            this.skinLine_7.Text = "skinLine8";
-            this.skinLine_7.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_6
-            // 
-            this.skinLine_6.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_6, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_6.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_6.LineHeight = 2;
-            this.skinLine_6.Location = new System.Drawing.Point(467, 234);
-            this.skinLine_6.Name = "skinLine_6";
-            this.skinLine_6.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_6.TabIndex = 26;
-            this.skinLine_6.Tag = "5";
-            this.skinLine_6.Text = "skinLine7";
-            this.skinLine_6.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_5
-            // 
-            this.skinLine_5.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_5, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_5.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_5.LineHeight = 2;
-            this.skinLine_5.Location = new System.Drawing.Point(440, 234);
-            this.skinLine_5.Name = "skinLine_5";
-            this.skinLine_5.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_5.TabIndex = 25;
-            this.skinLine_5.Tag = "4";
-            this.skinLine_5.Text = "skinLine6";
-            this.skinLine_5.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_4
-            // 
-            this.skinLine_4.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_4, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_4.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_4.LineHeight = 2;
-            this.skinLine_4.Location = new System.Drawing.Point(412, 234);
-            this.skinLine_4.Name = "skinLine_4";
-            this.skinLine_4.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_4.TabIndex = 24;
-            this.skinLine_4.Tag = "3";
-            this.skinLine_4.Text = "skinLine5";
-            this.skinLine_4.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_3
-            // 
-            this.skinLine_3.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_3, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_3.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_3.LineHeight = 2;
-            this.skinLine_3.Location = new System.Drawing.Point(386, 234);
-            this.skinLine_3.Name = "skinLine_3";
-            this.skinLine_3.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_3.TabIndex = 23;
-            this.skinLine_3.Tag = "2";
-            this.skinLine_3.Text = "skinLine4";
-            this.skinLine_3.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_2
-            // 
-            this.skinLine_2.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_2, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_2.LineColor = System.Drawing.Color.Silver;
-            this.skinLine_2.LineHeight = 2;
-            this.skinLine_2.Location = new System.Drawing.Point(360, 234);
-            this.skinLine_2.Name = "skinLine_2";
-            this.skinLine_2.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_2.TabIndex = 22;
-            this.skinLine_2.Tag = "1";
-            this.skinLine_2.Text = "skinLine3";
-            this.skinLine_2.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            // 
-            // skinLine_1
-            // 
-            this.skinLine_1.BackColor = System.Drawing.Color.Transparent;
-            this.animator.SetDecoration(this.skinLine_1, CCWin.SkinControl.DecorationType.None);
-            this.skinLine_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            this.skinLine_1.LineHeight = 2;
-            this.skinLine_1.Location = new System.Drawing.Point(335, 234);
-            this.skinLine_1.Name = "skinLine_1";
-            this.skinLine_1.Size = new System.Drawing.Size(20, 10);
-            this.skinLine_1.TabIndex = 21;
-            this.skinLine_1.Tag = "0";
-            this.skinLine_1.Text = "skinLine2";
-            this.skinLine_1.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            this.scorllbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.scorllbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.scorllbar.Borders.BottomColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.BottomWidth = 1;
+            this.scorllbar.Borders.LeftColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.LeftWidth = 1;
+            this.scorllbar.Borders.RightColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.RightWidth = 1;
+            this.scorllbar.Borders.TopColor = System.Drawing.Color.Empty;
+            this.scorllbar.Borders.TopWidth = 1;
+            this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
+            this.animator.SetDecoration(this.scorllbar, CCWin.SkinControl.DecorationType.None);
+            this.scorllbar.Location = new System.Drawing.Point(876, 7);
+            this.scorllbar.Name = "scorllbar";
+            this.scorllbar.Size = new System.Drawing.Size(10, 50);
+            this.scorllbar.TabIndex = 29;
+            this.scorllbar.Visible = false;
+            this.scorllbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseDown);
+            this.scorllbar.MouseEnter += new System.EventHandler(this.scorllbar_MouseEnter);
+            this.scorllbar.MouseLeave += new System.EventHandler(this.scorllbar_MouseLeave);
+            this.scorllbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseMove);
+            this.scorllbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseUp);
+            this.scorllbar.Move += new System.EventHandler(this.scorllbar_Move);
             // 
             // skinTabPage_gd
             // 
@@ -704,7 +597,7 @@
             this.recommendSongSheetControl1.EnabledMouseWheel = true;
             this.recommendSongSheetControl1.ItemSize = new System.Drawing.Size(100, 100);
             this.recommendSongSheetControl1.ListTop = 0;
-            this.recommendSongSheetControl1.Location = new System.Drawing.Point(3, 253);
+            this.recommendSongSheetControl1.Location = new System.Drawing.Point(3, 251);
             this.recommendSongSheetControl1.Name = "recommendSongSheetControl1";
             this.recommendSongSheetControl1.Orientation = LayeredSkin.Controls.ListOrientation.Vertical;
             this.recommendSongSheetControl1.RollSize = 20;
@@ -712,10 +605,10 @@
             this.recommendSongSheetControl1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarWidth = 10;
-            this.recommendSongSheetControl1.ShowScrollBar = true;
-            this.recommendSongSheetControl1.Size = new System.Drawing.Size(883, 298);
+            this.recommendSongSheetControl1.ShowScrollBar = false;
+            this.recommendSongSheetControl1.Size = new System.Drawing.Size(883, 107);
             this.recommendSongSheetControl1.SmoothScroll = false;
-            this.recommendSongSheetControl1.TabIndex = 3;
+            this.recommendSongSheetControl1.TabIndex = 31;
             this.recommendSongSheetControl1.Text = "recommendSongSheetControl1";
             this.recommendSongSheetControl1.Ulmul = true;
             this.recommendSongSheetControl1.Value = 0D;
@@ -736,7 +629,7 @@
             this.skinTabPage_gxtj.ResumeLayout(false);
             this.skinPanel_gxtj.ResumeLayout(false);
             this.skinPanel_gxtj.PerformLayout();
-            this.layeredPanel1.ResumeLayout(false);
+            this.layeredPanel_gxtj.ResumeLayout(false);
             this.skinTabPage_gd.ResumeLayout(false);
             this.skinPanel_gd.ResumeLayout(false);
             this.skinPanel_gd.PerformLayout();
@@ -788,15 +681,8 @@
         private CCWin.SkinControl.SkinLabel skinLabel_zxyy;
         private CCWin.SkinControl.SkinLine skinLine_xz;
         private CCWin.SkinControl.SkinAnimator animator;
-        private LayeredSkin.Controls.LayeredPanel layeredPanel1;
-        private CCWin.SkinControl.SkinLine skinLine_8;
-        private CCWin.SkinControl.SkinLine skinLine_7;
-        private CCWin.SkinControl.SkinLine skinLine_6;
-        private CCWin.SkinControl.SkinLine skinLine_5;
-        private CCWin.SkinControl.SkinLine skinLine_4;
-        private CCWin.SkinControl.SkinLine skinLine_3;
-        private CCWin.SkinControl.SkinLine skinLine_2;
-        private CCWin.SkinControl.SkinLine skinLine_1;
+        private LayeredSkin.Controls.LayeredPanel layeredPanel_gxtj;
+        private LayeredSkin.Controls.LayeredBaseControl scorllbar;
         private LayeredSkinControl.RecommendSongSheetControl recommendSongSheetControl1;
     }
 }

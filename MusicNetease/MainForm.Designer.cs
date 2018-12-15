@@ -255,7 +255,7 @@
             this.scorllbar.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("scorllbar.Canvas")));
             this.scorllbar.Location = new System.Drawing.Point(189, 51);
             this.scorllbar.Name = "scorllbar";
-            this.scorllbar.Size = new System.Drawing.Size(5, 567);
+            this.scorllbar.Size = new System.Drawing.Size(5, 50);
             this.scorllbar.TabIndex = 2;
             this.scorllbar.Visible = false;
             this.scorllbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseDown);
