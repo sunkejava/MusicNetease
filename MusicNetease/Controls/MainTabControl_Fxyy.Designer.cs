@@ -163,12 +163,6 @@
             this.layeredPanel_gxtj.Name = "layeredPanel_gxtj";
             this.layeredPanel_gxtj.Size = new System.Drawing.Size(889, 579);
             this.layeredPanel_gxtj.TabIndex = 2;
-            this.layeredPanel_gxtj.MouseDown += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseDown);
-            this.layeredPanel_gxtj.MouseEnter += new System.EventHandler(this.scorllbar_MouseEnter);
-            this.layeredPanel_gxtj.MouseLeave += new System.EventHandler(this.scorllbar_MouseLeave);
-            this.layeredPanel_gxtj.MouseMove += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseMove);
-            this.layeredPanel_gxtj.MouseUp += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseUp);
-            this.layeredPanel_gxtj.Move += new System.EventHandler(this.scorllbar_Move);
             // 
             // scorllbar
             // 
