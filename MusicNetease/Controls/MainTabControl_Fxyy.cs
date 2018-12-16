@@ -27,7 +27,7 @@ namespace MusicNetease.Controls
         DuiLabel dLabel6 = new DuiLabel();
         DuiLabel dLabel7 = new DuiLabel();
         DuiLabel dLabel8 = new DuiLabel();
-        int NowNum = 1;
+        int NowNum = 0;
         String[] ImgsString = new String[]{ "http://p1.music.126.net/utGm9BU68THpwEUPe0ecYQ==/109951163702692244.jpg",
                                          "http://p1.music.126.net/MxnT6B0uFfOIqmUET0Hkyg==/109951163706538300.jpg",
                                          "http://p1.music.126.net/uvBie7e5Ozxd9zXaIzl4kQ==/109951163707092059.jpg",
@@ -119,35 +119,35 @@ namespace MusicNetease.Controls
             dLabel1.BackColor = System.Drawing.Color.Silver;
             dLabel1.Height = 2;
             dLabel1.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel1.Tag = "1";
+            dLabel1.Tag = "0";
             dLabel2.Height = dLabel1.Height;
             dLabel2.BackColor = dLabel1.BackColor;
             dLabel2.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel2.Tag = "2";
+            dLabel2.Tag = "1";
             dLabel3.Height = dLabel1.Height;
             dLabel3.BackColor = dLabel1.BackColor;
             dLabel3.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel3.Tag = "3";
+            dLabel3.Tag = "2";
             dLabel4.Height = dLabel1.Height;
             dLabel4.BackColor = dLabel1.BackColor;
             dLabel4.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel4.Tag = "4";
+            dLabel4.Tag = "3";
             dLabel5.Height = dLabel1.Height;
             dLabel5.BackColor = dLabel1.BackColor;
             dLabel5.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel5.Tag = "5";
+            dLabel5.Tag = "4";
             dLabel6.Height = dLabel1.Height;
             dLabel6.BackColor = dLabel1.BackColor;
             dLabel6.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel6.Tag = "6";
+            dLabel6.Tag = "5";
             dLabel7.Height = dLabel1.Height;
             dLabel7.BackColor = dLabel1.BackColor;
             dLabel7.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel7.Tag = "7";
+            dLabel7.Tag = "6";
             dLabel8.Height = dLabel1.Height;
             dLabel8.BackColor = dLabel1.BackColor;
             dLabel8.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel8.Tag = "8";
+            dLabel8.Tag = "7";
             dLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
             int lcountWidth = ((Width / 3)-(dLabel1.Width*8))/9;//各个下标间距
             int lbeginLeft = Width / 3 * 1;//下标占位左边距
@@ -194,9 +194,16 @@ namespace MusicNetease.Controls
 
         private void Btn_ImgLeft_MouseClick(object sender, DuiMouseEventArgs e)
         {
-
             DuiButton btn = sender as DuiButton;
-            LoadSliderImg((btn.Name == "btn_Left" ? NowNum - 1 : NowNum + 1));
+            if (btn.Name == "btn_Left")
+            {
+                NowNum = ((NowNum - 1) < 0 ? ImgsString.Length - 1 : NowNum - 1);
+            }
+            else
+            {
+                NowNum = ((NowNum + 1) >= ImgsString.Length ? 0 : NowNum + 1);
+            }
+            LoadSliderImg(NowNum);
             setSelectLineColor();
         }
 
@@ -207,7 +214,7 @@ namespace MusicNetease.Controls
         private void LoadSliderImg(int Num)
         {
             int count = ImgsString.Length;
-            int prevNum = ((Num - 1) < 0 ? count - 1 : Num - 1);
+            int prevNum = ((Num - 1) < 0 ? count - 1 : Num -1);
             int nextNum = ((Num + 1) >= count ? 0 : Num + 1);
             PictureBox_Left.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[prevNum]).GetResponse().GetResponseStream());
             PictureBox_Main.BackgroundImage = Image.FromStream(System.Net.WebRequest.Create(ImgsString[Num]).GetResponse().GetResponseStream());
@@ -354,25 +361,25 @@ namespace MusicNetease.Controls
             skinLine_Update();
             switch (NowNum)
             {
-                case 1:
+                case 0:
                     dLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 2:
+                case 1:
                     dLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 3:
+                case 2:
                     dLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 4:
+                case 3:
                     dLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 5:
+                case 4:
                     dLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 6:
+                case 5:
                     dLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
-                case 7:
+                case 6:
                     dLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
                     break;
                 default:
