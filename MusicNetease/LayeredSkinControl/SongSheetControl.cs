@@ -11,6 +11,14 @@ using System.Windows.Forms;
 
 namespace MusicNetease.LayeredSkinControl
 {
+    /// <summary>
+    /// 类    名: SongSheetList.cs
+    /// CLR 版本: 4.0.30319.42000
+    /// 作    者: sunkejava 
+    /// 邮    箱：declineaberdeen@foxmail.com
+    /// 创建时间: 2018/11/17 14:55:51
+    /// 说    明：网易云音乐树形菜单控件
+    /// </summary>
     public class SongSheetList : LayeredSkin.Controls.LayeredListBox
     {
         

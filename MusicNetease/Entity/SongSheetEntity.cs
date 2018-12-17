@@ -20,10 +20,11 @@ namespace MusicNetease.Entity
         private string id;
         private string name;
         private string explain;
-        private Image backImg;
+        private string backImg;
         private string count;
         private string creater;
-        public SongSheetEntity(string _id, string _name, string _explain, Image _backImg, string _count, string _creater)
+        public SongSheetEntity() { }
+        public SongSheetEntity(string _id, string _name, string _explain, string _backImg, string _count, string _creater)
         {
             id = _id;
             name = _name;
@@ -79,9 +80,9 @@ namespace MusicNetease.Entity
             }
         }
         /// <summary>
-        /// 歌单背景图
+        /// 歌单背景图片
         /// </summary>
-        public Image BackImg
+        public string BackImg
         {
             get
             {

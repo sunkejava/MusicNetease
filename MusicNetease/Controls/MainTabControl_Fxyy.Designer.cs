@@ -155,8 +155,8 @@
             this.layeredPanel_gxtj.Borders.TopColor = System.Drawing.Color.Empty;
             this.layeredPanel_gxtj.Borders.TopWidth = 1;
             this.layeredPanel_gxtj.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("layeredPanel_gxtj.Canvas")));
-            this.layeredPanel_gxtj.Controls.Add(this.scorllbar);
             this.layeredPanel_gxtj.Controls.Add(this.recommendSongSheetControl1);
+            this.layeredPanel_gxtj.Controls.Add(this.scorllbar);
             this.animator.SetDecoration(this.layeredPanel_gxtj, CCWin.SkinControl.DecorationType.None);
             this.layeredPanel_gxtj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layeredPanel_gxtj.Location = new System.Drawing.Point(0, 0);
@@ -579,7 +579,8 @@
             // 
             // recommendSongSheetControl1
             // 
-            this.recommendSongSheetControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.recommendSongSheetControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.recommendSongSheetControl1.AutoFocus = false;
             this.recommendSongSheetControl1.BackColor = System.Drawing.Color.Transparent;
@@ -592,11 +593,11 @@
             this.recommendSongSheetControl1.Borders.TopColor = System.Drawing.Color.Empty;
             this.recommendSongSheetControl1.Borders.TopWidth = 1;
             this.recommendSongSheetControl1.Canvas = ((System.Drawing.Bitmap)(resources.GetObject("recommendSongSheetControl1.Canvas")));
-            this.animator.SetDecoration(this.recommendSongSheetControl1, CCWin.SkinControl.DecorationType.BottomMirror);
+            this.animator.SetDecoration(this.recommendSongSheetControl1, CCWin.SkinControl.DecorationType.None);
             this.recommendSongSheetControl1.EnabledMouseWheel = true;
-            this.recommendSongSheetControl1.ItemSize = new System.Drawing.Size(100, 100);
+            this.recommendSongSheetControl1.ItemSize = new System.Drawing.Size(791, 520);
             this.recommendSongSheetControl1.ListTop = 0;
-            this.recommendSongSheetControl1.Location = new System.Drawing.Point(3, 251);
+            this.recommendSongSheetControl1.Location = new System.Drawing.Point(20, 7);
             this.recommendSongSheetControl1.Name = "recommendSongSheetControl1";
             this.recommendSongSheetControl1.Orientation = LayeredSkin.Controls.ListOrientation.Vertical;
             this.recommendSongSheetControl1.RollSize = 20;
@@ -604,15 +605,13 @@
             this.recommendSongSheetControl1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarWidth = 10;
-            this.recommendSongSheetControl1.ShowScrollBar = false;
-            this.recommendSongSheetControl1.Size = new System.Drawing.Size(883, 107);
-            this.recommendSongSheetControl1.SmoothScroll = false;
-            this.recommendSongSheetControl1.TabIndex = 31;
+            this.recommendSongSheetControl1.ShowScrollBar = true;
+            this.recommendSongSheetControl1.Size = new System.Drawing.Size(850, 569);
+            this.recommendSongSheetControl1.SmoothScroll = true;
+            this.recommendSongSheetControl1.TabIndex = 30;
             this.recommendSongSheetControl1.Text = "recommendSongSheetControl1";
             this.recommendSongSheetControl1.Ulmul = true;
             this.recommendSongSheetControl1.Value = 0D;
-            this.recommendSongSheetControl1.RefreshListed += new System.EventHandler(this.recommendSongSheetControl1_RefreshListed);
-            this.recommendSongSheetControl1.RecommendSongSheetMouseDown += new System.EventHandler(this.recommendSongSheetControl1_RecommendSongSheetMouseDown);
             // 
             // MainTabControl_Fxyy
             // 
