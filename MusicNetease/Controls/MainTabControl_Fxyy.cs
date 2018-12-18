@@ -41,7 +41,7 @@ namespace MusicNetease.Controls
             skinLabel_gxtj.Tag = true;
             skinLabel_gxtj.ForeColor = Color.FromArgb(255, 92, 138);
             int lwidth = 0;
-
+            scorllbar.BackColor = Color.FromArgb(100, 205, 205, 205);
             if (this.Width > 1020)
             {
                 lwidth = (this.Width - 1040) / 2;
@@ -52,8 +52,10 @@ namespace MusicNetease.Controls
             }
             //recommendSongSheetControl1.Location = new Point(lwidth, recommendSongSheetControl1.Location.Y);
             //recommendSongSheetControl1.Size = new Size(Width, 350);
+            recommendSongSheetControl1.ItemSize = new Size(791, 520);
             Entity.SwitcherImageEntity switcherImgs = new Entity.SwitcherImageEntity(ids,names,ImgsString,IconsString);
             recommendSongSheetControl1.addSwitchImage(switcherImgs);
+            recommendSongSheetControl1.addRecommendSongTitle(new Entity.SongSheetTitle("推荐歌单","12306"));
             recommendSongSheetControl1.ItemSize = new Size(150, 175);
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("tj", "每日歌曲推荐", "根据您的音乐口味生成每日更新", "", "", ""));
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2522866436", "又到了起床靠爆发力的日子了", "编辑推荐：我没有赖床，我不起床是有理由的！", "http://p3.music.126.net/XIFMgvpqDqY4AO94MQBijQ==/109951163679316040.jpg?param=200y200", "202万", ""));
@@ -184,14 +186,14 @@ namespace MusicNetease.Controls
                 if (recommendSongSheetControl1.Items[i].Visible)
                     allheight = allheight + recommendSongSheetControl1.Items[i].Height;
             }
-            allheight += this.layeredPanel_gxtj.Height;
-            double pre = (double)(recommendSongSheetControl1.Height + this.layeredPanel_gxtj.Height) / (double)allheight;
+            double pre = (double)recommendSongSheetControl1.Height / (double)allheight;
             if (pre < 1)
             {
                 if (recommendSongSheetControl1.Visible)
                     scorllbar.Show();
-                scorllbar.Height = (int)(pre * (double)(recommendSongSheetControl1.Height+ this.layeredPanel_gxtj.Height));
-                scorllbar.Top = (int)(recommendSongSheetControl1.Value * (recommendSongSheetControl1.Height + this.layeredPanel_gxtj.Height - scorllbar.Height)) + recommendSongSheetControl1.Top;
+
+                scorllbar.Height = (int)(pre * (double)recommendSongSheetControl1.Height);
+                scorllbar.Top = (int)(recommendSongSheetControl1.Value * (recommendSongSheetControl1.Height - scorllbar.Height)) + recommendSongSheetControl1.Top;
             }
             else
             {
@@ -202,8 +204,10 @@ namespace MusicNetease.Controls
         private void scorllbar_Move(object sender, EventArgs e)
         {
             if (scorlling)
-                layeredPanel_gxtj.VerticalScroll.Value = (scorllbar.Top - layeredPanel_gxtj.Top) / (layeredPanel_gxtj.Height - scorllbar.Height);
-            }
+            {
+                recommendSongSheetControl1.Value = (double)(scorllbar.Top - recommendSongSheetControl1.Top) / (double)(recommendSongSheetControl1.Height - scorllbar.Height);
+            }   
+        }
 
         private void scorllbar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -214,10 +218,10 @@ namespace MusicNetease.Controls
 
         private void scorllbar_MouseEnter(object sender, EventArgs e)
         {
-            if (scorllbar.Top < layeredPanel_gxtj.Top)
-                scorllbar.Top = layeredPanel_gxtj.Top + 2;
-            if (scorllbar.Top > (layeredPanel_gxtj.Top + layeredPanel_gxtj.Height - scorllbar.Height))
-                scorllbar.Top = (layeredPanel_gxtj.Top + layeredPanel_gxtj.Height - scorllbar.Height);
+            if (scorllbar.Top < recommendSongSheetControl1.Top)
+                scorllbar.Top = recommendSongSheetControl1.Top + 2;
+            if (scorllbar.Top > (recommendSongSheetControl1.Top + recommendSongSheetControl1.Height - scorllbar.Height))
+                scorllbar.Top = (recommendSongSheetControl1.Top + recommendSongSheetControl1.Height - scorllbar.Height);
             scorllbar.BackColor = Color.FromArgb(100, 55, 55, 55);
         }
 
@@ -230,7 +234,7 @@ namespace MusicNetease.Controls
         {
             if (scorlling)
             {
-                if (scorllbar.Top >= layeredPanel_gxtj.Top && scorllbar.Top <= (layeredPanel_gxtj.Top + layeredPanel_gxtj.Height - scorllbar.Height))
+                if (scorllbar.Top >= recommendSongSheetControl1.Top && scorllbar.Top <= (recommendSongSheetControl1.Top + recommendSongSheetControl1.Height - scorllbar.Height))
                     scorllbar.Top = PointToClient(MousePosition).Y - mousetop;
             }
         }

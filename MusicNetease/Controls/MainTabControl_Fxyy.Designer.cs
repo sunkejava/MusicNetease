@@ -180,7 +180,7 @@
             this.animator.SetDecoration(this.scorllbar, CCWin.SkinControl.DecorationType.None);
             this.scorllbar.Location = new System.Drawing.Point(876, 7);
             this.scorllbar.Name = "scorllbar";
-            this.scorllbar.Size = new System.Drawing.Size(10, 50);
+            this.scorllbar.Size = new System.Drawing.Size(10, 291);
             this.scorllbar.TabIndex = 29;
             this.scorllbar.Visible = false;
             this.scorllbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.scorllbar_MouseDown);
@@ -605,13 +605,15 @@
             this.recommendSongSheetControl1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.recommendSongSheetControl1.ScrollBarWidth = 10;
-            this.recommendSongSheetControl1.ShowScrollBar = true;
+            this.recommendSongSheetControl1.ShowScrollBar = false;
             this.recommendSongSheetControl1.Size = new System.Drawing.Size(850, 569);
-            this.recommendSongSheetControl1.SmoothScroll = true;
+            this.recommendSongSheetControl1.SmoothScroll = false;
             this.recommendSongSheetControl1.TabIndex = 30;
             this.recommendSongSheetControl1.Text = "recommendSongSheetControl1";
             this.recommendSongSheetControl1.Ulmul = true;
             this.recommendSongSheetControl1.Value = 0D;
+            this.recommendSongSheetControl1.RefreshListed += new System.EventHandler(this.recommendSongSheetControl1_RefreshListed);
+            this.recommendSongSheetControl1.RecommendSongSheetMouseDown += new System.EventHandler(this.recommendSongSheetControl1_RecommendSongSheetMouseDown);
             // 
             // MainTabControl_Fxyy
             // 

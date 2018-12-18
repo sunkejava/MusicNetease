@@ -122,6 +122,7 @@
     <Compile Include="decline\Enums.cs" />
     <Compile Include="Entity\MenuEntity.cs" />
     <Compile Include="Entity\SongSheetEntity.cs" />
+    <Compile Include="Entity\SongSheetTitle.cs" />
     <Compile Include="Entity\SwitcherImageEntity.cs" />
     <Compile Include="FormMessage.cs">
       <SubType>Form</SubType>

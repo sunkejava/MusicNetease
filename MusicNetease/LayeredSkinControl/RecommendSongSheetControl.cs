@@ -7,6 +7,8 @@ using LayeredSkin.DirectUI;
 using System.Drawing;
 using System.ComponentModel;
 using MusicNetease.Entity;
+using System.Net;
+using System.IO;
 
 namespace MusicNetease.LayeredSkinControl
 {
@@ -81,7 +83,7 @@ namespace MusicNetease.LayeredSkinControl
         DuiLabel dLabel8 = new DuiLabel();
         int NowNum = 0;
         public SwitcherImageEntity switcherImgsEntity = new SwitcherImageEntity();
-
+        public List<SongSheetTitle> tGroups = new List<SongSheetTitle>();
         public List<SongSheetEntity> Groups = new List<SongSheetEntity>();
         
         #region 自定义公开属性
@@ -206,6 +208,210 @@ namespace MusicNetease.LayeredSkinControl
         #endregion
 
         #region 自定义事件
+        /// <summary>
+        /// 添加滚动图控件
+        /// </summary>
+        /// <param name="se"></param>
+        /// <returns></returns>
+        public bool addSwitchImage(SwitcherImageEntity se)
+        {
+            switcherImgsEntity = se;
+            DuiBaseControl baseControl = new DuiBaseControl();
+            baseControl.Size = new Size(Width, 350);
+            LoadSliderImg(NowNum);
+            imgMain.Size = new Size(540, 200);
+            imgLeft.Size = new Size(520, 190);
+            imgRight.Size = new Size(520, 190);
+            imgLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            imgMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            imgRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            imgLeft.Location = new Point(0, 30);
+            imgMain.Location = new Point((this.Width - 540) / 2, 20);
+            imgRight.Location = new Point(this.Width - 520 - 0, 30);
+            btn_ImgLeft.Location = new Point(0 + 20, 110);
+            btn_ImgRight.Location = new Point(this.Width - 0 - 20, 110);
+
+            imgLeft.Cursor = System.Windows.Forms.Cursors.Hand;
+            imgMain.Cursor = imgLeft.Cursor;
+            imgRight.Cursor = imgLeft.Cursor;
+            btn_ImgLeft.Cursor = imgLeft.Cursor;
+            btn_ImgRight.Cursor = imgLeft.Cursor;
+
+            imgLeft.MouseEnter += ImgLeft_MouseEnter;
+            imgLeft.MouseLeave += ImgLeft_MouseLeave;
+            imgMain.MouseEnter += ImgLeft_MouseEnter;
+            imgMain.MouseLeave += ImgLeft_MouseLeave;
+            imgRight.MouseEnter += ImgLeft_MouseEnter;
+            imgRight.MouseLeave += ImgLeft_MouseLeave;
+
+
+
+            btn_ImgLeft.Size = new Size(20, 20);
+            btn_ImgRight.Size = btn_ImgLeft.Size;
+            btn_ImgLeft.NormalImage = Properties.Resources.Img_left0;
+            btn_ImgLeft.HoverImage = Properties.Resources.Img_left1;
+            btn_ImgLeft.PressedImage = Properties.Resources.Img_left1;
+            btn_ImgRight.NormalImage = Properties.Resources.Img_right0;
+            btn_ImgRight.HoverImage = Properties.Resources.Img_right1;
+            btn_ImgRight.PressedImage = Properties.Resources.Img_right1;
+            btn_ImgLeft.AdaptImage = false;
+            btn_ImgRight.AdaptImage = false;
+            btn_ImgLeft.Name = "btn_Left";
+            btn_ImgRight.Name = "btn_Right";
+
+            btn_ImgLeft.MouseClick += Btn_ImgLeft_MouseClick;
+            btn_ImgRight.MouseClick += Btn_ImgLeft_MouseClick;
+            dLabel1.Cursor = imgLeft.Cursor;
+            dLabel2.Cursor = imgLeft.Cursor;
+            dLabel3.Cursor = imgLeft.Cursor;
+            dLabel4.Cursor = imgLeft.Cursor;
+            dLabel5.Cursor = imgLeft.Cursor;
+            dLabel6.Cursor = imgLeft.Cursor;
+            dLabel7.Cursor = imgLeft.Cursor;
+            dLabel8.Cursor = imgLeft.Cursor;
+            dLabel1.Size = new Size(20, 10);
+            dLabel2.Size = dLabel1.Size;
+            dLabel3.Size = dLabel1.Size;
+            dLabel4.Size = dLabel1.Size;
+            dLabel5.Size = dLabel1.Size;
+            dLabel6.Size = dLabel1.Size;
+            dLabel7.Size = dLabel1.Size;
+            dLabel8.Size = dLabel1.Size;
+            dLabel1.BackColor = System.Drawing.Color.Silver;
+            dLabel1.Height = 2;
+            dLabel1.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel1.Tag = "0";
+            dLabel2.Height = dLabel1.Height;
+            dLabel2.BackColor = dLabel1.BackColor;
+            dLabel2.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel2.Tag = "1";
+            dLabel3.Height = dLabel1.Height;
+            dLabel3.BackColor = dLabel1.BackColor;
+            dLabel3.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel3.Tag = "2";
+            dLabel4.Height = dLabel1.Height;
+            dLabel4.BackColor = dLabel1.BackColor;
+            dLabel4.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel4.Tag = "3";
+            dLabel5.Height = dLabel1.Height;
+            dLabel5.BackColor = dLabel1.BackColor;
+            dLabel5.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel5.Tag = "4";
+            dLabel6.Height = dLabel1.Height;
+            dLabel6.BackColor = dLabel1.BackColor;
+            dLabel6.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel6.Tag = "5";
+            dLabel7.Height = dLabel1.Height;
+            dLabel7.BackColor = dLabel1.BackColor;
+            dLabel7.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel7.Tag = "6";
+            dLabel8.Height = dLabel1.Height;
+            dLabel8.BackColor = dLabel1.BackColor;
+            dLabel8.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
+            dLabel8.Tag = "7";
+            dLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
+            int lcountWidth = ((Width / 3) - (dLabel1.Width * 8)) / 9;//各个下标间距
+            int lbeginLeft = Width / 3 * 1;//下标占位左边距
+            dLabel1.Location = new Point(lbeginLeft + lcountWidth, 234);
+            dLabel2.Location = new Point(lbeginLeft + lcountWidth * 2 + dLabel1.Width, 234);
+            dLabel3.Location = new Point(lbeginLeft + lcountWidth * 3 + dLabel1.Width * 2, 234);
+            dLabel4.Location = new Point(lbeginLeft + lcountWidth * 4 + dLabel1.Width * 3, 234);
+            dLabel5.Location = new Point(lbeginLeft + lcountWidth * 5 + dLabel1.Width * 4, 234);
+            dLabel6.Location = new Point(lbeginLeft + lcountWidth * 6 + dLabel1.Width * 5, 234);
+            dLabel7.Location = new Point(lbeginLeft + lcountWidth * 7 + dLabel1.Width * 6, 234);
+            dLabel8.Location = new Point(lbeginLeft + lcountWidth * 8 + dLabel1.Width * 7, 234);
+            baseControl.Controls.Add(imgLeft);
+            baseControl.Controls.Add(imgRight);
+            baseControl.Controls.Add(imgMain);
+            baseControl.Controls.Add(btn_ImgLeft);
+            baseControl.Controls.Add(btn_ImgRight);
+            baseControl.Controls.Add(dLabel1);
+            baseControl.Controls.Add(dLabel2);
+            baseControl.Controls.Add(dLabel3);
+            baseControl.Controls.Add(dLabel4);
+            baseControl.Controls.Add(dLabel5);
+            baseControl.Controls.Add(dLabel6);
+            baseControl.Controls.Add(dLabel7);
+            baseControl.Controls.Add(dLabel8);
+            btn_ImgLeft.Visible = false;
+            btn_ImgRight.Visible = false;
+            Items.Add(baseControl);
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            //更新列表
+            RefreshList();
+            GC.Collect();
+            return true;
+        }
+
+        public bool addRecommendSongTitle(SongSheetTitle st)
+        {
+            //是否已存在
+            bool isExists = false;
+            foreach (SongSheetTitle item in tGroups)
+            {
+                if (item == st)
+                {
+                    isExists = true;
+                }
+            }
+            //如果不存在则添加
+            if (!isExists)
+            {
+                //底层控件
+                DuiBaseControl baseControl = new DuiBaseControl();
+                baseControl.Size = new Size(this.Width, 30);
+                baseControl.BackColor = Color.FromArgb(245, 245, 247);
+                //边框
+                Borders baseBorder = new Borders(baseControl);
+                baseBorder.BottomWidth = 10;
+                baseBorder.TopWidth = 10;
+                baseBorder.LeftWidth = 10;
+                baseBorder.RightWidth = 10;
+                //标题
+                DuiLabel lTitle = new DuiLabel();
+                lTitle.Size = new Size(30, 10);
+                lTitle.Text = st.Name;
+                lTitle.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+                lTitle.ForeColor = Color.DimGray;
+                lTitle.Location = new Point(0,0);
+                //更多按钮
+                DuiButton dbutton = new DuiButton();
+                dbutton.Size = new Size(15,5);
+                dbutton.Text = "更多";
+                dbutton.Location = new Point(this.Width-20,2);
+                //更多图标
+                DuiButton dInIcon = new DuiButton();
+                dInIcon.Location = new Point(this.Width-5, 2);
+                dInIcon.Size = new Size(5, 5);
+                dInIcon.NormalImage = Properties.Resources.Arrowright0;
+                dInIcon.AdaptImage = false;
+                //下划线
+                DuiLabel lLine = new DuiLabel();
+                lLine.Size = new Size(this.Width, 3);
+                lLine.ForeColor = Color.DimGray;
+                lLine.BackColor = Color.DimGray;
+                lLine.Location = new Point(0, 10);
+                baseControl.Controls.Add(dbutton);
+                baseControl.Controls.Add(dInIcon);
+                baseControl.Controls.Add(lTitle);
+                baseControl.Controls.Add(lLine);
+                Items.Add(baseControl);
+                //更新列表
+                RefreshList();
+                tGroups.Add(st);
+            }
+            GC.Collect();
+            return !isExists;
+        }
+
         /// <summary>
         /// 添加歌单
         /// </summary>
@@ -358,140 +564,12 @@ namespace MusicNetease.LayeredSkinControl
                 RecommendSongSheetMouseDown(this, new EventArgs());
         }
 
-        /// <summary>
-        /// 添加滚动图控件
-        /// </summary>
-        /// <param name="se"></param>
-        /// <returns></returns>
-        public bool addSwitchImage(SwitcherImageEntity se)
+        private DuiBaseControl getDuiBase()
         {
-            switcherImgsEntity = se;
-            DuiBaseControl baseControl = new DuiBaseControl();
-            baseControl.Size = new Size(Width, 350);
-            LoadSliderImg(NowNum);
-            imgMain.Size = new Size(540, 200);
-            imgLeft.Size = new Size(520, 190);
-            imgRight.Size = new Size(520, 190);
-            imgLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            imgMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            imgRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            imgLeft.Location = new Point(0, 30);
-            imgMain.Location = new Point((this.Width - 540) / 2, 20);
-            imgRight.Location = new Point(this.Width - 520 - 0, 30);
-            btn_ImgLeft.Location = new Point(0 + 20, 110);
-            btn_ImgRight.Location = new Point(this.Width - 0 - 20, 110);
-
-            imgLeft.Cursor = System.Windows.Forms.Cursors.Hand;
-            imgMain.Cursor = imgLeft.Cursor;
-            imgRight.Cursor = imgLeft.Cursor;
-            btn_ImgLeft.Cursor = imgLeft.Cursor;
-            btn_ImgRight.Cursor = imgLeft.Cursor;
-
-            imgLeft.MouseEnter += ImgLeft_MouseEnter;
-            imgLeft.MouseLeave += ImgLeft_MouseLeave;
-            imgMain.MouseEnter += ImgLeft_MouseEnter;
-            imgMain.MouseLeave += ImgLeft_MouseLeave;
-            imgRight.MouseEnter += ImgLeft_MouseEnter;
-            imgRight.MouseLeave += ImgLeft_MouseLeave;
-
-
-
-            btn_ImgLeft.Size = new Size(20, 20);
-            btn_ImgRight.Size = btn_ImgLeft.Size;
-            btn_ImgLeft.NormalImage = Properties.Resources.Img_left0;
-            btn_ImgLeft.HoverImage = Properties.Resources.Img_left1;
-            btn_ImgLeft.PressedImage = Properties.Resources.Img_left1;
-            btn_ImgRight.NormalImage = Properties.Resources.Img_right0;
-            btn_ImgRight.HoverImage = Properties.Resources.Img_right1;
-            btn_ImgRight.PressedImage = Properties.Resources.Img_right1;
-            btn_ImgLeft.AdaptImage = false;
-            btn_ImgRight.AdaptImage = false;
-            btn_ImgLeft.Name = "btn_Left";
-            btn_ImgRight.Name = "btn_Right";
-
-            btn_ImgLeft.MouseClick += Btn_ImgLeft_MouseClick;
-            btn_ImgRight.MouseClick += Btn_ImgLeft_MouseClick;
-
-            dLabel1.Size = new Size(20, 10);
-            dLabel2.Size = dLabel1.Size;
-            dLabel3.Size = dLabel1.Size;
-            dLabel4.Size = dLabel1.Size;
-            dLabel5.Size = dLabel1.Size;
-            dLabel6.Size = dLabel1.Size;
-            dLabel7.Size = dLabel1.Size;
-            dLabel8.Size = dLabel1.Size;
-            dLabel1.BackColor = System.Drawing.Color.Silver;
-            dLabel1.Height = 2;
-            dLabel1.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel1.Tag = "0";
-            dLabel2.Height = dLabel1.Height;
-            dLabel2.BackColor = dLabel1.BackColor;
-            dLabel2.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel2.Tag = "1";
-            dLabel3.Height = dLabel1.Height;
-            dLabel3.BackColor = dLabel1.BackColor;
-            dLabel3.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel3.Tag = "2";
-            dLabel4.Height = dLabel1.Height;
-            dLabel4.BackColor = dLabel1.BackColor;
-            dLabel4.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel4.Tag = "3";
-            dLabel5.Height = dLabel1.Height;
-            dLabel5.BackColor = dLabel1.BackColor;
-            dLabel5.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel5.Tag = "4";
-            dLabel6.Height = dLabel1.Height;
-            dLabel6.BackColor = dLabel1.BackColor;
-            dLabel6.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel6.Tag = "5";
-            dLabel7.Height = dLabel1.Height;
-            dLabel7.BackColor = dLabel1.BackColor;
-            dLabel7.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel7.Tag = "6";
-            dLabel8.Height = dLabel1.Height;
-            dLabel8.BackColor = dLabel1.BackColor;
-            dLabel8.MouseEnter += new System.EventHandler(this.skinLine_MouseEnter);
-            dLabel8.Tag = "7";
-            dLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(138)))));
-            int lcountWidth = ((Width / 3) - (dLabel1.Width * 8)) / 9;//各个下标间距
-            int lbeginLeft = Width / 3 * 1;//下标占位左边距
-            dLabel1.Location = new Point(lbeginLeft + lcountWidth, 234);
-            dLabel2.Location = new Point(lbeginLeft + lcountWidth * 2 + dLabel1.Width, 234);
-            dLabel3.Location = new Point(lbeginLeft + lcountWidth * 3 + dLabel1.Width * 2, 234);
-            dLabel4.Location = new Point(lbeginLeft + lcountWidth * 4 + dLabel1.Width * 3, 234);
-            dLabel5.Location = new Point(lbeginLeft + lcountWidth * 5 + dLabel1.Width * 4, 234);
-            dLabel6.Location = new Point(lbeginLeft + lcountWidth * 6 + dLabel1.Width * 5, 234);
-            dLabel7.Location = new Point(lbeginLeft + lcountWidth * 7 + dLabel1.Width * 6, 234);
-            dLabel8.Location = new Point(lbeginLeft + lcountWidth * 8 + dLabel1.Width * 7, 234);
-            baseControl.Controls.Add(imgLeft);
-            baseControl.Controls.Add(imgRight);
-            baseControl.Controls.Add(imgMain);
-            baseControl.Controls.Add(btn_ImgLeft);
-            baseControl.Controls.Add(btn_ImgRight);
-            baseControl.Controls.Add(dLabel1);
-            baseControl.Controls.Add(dLabel2);
-            baseControl.Controls.Add(dLabel3);
-            baseControl.Controls.Add(dLabel4);
-            baseControl.Controls.Add(dLabel5);
-            baseControl.Controls.Add(dLabel6);
-            baseControl.Controls.Add(dLabel7);
-            baseControl.Controls.Add(dLabel8);
-            btn_ImgLeft.Visible = false;
-            btn_ImgRight.Visible = false;
-            Items.Add(baseControl);
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            Items.Add(new DuiBaseControl());
-            GC.Collect();
-            return true;
+            DuiBaseControl dbbase = new DuiBaseControl();
+            dbbase.Size = new Size(this.Width, 100);
+            return dbbase;
         }
-
         /// <summary>
         /// 加载滚动图
         /// </summary>
@@ -508,7 +586,22 @@ namespace MusicNetease.LayeredSkinControl
 
         private Image GetImageByUrl(string url)
         {
-            return Image.FromStream(System.Net.WebRequest.Create(url).GetResponse().GetResponseStream());
+            System.Drawing.Image image = null;
+            try
+            {
+                WebRequest webreq = WebRequest.Create(url);
+                //红色部分为文件URL地址，这里是一张图片
+                WebResponse webres = webreq.GetResponse();
+                Stream stream = webres.GetResponseStream();                
+                image = System.Drawing.Image.FromStream(stream);
+                stream.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return image;
+            //return Image.FromStream(System.Net.WebRequest.Create(url).GetResponse().GetResponseStream());
         }
 
         /// <summary>
