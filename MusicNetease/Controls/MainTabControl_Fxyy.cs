@@ -55,7 +55,7 @@ namespace MusicNetease.Controls
             recommendSongSheetControl1.ItemSize = new Size(791, 520);
             Entity.SwitcherImageEntity switcherImgs = new Entity.SwitcherImageEntity(ids,names,ImgsString,IconsString);
             recommendSongSheetControl1.addSwitchImage(switcherImgs);
-            recommendSongSheetControl1.addRecommendSongTitle(new Entity.SongSheetTitle("推荐歌单","12306"));
+            //recommendSongSheetControl1.addRecommendSongTitle(new Entity.SongSheetTitle("推荐歌单","12306"));
             recommendSongSheetControl1.ItemSize = new Size(150, 175);
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("tj", "每日歌曲推荐", "根据您的音乐口味生成每日更新", "", "", ""));
             recommendSongSheetControl1.addRecommendSongSheet(new Entity.SongSheetEntity("2522866436", "又到了起床靠爆发力的日子了", "编辑推荐：我没有赖床，我不起床是有理由的！", "http://p3.music.126.net/XIFMgvpqDqY4AO94MQBijQ==/109951163679316040.jpg?param=200y200", "202万", ""));

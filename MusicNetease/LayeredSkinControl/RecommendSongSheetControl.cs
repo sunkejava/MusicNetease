@@ -217,7 +217,7 @@ namespace MusicNetease.LayeredSkinControl
         {
             switcherImgsEntity = se;
             DuiBaseControl baseControl = new DuiBaseControl();
-            baseControl.Size = new Size(Width, 350);
+            baseControl.Size = ItemSize;
             LoadSliderImg(NowNum);
             imgMain.Size = new Size(540, 200);
             imgLeft.Size = new Size(520, 190);
@@ -336,6 +336,9 @@ namespace MusicNetease.LayeredSkinControl
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
             Items.Add(baseControl);
+            //添加歌单标头
+            addRecommendSongTitle(baseControl,new Entity.SongSheetTitle("推荐歌单", "12306"));
+            
             Items.Add(getDuiBase());
             Items.Add(getDuiBase());
             Items.Add(getDuiBase());
@@ -351,7 +354,7 @@ namespace MusicNetease.LayeredSkinControl
             return true;
         }
 
-        public bool addRecommendSongTitle(SongSheetTitle st)
+        public bool addRecommendSongTitle(DuiBaseControl dbase,SongSheetTitle st)
         {
             //是否已存在
             bool isExists = false;
@@ -368,45 +371,42 @@ namespace MusicNetease.LayeredSkinControl
                 //底层控件
                 DuiBaseControl baseControl = new DuiBaseControl();
                 baseControl.Size = new Size(this.Width, 30);
-                baseControl.BackColor = Color.FromArgb(245, 245, 247);
-                //边框
-                Borders baseBorder = new Borders(baseControl);
-                baseBorder.BottomWidth = 10;
-                baseBorder.TopWidth = 10;
-                baseBorder.LeftWidth = 10;
-                baseBorder.RightWidth = 10;
+                //baseControl.BackColor = Color.FromArgb(245, 245, 247);
+                baseControl.Location = new Point(0, 250);
                 //标题
                 DuiLabel lTitle = new DuiLabel();
-                lTitle.Size = new Size(30, 10);
+                lTitle.Size = new Size(80, 30);
                 lTitle.Text = st.Name;
-                lTitle.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+                lTitle.Font = new Font("微软雅黑", 12F, FontStyle.Regular);
                 lTitle.ForeColor = Color.DimGray;
                 lTitle.Location = new Point(0,0);
                 //更多按钮
                 DuiButton dbutton = new DuiButton();
-                dbutton.Size = new Size(15,5);
+                dbutton.Size = new Size(40,20);
                 dbutton.Text = "更多";
-                dbutton.Location = new Point(this.Width-20,2);
+                dbutton.BaseColor = Color.Transparent;
+                dbutton.Location = new Point(this.Width-60,5);
                 //更多图标
                 DuiButton dInIcon = new DuiButton();
-                dInIcon.Location = new Point(this.Width-5, 2);
-                dInIcon.Size = new Size(5, 5);
+                dInIcon.Location = new Point(this.Width-23, 2);
+                dInIcon.Size = new Size(10, 10);
                 dInIcon.NormalImage = Properties.Resources.Arrowright0;
                 dInIcon.AdaptImage = false;
                 //下划线
                 DuiLabel lLine = new DuiLabel();
-                lLine.Size = new Size(this.Width, 3);
-                lLine.ForeColor = Color.DimGray;
-                lLine.BackColor = Color.DimGray;
-                lLine.Location = new Point(0, 10);
+                lLine.Size = new Size(this.Width, 30);
+                lLine.ForeColor = Color.Red;
+                lLine.BackColor = Color.Red;
+                lLine.Location = new Point(0, 40);
                 baseControl.Controls.Add(dbutton);
                 baseControl.Controls.Add(dInIcon);
                 baseControl.Controls.Add(lTitle);
                 baseControl.Controls.Add(lLine);
-                Items.Add(baseControl);
+                dbase.Controls.Add(baseControl);
+                //Items.Add(baseControl);
                 //更新列表
-                RefreshList();
-                tGroups.Add(st);
+                //RefreshList();
+                //tGroups.Add(st);
             }
             GC.Collect();
             return !isExists;
@@ -434,7 +434,7 @@ namespace MusicNetease.LayeredSkinControl
             {
                 //底层控件
                 DuiBaseControl baseControl = new DuiBaseControl();
-                baseControl.Size = new Size(140, 180);
+                baseControl.Size = ItemSize;
                 baseControl.BackColor = Color.FromArgb(245, 245, 247);
                 //边框
                 Borders baseBorder = new Borders(baseControl);
@@ -567,7 +567,7 @@ namespace MusicNetease.LayeredSkinControl
         private DuiBaseControl getDuiBase()
         {
             DuiBaseControl dbbase = new DuiBaseControl();
-            dbbase.Size = new Size(this.Width, 100);
+            dbbase.Size = ItemSize;
             return dbbase;
         }
         /// <summary>
