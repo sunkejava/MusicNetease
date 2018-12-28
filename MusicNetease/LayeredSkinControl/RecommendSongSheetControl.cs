@@ -386,12 +386,16 @@ namespace MusicNetease.LayeredSkinControl
                 dbutton.Text = "更多";
                 dbutton.BaseColor = Color.Transparent;
                 dbutton.Location = new Point(this.Width-60,5);
+                dbutton.AdaptImage = false;
+                dbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+
                 //更多图标
                 DuiButton dInIcon = new DuiButton();
                 dInIcon.Location = new Point(this.Width-23, 2);
                 dInIcon.Size = new Size(10, 10);
                 dInIcon.NormalImage = Properties.Resources.Arrowright0;
                 dInIcon.AdaptImage = false;
+                dInIcon.Cursor = System.Windows.Forms.Cursors.Hand;
                 //下划线
                 DuiLabel lLine = new DuiLabel();
                 lLine.Size = new Size(this.Width, 30);
