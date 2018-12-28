@@ -335,19 +335,18 @@ namespace MusicNetease.LayeredSkinControl
             baseControl.Controls.Add(dLabel8);
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
             Items.Add(baseControl);
             //添加歌单标头
             addRecommendSongTitle(baseControl,new Entity.SongSheetTitle("推荐歌单", "12306"));
-            
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
             //更新列表
             RefreshList();
             GC.Collect();
@@ -571,7 +570,9 @@ namespace MusicNetease.LayeredSkinControl
         private DuiBaseControl getDuiBase()
         {
             DuiBaseControl dbbase = new DuiBaseControl();
-            dbbase.Size = ItemSize;
+            dbbase.Size = new Size(ItemSize.Width,10);
+            dbbase.Top = ItemSize.Height;
+            dbbase.Location = new Point(0, ItemSize.Height);
             return dbbase;
         }
         /// <summary>
