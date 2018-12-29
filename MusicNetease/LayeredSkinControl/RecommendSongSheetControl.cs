@@ -335,18 +335,19 @@ namespace MusicNetease.LayeredSkinControl
             baseControl.Controls.Add(dLabel8);
             btn_ImgLeft.Visible = false;
             btn_ImgRight.Visible = false;
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
-            Items.Add(getDuiBase());
             Items.Add(baseControl);
             //添加歌单标头
             addRecommendSongTitle(baseControl,new Entity.SongSheetTitle("推荐歌单", "12306"));
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            Items.Add(getDuiBase());
+            
             //更新列表
             RefreshList();
             GC.Collect();
