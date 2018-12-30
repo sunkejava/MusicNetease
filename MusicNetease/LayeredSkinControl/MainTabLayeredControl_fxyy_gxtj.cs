@@ -48,7 +48,6 @@ namespace MusicNetease.LayeredSkinControl
             string[] IconsString = new string[] { "1", "2", "3", "4", "5", "6", "7", "8" };
             Entity.SwitcherImageEntity switcherImgs = new Entity.SwitcherImageEntity(ids, names, ImgsString, IconsString);
             SwitcherControl sw = new SwitcherControl();
-            //MessageBox.Show("实际宽度为："+this.Width.ToString());
             sw.setSize(850, 350);
             sw.Location = new Point(0, 0);
             sw.addSwitchImage(switcherImgs);
